@@ -1,0 +1,139 @@
+// synchronous: wait and do tasks one by one
+
+//async // task can run without waiting for previou task to complete 
+// and save time while dealing with operations like API calls,timers,or file loading
+
+console.log("one")
+console.log("two")
+console.log("three")
+
+setTimeout(()=>{
+    console.log("two 1")
+},1000)
+
+//ex
+console.log("start")
+console.log("middle")
+console.log("end")
+
+// setTimeout() // runs only onces
+setTimeout(()=>{
+    console.log("middle 1")
+},4000)
+
+//ex
+console.log("start")
+setTimeout(() =>{
+    console.log("hello after 2 seconds")
+},2000)
+console.log("end")
+
+// showing a message later
+setTimeout(() =>{
+    alert("welcometo the website")
+},3000)
+
+
+// changing text
+setTimeout(() =>{
+    document.body.innerHTML = "Text Change"
+},1000)// dout
+
+
+//
+let sum=0
+for(i=0;i<10000;i++){
+    sum+=i
+}
+console.log(sum)
+
+//
+let sum1 = 2
+for(i=0;i<10000;i++){
+    sum1+=i
+}
+console.log(sum1)
+
+// setinterval //used to run a function repeatedly after a fixed time interval  
+
+setInterval(()=>{
+    console.log("four")
+},3000)
+
+//
+// ex
+ setInterval(() =>{
+    console.log("hello sana")
+ },5000)
+
+ // prints local time
+ setInterval(() => {
+    let time = new Date();
+    console.log(time.toLocaleTimeString())
+ },5000)
+
+ // changing background color
+ setInterval(() =>{
+    document.body.style.backgroundColor = "lightblue"
+ },1000)
+
+
+
+// clearinterval() // used to stop a function
+
+
+//hello universe 3 times print
+ for (i=0;i<3;i++){
+    console.log("hello universe")
+ }
+
+ //
+ let timer = setInterval(() =>{
+    console.log("running...")
+ },1000)
+
+ setTimeout(() =>{
+    clearInterval(timer)
+ },2000)
+
+ // counter stop
+ let count = 0
+ let interval = setInterval(()=>{
+    count++
+    console.log(count)
+
+    if (count === 5){
+        clearInterval(interval)
+        console.log("Interval Stopped")
+    }
+ },1000)
+ //
+ let id = setInterval(()=>{
+    console.log("hello")
+ },1000)
+ clearInterval(id)
+
+
+
+ // cleartimeout() // used to cancel a timeout set by setTimeout() before it execute
+ 
+ let timer1 = setTimeout(() =>{
+    console.log("hello")
+ },1000)
+
+ clearTimeout(timer1)
+
+ // cancel notification
+ let notification = setTimeout(()=>{
+    console.log("NewMessage")
+ },5000)
+ console.log("Notification Cancelled")
+ clearTimeout(notification)
+ 
+
+
+ // event bubbling: this event travels from child to parent element
+
+ // capturing : travels from parent to child element with help of "true"
+
+ //deligation : event will be added to the parent element and the event will be used by all the child element

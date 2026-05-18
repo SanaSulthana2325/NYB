@@ -143,3 +143,61 @@ document.body.append(counterbtn,p)
 // synchronous: code executive in order line by line in numbers 
 
 //  asynchronous Executions
+
+//
+let child = document.getElementById("innertext")
+function action(){
+    console.log("inner h1 clicked")
+}
+child.addEventListener("click",action)
+
+//
+let parent = document.getElementById("outertext")
+function action1(){
+    console.log("outer text")
+}
+parent.addEventListener("click",action1,true)
+
+//event bubbling: this event travels from child to parent element
+let div = document.getElementById("div")
+function action2(){
+    console.log("parent element")
+}
+div.addEventListener("click",action2)
+
+// capturing:
+let div1 = document.getElementById("div1")
+function action3(){
+    console.log("top parent clicked")
+}
+div1.addEventListener("click",action3,true)
+
+//
+let list = document.getElementById("list")
+function listclick(){
+    console.log("clicked")
+}
+list.addEventListener("click",listclick)
+
+//deligation
+let list1 = document.getElementById("list")
+function listclick(){
+    console.log("clicked")
+}
+list1.addEventListener("click",function (e){
+console.log(e.target.innerText)
+})
+
+//window.onscroll
+
+console.log(window)
+
+
+//normal event
+
+
+// Throttling
+
+//Debouncing
+
+

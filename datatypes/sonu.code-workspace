@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Music/sana1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sonu",
+		"liveServer.settings.port": 5501
+	}
+}

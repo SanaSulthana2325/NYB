@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- audio tag-->
+    <audio controls autoplay,muted>
+    <source src="sample1.mp3" type="audio/mp3">
+</audio>
+<br>
+
+<br>
+
+
+<audio controls loop,autoplay, muted>
+    <source src="sample2.mp3" type="audio/mp3">
+</audio>
+<br>
+<br>
+<audio controls>
+    <source src="./sample20.mp3"  type="audio/mp3">
+</audio>
+
+
+<br>
+
+<hr>
+
+<!-- video tag-->
+
+<video width="200" height="200" controls>
+    <source src="myvideo.mp4" type="video/mp4">
+</video>
+
+<br>
+
+
+<video width="300" height="300" controls>
+    <source src="./video3.mp4" type="video/mp4">
+</video>
+
+<hr>
+
+
+<!-- table tag-->
+ <h2>student table </h2>
+ <table border="1" cellpadding="8" cellspacing="0">
+<tr>
+    <th colspan="4">student report 2026</th>
+</tr>
+<tr>
+    <th>name</th>
+    <th>course</th>
+    <th>marks</th>
+    <th>grades</th>
+</tr>
+<tr>
+    <td rowspan="2">sana</td>
+    <td>HTML</td>
+    <td>95</td>
+    <td>A+</td>
+</tr>
+<tr>
+    <td>css</td>
+    <td>90</td>
+    <td>A</td>
+</tr>
+<tr>
+    <td>tasan</td>
+    <td>JavaScript</td>
+    <td>67</td>
+    <td>B+</td>
+</tr>
+</table>
+<!--callpadding: space inside each cell
+cellspacing: removes gaps between cells
+colspan: merge all rows
+rowspan: two column in the next row-->
+
+<!--table2-->
+<table border="1" cellpadding="9" cellspacing="3">
+    <h1>employee table</h1>
+    <tr>
+        <th colspan="4">employee details</th>
+    </tr>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>place</th>
+        <th>course</th>
+    </tr>
+    <tr>
+        <td>sana</td>
+        <td>45</td>
+        <td>wrangal</td>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td>tasan</td>
+        <td>34</td>
+        <td>hyd</td>
+        <td>CSS</td>
+        
+    </tr>
+    <tr>
+        <td rowspan="2">sonu</td>
+        <td>27</td>
+        <td>khazipet</td>
+        <td>JS</td>
+    </tr>
+    <tr>
+        
+        <td>66</td>
+        <td>huz</td>
+        <td>python</td>
+    </tr>
+
+</table>
+
+
+<hr>
+
+
+
+<!-- form tag-->
+
+<h3> Registration form </h3>
+<form action="/submit" method="post">
+    <!--1.Text Input-->
+    <label for="name"> Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <br>
+    <br>
+    <!--email Input-->
+    <lable for="email">Email:</lable>
+    <input type="email" id="email" name="email" placeholder="gmail.com" required>
+    <br>
+    <br>
+    <!--password Input-->
+    <label for="password"> password:</label>
+    <input type="password" id="password" name="password" minlength="6" required>
+
+    <br>
+    <br>
+    <!--Number Input-->
+    <label for="age">age:</label>
+    <input type="number" id="age" name="age" min="18" max="60" value="18">
+    <br>
+    <br>
+
+    <!--Radio Button: selects only one-->
+    <lable>gender:</lable><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">female</label>
+    <br>
+    <br>
+    <!--checkbox: select multiple-->
+    <label>Hobbies</label>
+    <input type="checkbox">cooking
+    <input type="checkbox">gardening
+    <input type="checkbox">gaming
+    <input type="checkbox">singing
+    <input type="checkbox">dancing
+    <br>
+    <br>
+    
+    <!--dropdown select-->
+    <h2>select country</h2>
+    <select>
+        <option>USA</option>
+        <option>Canada</option>
+        <option>India</option>
+        <option>Paris</option>
+        <option>London</option>
+        <option>New Zealand</option>
+    </select>
+
+<br>
+<br>
+<!--Textarea-->
+
+
+<h2>text area</h2>
+<textarea rows="6" cols="20">
+
+</textarea>
+<br>
+<br>
+<!--buttons-->
+
+<input type="button" value="submit">
+<input type="button" value="reset">
+
+</form>
+
+<hr>
+
+
+<!-- form2-->
+ <form>
+<h2>sign in form </h2>
+<lable >name:</lable>
+<input type="text">
+<br>
+<br>
+<lable>email:</lable>
+<input type="email" placeholder="@gmail.com">
+<br>
+<br>
+<lable>password:</lable>
+<input type="password" placeholder="enter password">
+<br>
+<br>
+
+<lable>age:</lable>
+<input type="age" placeholder="18" min="18" max="60">
+<br>
+<br>
+<h3> gender</h3>
+<input type="radio"> Male
+<input type="radio"> female
+<input type="radio"> other
+<br>
+<br>
+
+<h3>hobbies</h3>
+<input type="checkbox">playing
+<input type="checkbox">dancing
+<input type="checkbox">reading
+<br>
+<br>
+<h3>near your places</h3>
+<select>
+    <option>warangal</option>
+    <option>hyd</option>
+    <option>huz</option>
+    <option>khazipet</option>
+    <option>hnk</option>
+</select>
+<br>
+<br>
+
+<h3>tell about yourself </h3>
+<textarea row="6" cols="30" >
+
+</textarea>
+<br>
+<br>
+
+<input type="button"  value="submit">
+<input type="button" value="reset">
+
+</form>
+
+
+</body>
+</html>

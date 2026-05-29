@@ -1,0 +1,195 @@
+//objects
+// these objects can be defined in 4 ways
+//1. object literals
+let b={}
+console.log(b)
+
+//new key word
+
+let a = new Object()
+console.log(a)
+
+// constructor // use function in thsi
+function employee(a,b,c){
+    this.name = a;
+    this.role = b;
+    this.dept = c;
+}
+let emp1=new employee("sana sulthana","software engineer","IT")
+console.log(emp1)
+let emp2=new employee("sulthana","software engineer","IT")
+console.log(emp2)
+
+// ex
+function car(brand, color, year){
+    this.brand = brand
+    this.color = color
+    this.year = year
+}
+let car1 = new car("Tesla","red",2024)
+console.log(car1)
+let car2 = new car("BMW", "black",2023)
+console.log(car2)
+
+//class // also call ES6 class
+class Emp {
+    constructor(a,b,c){
+    this.name = a;
+    this.role = b;
+    this.dept = c;
+    }
+
+}
+var m=new Emp("sana","software engineer","IT")
+console.log(m)
+
+//
+class car3{
+    constructor(brand,color,year){
+    this.brand = brand
+    this.color = color
+    this.year = year
+
+    }
+}
+let car4 = new car("Tesla","red",2024)
+
+//
+var obj = {one:"a",b:"hello",c:20}
+console.log(obj)
+console.log(obj.one)
+console.log(obj.b)
+console.log(obj.c)
+
+console.log(obj["one"])
+
+// to add the object
+obj.hello = "good morning"// which is used to add this to the object
+console.log(obj)
+
+// to delete the object
+delete obj.one
+console.log(obj)
+
+// to change the existing one
+obj.b="hai"
+console.log(obj)
+
+//ex
+let student = {
+    name:"sana",
+    age:22,
+    city:"warangal",
+    skill: ["js","html"]
+}
+console.log(student)
+console.log(student.name)
+console.log(student["age"])
+//
+student.course = "web dev"
+student.age = 23
+console.log(student)
+//
+delete student.city
+console.log(student)
+
+
+// copying of objects
+// 3 ways to copy onjects
+// 1.normal copy
+
+// ex
+var obj={a:"one",b:"two",c:"three"}
+var obj1=obj
+console.log(obj)
+console.log(obj1)
+obj1.d="four"
+console.log(obj1)
+console.log(obj)
+
+
+//2.shallow copy used with the hepl of spread operator
+var obj2={...obj}
+
+obj2.name="hai"
+console.log("obj2",obj2)
+console.log("obj",obj)// it did not print the name ="hai" due to shallow copy
+
+// deep copy (assignment operator)
+var copy1 = JSON.parse(JSON.stringify(obj2))
+console.log(obj2)
+
+// coping of array
+
+var arr=[456,365,786,2025,12,[10,5,6789]]
+
+// normal copy
+
+var copy = arr
+//console.log(arr[5][0])
+console.log("arr",arr)
+
+arr[0]=777
+console.log("copy",copy)
+console.log("arr",arr)// 456 changes to 777 in both orinal and old one
+
+// shallow copy
+
+var copy1=[...arr]
+copy1[0]=3333
+copy1[5][0]=1000
+
+console.log("original",arr)
+console.log("copy",copy1)
+console.log("arr",arr)// in swallow it will not change the orininal copy only copy1 changes
+
+// deep copy
+
+var copy2=JSON.parse(JSON.stringify(arr))
+
+console.log(copy2)
+copy2[5][0]="hello"
+console.log(copy2)
+console.log(arr)
+
+// shallow method with slice method
+let arr1 = [1,2,3]
+let arr2 = arr1.slice()
+arr2[0] = 89
+console.log(arr1[2])
+
+// ex
+let num=[1,2,3,4,5,[6,7,8]]
+console.log(num)
+console.log("num",num)
+
+//normal
+var dot = num
+console.log("num",num)
+num[0]=786
+console.log("dot",dot)
+console.log("num",num)
+
+// shallow copy
+var dot1=[...num]
+dot1[0]=5555
+dot1[5][0]= 8989
+console.log("original",num)
+console.log(dot,dot1)
+console.log("num",num)
+
+// deep copy
+
+var dot2=JSON.parse(JSON.stringify(num))
+console.log(dot2)
+dot2[5][0]="hello"
+console.log(dot2)
+console.log(num)
+
+
+
+
+
+//object.keys
+//object.values
+//object.entries

@@ -1,6 +1,6 @@
 // Default parameter: is a parameter that has a default value assigned to it
 
-//
+// practice with null and undefined values
 function greet1(name="guest"){
     console.log("hello "+ name)
 }

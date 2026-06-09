@@ -291,3 +291,6 @@ let total = highEarners.reduce(
     (sum, salary) => sum + salary,0
 )
 console.log(total)
+
+
+//

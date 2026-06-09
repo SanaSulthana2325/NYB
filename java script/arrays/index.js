@@ -124,7 +124,7 @@ console.log(names.indexOf('sulthana'))
 console.log(names.indexOf('tasan'))
 console.log(names.indexOf('sana'))
 
-//8. includes() // tur or false
+//8. includes() // ture or false
 
 let Num = [1,2,3,4,6]
 console.log(Num)

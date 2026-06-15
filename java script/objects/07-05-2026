@@ -9,7 +9,7 @@ console.log(b)
 let a = new Object()
 console.log(a)
 
-// constructor // use function in thsi
+// constructor // use function in this
 function employee(a,b,c){
     this.name = a;
     this.role = b;

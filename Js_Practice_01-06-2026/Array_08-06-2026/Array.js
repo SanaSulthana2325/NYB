@@ -14,7 +14,7 @@ console.log(students[3])
 //
 let cart = ["mobile","laptop","headphones","ipad"]
 console.log(cart)
-
+l
 // marks of students
 let marks = ["78",90,56,89,88,99]
 console.log(marks[3])

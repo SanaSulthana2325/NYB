@@ -1,4 +1,4 @@
-// Rest Parameter:  allow function to accept any number of arhument and store them in a real array
+// Rest Parameter:  allow function to accept any number of argument and store them in a real array
 
 //
 function showNumber(...number){

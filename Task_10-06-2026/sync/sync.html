@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronous task</title>
+</head>
+<body>
+    <div id="parent"> Parent
+        <button id="child">Click Me</button>
+
+    </div>
+
+    <br>
+    <!--multiple level-->
+
+    <div id="grandparent">Grandparent
+        <div id="parent1">parent
+            <button id="child1"> Click Me</button>
+        </div>
+    </div>
+
+    <br>
+    <!---->
+    <ul id="menu">
+        <li>sana</li>
+        <li>sonu</li>
+        <li>tasan</li>
+    </ul>
+
+    <br>
+    <!--event capturing-->
+
+    <div id="parent3">parent
+        <button id="child2">Click Me</button>
+
+    </div>
+
+    <br>
+    <!--navigation-->
+    <div id="navbar">navigation
+        <button id="child3">Click Me</button>
+
+    </div>
+
+    <br>
+    <!--validation-->
+    <div id="form">form validation
+        <button id="child4">Click Me</button>
+
+    </div>
+
+    <br>
+    <!--modal popup-->
+
+    
+    <div id="modal">modal popup protection
+        <button id="child5">Click Me</button>
+
+    </div>
+
+    <br>
+    
+    <!-- execution flow of bubbling and capturing-->
+     <h2>event capturing</h2>
+     <div id="grandparent1"> grandparent
+        <div id="parent4">parent
+            <button id="child6">CLICK ME</button>
+        </div>
+     </div>
+
+     <!---->
+
+     <h2>event bubbling</h2>
+     <div id="grandparent2"> grandparent
+        <div id="parent5">parent
+            <button id="child7">CLICK ME</button>
+        </div>
+     </div>
+
+     <br>
+     <!--dynamic buttons-->
+     <div id="container">
+        <button>button 1</button>
+        <button>button 2</button>
+     </div>
+     <button id="addBtn"> Add New Button</button>
+
+     <br>
+     <br>
+
+     <!--dynamic to do list-->
+
+     <input type="text" id="taskInput">
+     <button id="addTask">Add Task</button>
+
+     <ul id="taskList"></ul>
+
+     <br>
+     <br>
+     <!--dynamic table rows-->
+
+     <table border="1">
+      <tbody id="tableBody">
+     <tr>
+      <td>John</td>
+      <td><button class="remove">Remove</button></td>
+     </tr>
+     </tbody>
+     </table>
+
+     <button id="addRow">Add Row</button>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./sync.js"></script>
+</body>
+</html>

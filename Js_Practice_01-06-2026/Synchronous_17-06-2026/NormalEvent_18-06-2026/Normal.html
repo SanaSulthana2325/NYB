@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Event</title>
+</head>
+<body>
+    <button onclick="sayHello()">Click Me</button>
+
+    <br>
+    <br>
+
+    <!-- input event-->
+     <input type="text" oninput ="showText(event)">
+
+     <br>
+     <br>
+     <!--load event-->
+     <body onload="pageLoaded()"></body>
+
+     <br>
+     <br>
+     <!--Mouse Over event-->
+     <button onmouseover="hoverMessage()">Hover Me</button>
+
+     <br>
+     <br>
+     <!--submit button-->
+     <form onsubmit="submitForm(event)">
+     <input type="text" placeholder="Enter name">
+     <button type = "submit">Submit</button>
+     </form>
+
+     <br>
+     <br>
+     <!--double click event-->
+
+     <button ondblclick="Message()">Double Click Me</button>
+
+     <br>
+     <br>
+     <!--keydown events-->
+     <input type="text" onkeydown="checkKey(event)">
+
+     <br>
+     <br>
+     <!--keyup event-->
+     <input type="text" onkeyup="showText(event)">
+
+     <br>
+     <br>
+     <!--focus event-->
+     <input type="text" onfocus="focused()">
+     <br>
+     <br>
+     <!--Blur event-->
+     <input type="text" onblur="lostFocus()">
+     <br>
+     <br>
+     <!--change event-->
+     <select onchange="countryChanged(this)">
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+     </select>
+     <br>
+     <br>
+     <!--copy event-->
+     <p oncopy="copied()">Copy this text</p>
+
+     
+
+
+
+
+
+
+
+
+
+    <script src="./Normal.js"></script>
+</body>
+</html>

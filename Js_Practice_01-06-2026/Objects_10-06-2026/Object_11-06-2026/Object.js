@@ -1,15 +1,42 @@
-//object.key( return keys )
-let student = {name:"sana", age:22,city:"warangal"}
-console.log(Object.keys(student))
+//for...in Loop
+// key---> property name ofthe object
+// object--->the object you want to loop through
 
-// object.values( return values)
-console.log(Object.values(student))
 
-//Object.entries( return in pairs)
-console.log(Object.entries(student))
+// example
+let student34 = {
+    name: "sdss",
+    age: 43,
+    course:"BBA"
+} 
+for(let key in student34){
+    console.log(key)
+    console.log(student34[key])// accessing values
+    console.log(key +" : "+ student34[key])
 
-// date object
+}
 
+// employees details
+let employee = {
+    id: 101,
+    name: "Rahul",
+    department: "HR",
+    salary: 50000
+};
+
+for (let key in employee) {
+    console.log(key + " => " + employee[key]);
+}
+
+
+//Date Object:the date object in js used to work with
+//1. currentdate
+// 2.current time
+// 3.day
+// 4.month
+// 5.year
+// 6.hours,minutes,seconds
+// 7.time calculation
 let d = new Date()
 console.log(d)
 
@@ -40,7 +67,7 @@ console.log(year)
 //
 console.log(`${day}-${month}-${year}`)
 
-// Template string : used with thw help of // ` `${varaible name}
+//Template Strings:used with the help of // ` `${varaible name}
 //
 var k=10
 var i=20
@@ -55,24 +82,19 @@ let msg = `hii,i am ${name} and I am ${age} years old.`
 console.log(msg)
 
 // ex
-let city = "warangal"
-let country = "India"
-console.log(`i live in ${city}, ${country}`)
-
-// ex
 let product = "laptop"
 let cost = 50000
 console.log(`the ${product} cost is ${cost} rupees.`)
 
 
-// math object 
+//Math Object
 //methods of math like
 
 var ab=10
 var bc=10.7
 
-console.log(Math.floor(bc))
-console.log(Math.ceil(bc))
+console.log(Math.floor(bc))// rounds downward
+console.log(Math.ceil(bc))//rounds upward
 console.log(Math.sqrt(9))
 console.log(Math.pow(2,3))
 console.log(Math.floor(Math.random() *10000))
@@ -92,36 +114,9 @@ console.log(randomNum)
 
 //
 let difference = -15
-console.log(Math.abs(difference))
+console.log(Math.abs(difference))//  absolute value
 
-// Task(Generating random numbers in range)
-
-let min = 1
-let max = 10
-let random = Math.floor(Math.random() * (10-1+1)) + 1
-console.log(random)
-
-let random1 = Math.floor(Math.random() * (100-50+1)) + 50
-console.log(random1)
-
-//
-let colors = ["red","blue","green","yellow"]
-let randomIndex = Math.floor(Math.random() * colors.length)
-console.log(colors[randomIndex])
-
-// all math objects
-let a = 9
-let b =22.44
-console.log(Math.floor(b))
-console.log(Math.round(b))
-console.log(Math.ceil(b))
-console.log(Math.pow(4,9))
-console.log(Math.sqrt(8))
-console.log(Math.abs(-7))
-console.log(Math.random() * 10000)
-console.log(Math.PI)
-
-// string
+//String Object: used to store and manipulate text
 
 let r ="hello"
 console.log(r.length)

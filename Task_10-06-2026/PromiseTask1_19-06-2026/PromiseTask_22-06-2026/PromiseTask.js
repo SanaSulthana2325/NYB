@@ -147,7 +147,7 @@ Promise.allSettled([calc1, calc2, calc3])
 
 // promise.any:
 // login system:
-let googlelogin = new Promise(( resolve, reject)=>{
+let googlelogin = new Promise(( resolve,reject)=>{
     setTimeout(()=>{
         reject("google login failed")
     },1000)

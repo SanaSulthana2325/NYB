@@ -7,10 +7,10 @@ function add(a,b){
  console.log(add(4,6))
  //
 
- function add(c,d){
+ function add15(c,d){
     return "result"
  }
- let result= add(7+5)
+ let result= add15(7+5)
  console.log(result)
  // functions are divided into two types 
  //1. function declaration
@@ -231,7 +231,7 @@ console.log(two(25))
 
 //4. currying function
 
-function add(a){
+function add34(a){
    
      return function(b){
       console.log("second function",b)
@@ -239,17 +239,17 @@ function add(a){
      }
 
 }
-var M = add(10)
+var M = add34(10)
 console.log(M(20))
 // 
-function add(a){
+function add56(a){
    return function(b){
       return function(c){
          return a + b + c
       }
    }
 }
-console.log(add(29)(38)(59))
+console.log(add56(29)(38)(59))
 // IIFE
 
 //main concept of function:
@@ -289,10 +289,10 @@ console .log("My name is"+user+" and i am "+age+" years old")
 
 //apply this in arrow function
 //i. normal 
-function hello(){
+function hello44(){
    console.log("hello sana sulthana")
 }
-hello()
+hello44()
 
 // arrow function
 const hello1 = () => {
@@ -322,3 +322,10 @@ let objarro = {
 }
 objarro.HELLO()
 objarro.Hello()
+
+
+
+//
+export function ha(){
+
+}

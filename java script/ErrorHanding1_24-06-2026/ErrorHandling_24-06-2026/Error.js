@@ -1,4 +1,7 @@
-// Error handling
+// Error handling:
+//Error handling means dealing with problems in your code without breaking the whole program.
+
+//Instead of crashing, we handle errors safely and show meaningful messages.
 
 console.log("good Morning")
 

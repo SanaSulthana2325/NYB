@@ -18,6 +18,8 @@ console.log(sum(1,2))
 import good from './Module1.js'
 console.log(good)
 
+
+
 // named export: we can export n number codes
 
 export function hello(){
@@ -27,5 +29,16 @@ export function hello(){
 export function bye(){
 
 }
+
+//
+export function add(u, v){
+    return u +v
+}
+
+export function multiply(u, v){
+    return u*v
+}
+
+
 
 

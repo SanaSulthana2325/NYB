@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a new webpage using selector</title>
+    <link rel="stylesheet" href="./NewWebpage.css">
+    <style>
+
+        *{
+            font-family: Arial;
+        }
+
+        
+        h1 {
+            color: blue;
+        }
+
+        
+        #main-title {
+            background-color: yellow;
+        }
+
+    
+        .card {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgray;
+        }
+
+        
+        h2, p {
+            color: green;
+        }
+
+        
+        .container p {
+            background-color: lightblue;
+        }
+
+        
+        .menu > li {
+            color: red;
+        }
+
+        
+        h3 + p {
+            color: orange;
+        }
+
+        
+        h4 ~ p {
+            color: purple;
+        }
+
+        
+        input[type="text"] {
+            background-color: pink;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Element Selector -->
+    <h1>Element Selector Example</h1>
+
+    <!-- ID Selector -->
+    <h1 id="main-title">
+        ID Selector Example
+    </h1>
+
+    <!-- Class Selector -->
+    <div class="card">
+        birthday card 1
+    </div>
+
+    <div class="card">
+        birthday Card 2
+    </div>
+
+    <!-- Group Selector -->
+    <h2>Group Selector Heading</h2>
+
+    <p>about universe in Paragraph</p>
+
+    <!-- Descendant Selector -->
+    <div class="container">
+
+        <p>
+            Descendant Selector Paragraph
+        </p>
+
+    </div>
+
+    <p>
+        Outside Container Paragraph
+    </p>
+
+    <!-- Child Selector -->
+    <ul class="menu">
+
+        <li>Home</li>
+
+        <li>About</li>
+
+        <div>
+            <li>Nested Item</li>
+        </div>
+
+    </ul>
+
+    <!-- Adjacent Sibling Selector -->
+    <h3>Adjacent Sibling Example</h3>
+
+    <p>
+        This is Tasan
+    </p>
+
+    <p>
+        she is beautiful girl
+    </p>
+
+    <!-- General Sibling Selector -->
+    <h4>General Sibling Example</h4>
+
+    <p>Paragraph 1</p>
+
+    <p>Paragraph 2</p>
+
+    <!-- Attribute Selector -->
+    <br><br>
+
+    <input type="text" placeholder="Username">
+
+    <br><br>
+
+    <input type="password" placeholder="Password">
+
+
+    
+</body>
+</html>

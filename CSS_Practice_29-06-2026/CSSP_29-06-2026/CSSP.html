@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice</title>
+    <link rel="stylesheet" href="./CSSP.css">
+    <!-- internal css-->
+    <style>
+        h1 {
+    color: green;
+ }
+
+ p {
+    color: orange;
+    font-size: 18px;
+ }
+ p2{
+    color:red;
+ }
+ 
+ #title{
+    color: blue; font-size: 40px;
+ }
+
+ 
+ .box{
+    background-color: yellow;
+    color:red;
+ }
+
+ *{
+    font-family: Arial;
+ }
+ h1, p5{
+    color: rgb(146, 238, 9);
+ }
+ div p6{
+    color:lightblue;
+ }
+ div1 >p7{
+    color: rgb(97, 2, 2)
+ }
+ h1 + p8 {
+    color: purple;
+ }
+ h1 ~ p9{
+    color:orange;
+ }
+ input[type= "text"]{
+    background-color: lightpink;
+ }
+ div3{
+    border: 3px solid blue;
+ }
+ k.dotted{
+    border-style: dotted;
+ }
+ k.dashed{
+    border-style: dashed;
+ }
+ k.solid{
+    border-style: solid;
+ }
+ button {
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.login-box {
+    background-color: white;
+    border: 2px solid gray;
+    padding: 20px;
+}
+
+    </style>
+
+</head>
+<body>
+    <!--inline element-->
+    <h1 style="color: blue;">Welcome</h1>
+
+<p style="font-size:20px; color:red;">
+    This is inline CSS.
+</p>
+
+<!--internal-->
+<h1>Welcome</h1>
+<p>This is internal CSS.</p>
+<hr>
+
+
+<!--external -->
+<h2>Welcome</h2>
+<p1>this is sana sulthana</p1>
+<br>
+<hr>
+
+
+<!--example of element selector-->
+<h5>element selector</h5>
+<p2>Hello</p2>
+<p2>Welcome</p2>
+
+<!--Id selector-->
+<h5>ID selector</h5>
+<h1 id = "title">TASAN</h1>
+
+<!--class selector-->
+<h5></h5>
+<p3 class="box">Paragraph 1</p3>
+<p3 class="box">Paragraph 2</p3>
+
+<!--universal selector-->
+<h1>Tasleem</h1>
+<p4>Welcome home</p4>
+
+<!--group selector-->
+
+<h1>Heading</h1>
+<p5>Paragraph</p5>
+<hr>
+
+
+<!--Descendant selector-->
+
+<div>
+    <p6> this is inside div</p6>
+</div>
+<p6>this is outside div</p6>
+<hr>
+
+
+<!--child selector-->
+<div1>
+    <p7> Direct Child</p7>
+    <section>
+        <p7> not Direct child</p7>
+    </section>
+</div1>
+<hr>
+
+
+<!--adjacent sibling -->
+<h1> Heading</h1>
+<p8>first paragraph</p8>
+<p8>second paragraph</p8>
+
+<!--general sibling-->
+
+<h1>Heading</h1>
+<p9>para 1</p9>
+<p9>Para 2</p9>
+<hr>
+
+
+<!--Attributs selector-->
+
+<input type="text" placeholder="enter name">
+<input type="password" placeholder="password">
+
+<hr>
+<br>
+
+<!--border-->
+<div3> hello wrold</div3>
+<hr>
+<br>
+<hr>
+<br>
+<!---->
+<k class="dotted">Dotted Border</k>
+<k class="dashed">Dashed Border</k>
+<k class="solid">Solid Border</k>
+<k class="double">Double Border</k>
+<hr>
+<br>
+<br>
+
+<!--round borders-->
+<button>click me</button>
+<br>
+<hr>
+
+<div23 class="login-box">
+    <h2>Login</h2>
+</div23>
+
+
+<!--example-->
+<div class="card">
+    <h2 id="title">Product Name</h2>
+    <p22>Price: ₹500</p22> <br>
+    <button>Buy Now</button>
+</div>
+
+
+    
+</body>
+</html>
+
+<!--
+Introduction to CSS
+
+CSS (Cascading Style Sheets) is a stylesheet language used to control the appearance and layout of web pages. While HTML provides the structure of a webpage, CSS makes it attractive by adding colors, fonts, spacing, animations, and responsive layouts.
+
+Why Use CSS?
+
+*Makes web pages visually appealing.
+*Separates content (HTML) from design (CSS).
+*Reduces code repetition.
+*Improves website maintenance.
+*Supports responsive design for different screen sizes.
+
+
+//Advantages of CSS
+*Creates attractive web pages.
+*Saves time by reusing styles.
+*Easy to maintain and update.
+*Improves website loading speed.
+*Enables responsive and mobile-friendly designs.
+--->
+
+
+<!-- ways to Apply Styles to an Element:
+ There are 3 main ways to apply CSS styles to HTML elements:
+
+Inline CSS
+Internal CSS
+External CSS
+
+//Inline CSS:
+
+Inline CSS is written directly inside the HTML element using the style attribute.
+
+//*Advantages
+Easy for quick styling.
+Useful for testing small changes.
+
+//Disadvantages
+Not reusable.
+Makes HTML messy.
+Difficult to maintain.
+
+//2. internal css
+Internal CSS is written inside the <style> tag within the <head> section of the HTML file.
+
+//*Advantages
+Better organization than inline CSS.
+Good for single-page websites.
+
+//*Disadvantages
+Cannot reuse styles across multiple pages.
+
+//external css
+External CSS is written in a separate .css file and linked to the HTML file.
+
+//*Advantages
+Reusable across many pages.
+Clean and maintainable.
+Best method for large projects.
+
+//*Disadvantages
+Requires separate CSS file.
+-->
+
+
+<!--CSS Selectors:
+CSS Selectors are used to select HTML elements and apply styles to them.
+
+//* TYPES OF CSS SELECTOR
+
+//1.Element Selector : Selects HTML elements by tag name
+
+//2. Id selector(#):Selects a specific element using its id.
+
+-An id must be unique.
+
+//3.class selector(.): Selects elements using class names.
+
+-Multiple elements can use the same class.
+
+//4. Universal selector (*) : selects all elements
+
+//5. gropu selector(,) : applies same styles to miltple elements
+
+//6.Decendant selector(space) : selects elements inside another element
+
+// child selector(>) : selects direct child child elemets
+
+// Adjacent sibling selector(+): selects the immediate next sibling
+
+//general sibling selector(~) : Selects all siblings after an element
+
+// Attribute selector : selects elements based on attributes
+-->
+
+<!--Borders: use to create line HTML elements
+
+Background:Background properties are used to add colors and images behind elements.
+
+Width and Height: controls elements sizing and layout
+-->
+
+
+<!--
+| Selector         | Symbol   | Example              |
+| ---------------- | -------- | -------------------- |
+| Element          | tag name | `p`                  |
+| ID               | `#`      | `#title`             |
+| Class            | `.`      | `.box`               |
+| Universal        | `*`      | `*`                  |
+| Group            | `,`      | `h1, p`              |
+| Descendant       | space    | `div p`              |
+| Child            | `>`      | `div > p`            |
+| Adjacent Sibling | `+`      | `h1 + p`             |
+| General Sibling  | `~`      | `h1 ~ p`             |
+| Attribute        | `[]`     | `input[type="text"]` |
+-->
+
+
+
+
+<!--
+| Property           | Purpose                     |
+| ------------------ | --------------------------- |
+| `border`           | Creates border              |
+| `border-radius`    | Rounded corners             |
+| `background-color` | Background color            |
+| `background-image` | Background image            |
+| `width`            | Horizontal size             |
+| `height`           | Vertical size               |
+| `max-width`        | Maximum width               |
+| `min-height`       | Minimum height              |
+| `box-sizing`       | Controls total element size |
+-->

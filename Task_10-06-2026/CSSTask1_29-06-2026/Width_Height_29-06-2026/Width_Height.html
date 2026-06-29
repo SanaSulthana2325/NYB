@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width and height</title>
+    <style>
+        .box1{
+            width: 300px;
+            height: 200px;
+
+            background-color: lightblue;
+            border:2px solid blue;
+        }
+
+ .container {
+
+  width: 80%;
+
+  height: 200px;
+
+  background-color: lightgreen;
+
+  margin: auto;
+}
+
+ .container1{
+
+  width: 90%;
+
+  max-width: 1000px;
+
+  height: 250px;
+
+  background-color: lightcoral;
+
+  margin: auto;
+}
+.hero {
+
+  width: 75%;
+
+  height: 75vh;
+
+  background-color: orange;
+
+  text-align: center;
+
+  color: white;
+}
+.parent {
+
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.box {
+
+  flex: 1;
+
+  min-width: 250px;
+
+  height: 200px;
+
+  background-color: skyblue;
+
+  border: 2px solid blue;
+}
+.login-box {
+
+  width: 90%;
+
+  max-width: 400px;
+
+  min-height: 300px;
+
+  margin: 50px auto;
+
+  padding: 20px;
+
+  border: 2px solid #3498db;
+
+  border-radius: 10px;
+}
+
+input {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 10px;
+}
+
+button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 15px;
+
+  background-color: blue;
+
+  color: white;
+
+  border: none;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- fixed width and height container-->
+     <div class="box1">
+        fixed size container
+     </div>
+     <br>
+     <br>
+
+
+     <!--responsive width using percentage-->
+     <div class="container">
+      Responsive Width Container
+     </div>
+
+     <br>
+     <br>
+     <!--max-width-->
+     <div class="container1">
+     Responsive Container with max-width
+     </div>
+
+     <!--height using vh-->
+     <div class="hero">
+
+     <h1>Full Screen Section</h1>
+
+     </div>
+
+     <br>
+     <br>
+     <hr>
+     <!--multiple responsive containers-->
+
+     <div class="parent">
+
+     <div class="box">Box 1</div>
+
+     <div class="box">Box 2</div>
+
+     <div class="box">Box 3</div>
+
+     <div class="box">Box 4</div>
+
+     </div>
+     <br>
+     <br>
+     <br>
+
+     <!--login form-->
+
+     <div class="login-box">
+
+     <h2>Login</h2>
+
+      <input type="text" placeholder="Username">
+
+     <input type="password" placeholder="Password">
+
+     <button>Login</button>
+
+     </div>
+
+
+     
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+
+<!--
+Create responsive containers with different width and height values.
+Responsive Containers in CSS
+
+A responsive container adjusts its size automatically based on:
+
+Screen size
+Device width
+Content size
+
+Responsive containers are used in:
+
+Websites
+Dashboards
+Cards
+Login forms
+Product sections
+Mobile layouts
+
+Practice using pixels (%), viewport units (vw, vh), and auto sizing.
+
+| Unit       | Meaning            |
+| ---------- | ------------------ |
+| px         | Fixed size         |
+| %          | Relative to parent |
+| vw         | Viewport width     |
+| vh         | Viewport height    |
+| auto       | Automatic          |
+| max-width  | Maximum width      |
+| min-height | Minimum height     |
+
+Compare fixed and responsive layouts.
+-->

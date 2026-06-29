@@ -9,10 +9,11 @@
 // we can import with any name
 //no need to use {} at the time of input
 
- export default function sum(a, b){
-    return a+b
-}
-console.log(sum(1,2))
+ //export default function sum(a, b){
+ //   return a+b
+    
+//}
+//console.log(sum(1,2))
 
 //
 import good from './Module1.js'
@@ -31,14 +32,27 @@ export function bye(){
 }
 
 //
-export function add(u, v){
-    return u +v
+// export function add(u, v){
+//     return u +v
+// }
+
+// export function multiply(u, v){
+//     return u*v
+// }
+
+
+//
+function add(t,s){
+    return t+s
+}
+function sub(t,s){
+    return t-s
+}
+function div(t,s){
+    return t/s
+}
+function mul(t,s){
+    return t*s
 }
 
-export function multiply(u, v){
-    return u*v
-}
-
-
-
-
+export default {add,sub,div,mul}

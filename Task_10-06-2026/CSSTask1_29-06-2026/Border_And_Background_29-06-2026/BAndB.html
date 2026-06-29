@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders and background</title>
+    <link rel="stylesheet" href="./BAndB.css">
+
+
+    <style>
+       .solid {
+  border: 3px solid black;
+}
+
+.dotted {
+  border: 3px dotted blue;
+}
+
+.dashed {
+  border: 3px dashed red;
+}
+
+.double {
+  border: 5px double green;
+} 
+.thin {
+  border: solid black;
+  border-width: 2px;
+}
+
+.medium {
+  border: solid blue;
+  border-width: 5px;
+}
+
+.thick {
+  border: solid red;
+  border-width: 10px;
+}
+
+.red {
+  border: 3px solid red;
+}
+
+.green {
+  border: 3px solid green;
+}
+
+.blue {
+  border: 3px solid blue;
+}
+.box {
+  border-top: 5px solid red;
+  border-right: 5px dashed blue;
+  border-bottom: 5px dotted green;
+  border-left: 5px double orange;
+
+  padding: 20px;
+  width: 250px;
+}
+ .button{
+  border: 3px solid blue;
+  border-radius: 15px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.login-box {
+
+  width: 300px;
+  padding: 20px;
+
+  border: 3px solid #3498db;
+
+  border-radius: 10px;
+
+  background-color: #f4f4f4;
+
+  margin: 50px auto;
+}
+
+input {
+
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+
+  border: 2px solid gray;
+
+  border-radius: 5px;
+}
+
+button {
+
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+
+  border: none;
+
+  background-color: blue;
+  color: white;
+
+  border-radius: 5px;
+}
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  background-color: yellow;
+}
+
+p2 {
+  background-color: lightgreen;
+}
+/*body{
+    background-image: url("https://tse2.mm.bing.net/th/id/OIP.K9vUA9bCvy7tGsqnb7YdkwHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3");
+    color: white
+}*/
+body {
+
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+  background-repeat: no-repeat;
+}
+
+/*body {
+
+  background-image: url("https://images.unsplash.com/photo-1493246507139-91e8fad9978e");
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+}*/
+
+body {
+
+  background-color: #f2f2f2;
+
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-size: cover;
+
+  height: 100vh;
+
+  color: white;
+
+  text-align: center;
+}
+
+h3 {
+  padding-top: 200px;
+  font-size: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <h2 class="solid">Solid Border</h2>
+
+<h2 class="dotted">Dotted Border</h2>
+
+<h2 class="dashed">Dashed Border</h2>
+
+<h2 class="double">Double Border</h2>
+
+<!--border width: controls thinkness of the border-->
+
+<p class="thin">Thin Border</p>
+
+<p class="medium">Medium Border</p>
+
+<p class="thick">Thick Border</p>
+
+<!--border color-->
+
+<h2 class="red">Error Message</h2>
+
+<h2 class="green">Success Message</h2>
+
+<h2 class="blue">Information Message</h2>
+
+<!--different borders on each side-->
+
+ <div class="box">
+  Different Borders on Each Side
+</div>
+<br>
+<br>
+
+
+<!-- round border-->
+ <div class="button">
+  Rounded Button
+ </div>
+ <br>
+ <br>
+ <hr>
+
+<!-- login-->
+ <div class="login-box">
+
+<h2>Login</h2>
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</div>
+<br>
+<br>
+<hr>
+
+
+<!--background color-->
+<h1>Welcome to CSS</h1>
+
+<p2>This is background color example.</p2>
+
+<!--background image-->
+<!--<h1>Nature Background</h1>
+
+<p4>Background image applied to webpage.</p4>-->
+
+<!--background reapeat: controls weather a image repeats or not-->
+
+<h1>No Repeat Background</h1>
+
+<!--background position-->
+<h1>Centered Background Image</h1>
+
+<!--all background properties-->
+<h3>Welcome to Tasan background</h3>
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+<!--
+Apply different border styles, colors, and widths.
+CSS borders are used to create outlines around HTML elements like buttons, boxes, images, tables, cards, forms, etc.
+
+You can control:
+
+Border Style → solid, dotted, dashed, double…
+Border Color → red, blue, green…
+Border Width → thin, medium, thick, or pixels
+-->
+<!--
+Practice border-radius for creating rounded corners.
+Implement various background properties:
+Background Color
+Background Image
+Background Repeat
+Background Position
+Background Size
+-->
+
+<!--
+Background properties are used to style the background of webpages, sections, cards, buttons, banners, login forms, etc.-->

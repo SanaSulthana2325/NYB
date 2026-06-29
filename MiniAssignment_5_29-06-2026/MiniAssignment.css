@@ -1,0 +1,20 @@
+/* EXTERNAL CSS FILE */
+
+/* PARAGRAPH STYLING */
+
+p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* LIST STYLING */
+
+ul{
+    padding-left:20px;
+}
+
+/* LIST ITEM STYLING */
+
+li{
+    margin-bottom:10px;
+}

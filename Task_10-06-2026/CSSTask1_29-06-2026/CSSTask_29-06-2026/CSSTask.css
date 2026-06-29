@@ -1,0 +1,11 @@
+.card {
+    border: 2px solid black;
+    width: 250px;
+    padding: 20px;
+    background-color: lightyellow;
+}
+
+button {
+    background-color: green;
+    color: white;
+}

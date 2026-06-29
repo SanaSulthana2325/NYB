@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors task</title>
+    <link rel="stylesheet" href="./SelectorTask.css">
+    <style>
+        h1{
+            color: blue;
+        }
+        #logo{
+            color: red;
+            font-size: 40px;
+        }
+        .product{
+            border: 2px solid black;
+            padding: 10px;
+            background-color: lightgoldenrodyellow;
+        }
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1,p5{
+            color:green;
+        }
+        .sidebar p9{
+            color:rgb(209, 101, 119);
+        }
+        nav > a{
+            color:red;
+        }
+        h2 + p22{
+            color: orange;
+        }
+        h1 ~ p77{
+            color:rgb(6, 114, 114);
+        }
+
+    </style>
+</head>
+<body>
+    <!--element selector -->
+    <!-- news website heading-->
+     <h1>breaking news</h1>
+     <h1>sports update</h1>
+
+     <hr>
+     <br>
+
+
+    <!--id selector(#)-->
+    <!--website login-->
+    <h2 id="logo">amazon </h2>
+     <hr>
+     <br>
+
+
+    <!--class(.)-->
+    <!--product cards-->
+    <div class="product">
+    Mobile Phone
+    </div>
+
+    <div class="product">
+    Laptop
+    </div>
+    <hr>
+    <br>
+
+    <!--universal(*)-->
+    <!-- entire website font-->
+     <h1>Hello</h1>
+     <p2>Sana</p2>
+     <hr>
+     <br>
+
+     <!--group (,)-->
+     <!--blog page-->
+     <h1>blog tilte</h1>
+     <p5>blog paragraph</p5>
+     <hr>
+     <br>
+
+     <!--Descendant(space)-->
+     <!--side bar menu-->
+     <div class="sidebar">
+        <p9>Home</p9>
+     </div>
+     <p9>Main content</p9>
+
+     <hr>
+     <br>
+
+
+
+    <!--child(>)-->
+    <!--navigation menu-->
+    <nav>
+        <a href="#">home</a>
+        <div>
+            <a href="#">Nested Link</a>
+        </div>
+    </nav>
+
+    <!--adjacent sibling(+)-->
+    <!-- form instructions-->
+     <h2>password rules</h2>
+     <p22>must contain 8 characters</p22>
+     <br>
+     <p22>must contain number</p22>
+     <hr>
+     <br>
+
+     <!--general sibling(~)-->
+
+     <!--alert-->
+     <h1>Warning</h1>
+     <P77> Error 1</P77>
+     <p77> Error 2</p77><hr>
+     <br>
+
+
+
+    
+</body>
+</html>
+
+<!--
+Selector         | Symbol   | Example              |
+| ---------------- | -------- | -------------------- |
+| Element          | tag name | `p`                  |
+| ID               | `#`      | `#title`             |
+| Class            | `.`      | `.box`               |
+| Universal        | `*`      | `*`                  |
+| Group            | `,`      | `h1, p`              |
+| Descendant       | space    | `div p`              |
+| Child            | `>`      | `div > p`            |
+| Adjacent Sibling | `+`      | `h1 + p`             |
+| General Sibling  | `~`      | `h1 ~ p`             |
+| Attribute        | `[]`     | `input[type="text"]` |
+-->
+<!--
+//* TYPES OF CSS SELECTOR
+
+//1.Element Selector : Selects HTML elements by tag name
+
+//2. Id selector(#):Selects a specific element using its id.
+
+-An id must be unique.
+
+//3.class selector(.): Selects elements using class names.
+
+-Multiple elements can use the same class.
+
+//4. Universal selector (*) : selects all elements
+
+//5. gropu selector(,) : applies same styles to miltple elements
+
+//6.Decendant selector(space) : selects elements inside another element
+
+// child selector(>) : selects direct child child elemets
+
+// Adjacent sibling selector(+): selects the immediate next sibling
+
+//general sibling selector(~) : Selects all siblings after an element
+
+// Attribute selector : selects elements based on attributes
+-->
+
+
+

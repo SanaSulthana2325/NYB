@@ -1,0 +1,49 @@
+.card {
+    border: 2px solid black;
+    width: 250px;
+    padding: 20px;
+    background-color: lightyellow;
+}
+
+button {
+    background-color: green;
+    color: white;
+}
+
+
+/* creating html with css style
+/* Styling the entire page */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Styling heading */
+h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+/* Styling paragraph */
+p {
+    color: gray;
+    font-size: 20px;
+}
+
+/* Styling button */
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: darkgreen;
+}

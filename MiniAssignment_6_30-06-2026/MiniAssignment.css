@@ -1,0 +1,247 @@
+/**/
+/* UNIVERSAL STYLING */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f4f4;
+  line-height:1.6;
+}
+
+/* HEADER */
+.header{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#444;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  padding:15px 20px;
+}
+
+.navbar a:hover{
+  background:#666;
+}
+
+/* COMMON SECTION */
+.section{
+  background:white;
+  margin:20px;
+  padding:25px;
+  border-radius:10px;
+}
+
+/* BOX MODEL */
+.box-model{
+  background:lightblue;
+
+  width:300px;
+  padding:30px;
+  border:8px solid blue;
+  margin:40px auto;
+
+  text-align:center;
+  font-weight:bold;
+}
+
+/* DISPLAY PROPERTIES */
+.inline{
+  background:orange;
+  padding:10px;
+}
+
+.block{
+  background:tomato;
+  color:white;
+  margin-top:20px;
+  padding:20px;
+  display:block;
+}
+
+.inline-block{
+  display:inline-block;
+  width:150px;
+  padding:20px;
+  margin-top:20px;
+  background:purple;
+  color:white;
+}
+
+/* POSITIONING */
+.position-section{
+  position:relative;
+  height:400px;
+}
+
+.relative-box{
+  position:relative;
+
+  width:300px;
+  height:150px;
+
+  background:lightgreen;
+  margin-top:20px;
+  padding:20px;
+}
+
+.absolute-box{
+  position:absolute;
+
+  top:20px;
+  right:20px;
+
+  background:red;
+  color:white;
+  padding:10px;
+}
+
+.fixed-box{
+  position:fixed;
+
+  bottom:20px;
+  right:20px;
+
+  background:black;
+  color:white;
+
+  padding:15px;
+  border-radius:5px;
+}
+
+.sticky-box{
+  position:sticky;
+  top:0;
+
+  background:gold;
+  padding:15px;
+  margin-top:20px;
+}
+
+/* FLOAT */
+.float-container{
+  background:#ddd;
+  padding:20px;
+}
+
+.float-box{
+  width:45%;
+  padding:30px;
+  color:white;
+}
+
+.left{
+  float:left;
+  background:teal;
+}
+
+.right{
+  float:right;
+  background:crimson;
+}
+
+.clear{
+  clear:both;
+}
+
+/* FLEXBOX */
+.flex-container{
+  display:flex;
+
+  gap:20px;
+  justify-content:space-between;
+  flex-wrap:wrap;
+
+  margin-top:20px;
+}
+
+.flex-item{
+  flex:1 1 200px;
+  background:darkcyan;
+  color:white;
+  padding:40px;
+  text-align:center;
+}
+
+/* GRID */
+.grid-container{
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+
+  gap:20px;
+  margin-top:20px;
+}
+
+.grid-item{
+  background:slateblue;
+  color:white;
+  padding:40px;
+  text-align:center;
+}
+
+/* RESPONSIVE STRUCTURE */
+.responsive-layout{
+  display:flex;
+  gap:20px;
+  margin-top:20px;
+}
+
+.sidebar{
+  flex:1;
+  background:#333;
+  color:white;
+  padding:30px;
+}
+
+.content{
+  flex:3;
+  background:#eee;
+  padding:30px;
+}
+
+/* FOOTER */
+.footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:20px;
+}
+
+/* RESPONSIVE MEDIA QUERY */
+@media(max-width:768px){
+
+  .responsive-layout{
+    flex-direction:column;
+  }
+
+  .navbar{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .flex-container{
+    flex-direction:column;
+  }
+
+  .float-box{
+    width:100%;
+    float:none;
+    margin-bottom:20px;
+  }
+}

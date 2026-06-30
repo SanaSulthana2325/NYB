@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="./BoxModel.css">
+    <style>
+        button{
+    padding: 10px 20px;
+    border: 2px solid blue;
+    margin: 15px;
+}
+.box1{
+    content: counter(name);
+    width: 300px;
+    padding: 30px 20px;
+    border: 4px double rgb(241, 13, 241);
+    margin: 40px;
+    background-color: blue;
+}
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        hello
+    </div>
+
+    <br>
+
+    <!--login-->
+
+    <button>Login</button>
+    <br>
+    <!--example-->
+    <div class="box">
+        welcome to css box model
+    </div>
+    <br>
+
+    <!--example-->
+    <div class="container">
+        css learning
+    </div>
+
+    <!--food delivery card-->
+    <div class="card">
+    <h2> Pizza </h2>
+    <p>Price : ₹299</p>
+    <button>Order Now</button>
+</div>
+<br>
+<br>
+<!--login form-->
+<div class="login-box">
+
+   <h2>Login</h2>
+
+   <input type="text" placeholder="Username">
+
+   <br>
+   <br>
+
+   <input type="password" placeholder="Password">
+
+   <br>
+   <br>
+   <button>submit</button>
+
+</div>
+
+<!-- engagement ceremony-->
+<div class="box3">
+    Engagement Invitation
+
+</div>
+<br>
+<br>
+
+<!--margin collaps ex-->
+<div class="box11">Box 1</div>
+<div class="box21">Box 2</div>
+
+<!--overflow-->
+<div class="box">
+   hii i am sana sulthana working in nyb infotech as software engineer in hyderabad working since 2 months and i have gained a lot of knowledge in the technical field .
+</div>
+
+<br>
+<!--outline-->
+<input type="text" placeholder="Enter Name">
+
+<!--example-->
+<div class="card">
+   Welcome to universe
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+<!--CsS box model
+* The CSS Box Model is the concept that every HTML element is treated like a rectangular box.
+
+* Whenever you create a button, div, image, paragraph, card, or container in a webpage, CSS sees it as a box made up of different layers.-->
+<!--
+Content:
+The actual text, image, or data inside the element.
+
+Padding:Space between content and border.
+
+Border: The visible boundary around the padding and content.
+
+Margin:Space outside the border.
+
+Used to create distance between elements.
+
+Width and Height:
+
+box-sizing (content-box and border-box):
+
+Margin Collapse:When two vertical margins meet, CSS combines them into a single margin instead of adding them together.
+
+This usually happens:
+
+Between two block elements
+In vertical direction only
+Top and bottom margins
+
+Overflow: Overflow controls what happens when content becomes larger than its container.
+
+Outline:Outline is a line drawn OUTSIDE the border.
+
+Unlike border:
+
+It does not take space
+It stays outside
+Mostly used for focus effects
+-->
+
+<!--
+Content → Actual data
+Padding → Space inside
+Border → Boundary
+Margin → Space outside-->
+
+<!--
+| Padding                          | Margin                          |
+| -------------------------------- | ------------------------------- |
+| Inside space                     | Outside space                   |
+| Space between content and border | Space between elements          |
+| Background color applies         | Background color does not apply |
+-->
+
+<!--
+| Border               | Outline                      |
+| -------------------- | ---------------------------- |
+| Takes space          | Does not take space          |
+| Inside layout        | Outside layout               |
+| Affects element size | Does not affect size         |
+| Used for styling     | Used for focus/accessibility |
+-->

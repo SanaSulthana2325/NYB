@@ -1,0 +1,217 @@
+.box{
+    display: block;
+    background-color: lightblue;
+    margin: 10px;
+    padding: 20px;
+}
+/**/
+.box1{
+    display: inline;
+    background-color: pink;
+    padding: 10px;
+}
+
+/* inline block*/
+.box66{
+    display: inline-block;
+
+    width: 150px;
+    height: 100px;
+
+    background-color: lightgreen;
+    margin: 10px;
+    text-align: center;
+}
+/*none*/
+.hidden-box{
+    display: none;
+}
+
+/*display flex*/
+.container1{
+    display: flex;
+    gap: 20px;
+}
+
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+/* display grid*/
+.container2{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.box5{
+    background-color: skyblue;
+    padding: 30px;
+}
+
+/*position static*/
+.box7{
+    position: static;
+
+    background-color: lightblue;
+    padding: 10px;
+    border: 2px solid blue;
+}
+
+/*relative*/
+.box8{
+    position: relative;
+
+    top: 20px;
+    left: 40px;
+
+    background-color: lightgreen;
+    padding: 20px;
+    width: 250px;
+}
+
+/*absolute*/
+.card1{
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.badge{
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background-color: red;
+    color: white;
+
+    padding: 10px;
+}
+
+/* fixed*/
+.chat-button{
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background-color: green;
+    color: white;
+
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.content{
+    height: 2000px;
+}
+
+/*sticky*/
+.navbar{
+
+    position: sticky;
+
+    top: 0;
+
+    background-color: black;
+    color: white;
+
+    padding: 20px;
+}
+
+.content{
+    height: 80px;
+    padding: 20px;
+}
+
+/*complete position*/
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+/* STICKY NAVBAR */
+.navbar1{
+    position: sticky;
+    top: 0;
+
+    background: black;
+    color: white;
+
+    padding: 20px;
+}
+
+/* STATIC CONTENT */
+.static-box{
+    position: static;
+
+    background: lightblue;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* RELATIVE BOX */
+.relative-box{
+    position: relative;
+
+    top: 10px;
+    left: 30px;
+
+    background: lightgreen;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* PRODUCT CARD */
+.card1{
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+
+    background: lightgray;
+    margin: 20px;
+}
+
+/* ABSOLUTE BADGE */
+.badge1{
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background: red;
+    color: white;
+
+    padding: 10px;
+}
+
+/* FIXED BUTTON */
+.chat1{
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background: green;
+    color: white;
+
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.content1{
+    height: 1500px;
+}
+
+
+

@@ -1,0 +1,227 @@
+/* block*/
+div{
+    display:block;
+
+    background-color:lightblue;
+
+    margin:10px;
+
+    padding:20px;
+}
+
+/* inline*/
+span{
+    display:inline;
+
+    background-color:yellow;
+
+    padding:10px;
+}
+
+/* inline block*/
+.btn{
+
+    display:inline-block;
+
+    width:120px;
+
+    padding:20px;
+
+    background-color:lightgreen;
+
+    margin:10px;
+
+    text-align:center;
+}
+
+/* float left*/
+.box6{
+
+    width:150px;
+    height:150px;
+
+    background-color:lightblue;
+
+    float:left;
+
+    margin-right:20px;
+}
+/*position properties*/
+/*statis*/
+.box3{
+    width:200px;
+    height:100px;
+
+    background:teal;
+    color:white;
+
+    position:static;
+}
+
+/*relative*/
+.box4{
+    width:200px;
+    height:100px;
+
+    background:orange;
+
+    position:relative;
+
+    top:20px;
+    left:40px;
+}
+/*absolute*/
+.parent{
+    width:300px;
+    height:200px;
+
+    background:lightgray;
+
+    position:relative;
+}
+
+.badge{
+    position:absolute;
+
+    top:10px;
+    right:10px;
+
+    background:red;
+    color:white;
+
+    padding:5px 10px;
+}
+
+/*fixed*/
+.chat-btn{
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    background:green;
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+}
+
+/*sticky*/
+.header{
+    position:sticky;
+
+    top:0;
+
+    background:black;
+    color:white;
+
+    padding:20px;
+}
+
+/*flexbox*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+/* =================================
+   HEADER USING FLEXBOX
+================================= */
+
+.header{
+
+    display:flex;
+
+    /* MAIN AXIS ALIGNMENT */
+    justify-content:space-between;
+
+    /* CROSS AXIS ALIGNMENT */
+    align-items:center;
+
+    background:#222;
+    color:white;
+
+    padding:20px;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+}
+
+
+/* =================================
+   FLEX ITEM PROPERTIES
+================================= */
+
+/* FLEX-GROW */
+
+.card1{
+    flex-grow:1;
+}
+
+/* FLEX-SHRINK */
+
+.card2{
+    flex-shrink:2;
+}
+
+/* FLEX-BASIS */
+
+.card3{
+    flex-basis:300px;
+}
+
+/* FLEX SHORTHAND */
+
+.card4{
+    flex:1 1 250px;
+}
+
+/* ORDER */
+
+.card2{
+    order:-1;
+}
+
+/* ALIGN-SELF */
+
+.card3{
+    align-self:flex-start;
+}
+
+/*grid*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.product{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    padding: 20px;
+}
+.card{
+    background: teal;
+    color: rgb(255, 0, 128);
+    padding: 40px;
+    text-align: center;
+    
+}

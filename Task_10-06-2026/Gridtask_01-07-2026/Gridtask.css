@@ -1,0 +1,111 @@
+/* */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: plum;
+}
+/* grid container*/
+.dashboard{
+    display:grid;
+    grid-template-columns: 300px 1fr 1fr 1fr;
+    grid-template-rows: 80px 200px 350px;
+    gap:20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+/* style dashboard child*/
+.dashboard > div{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px palevioletred;
+
+}
+/* side bar*/
+.sidebar{
+
+    /* ROW SPAN */
+    grid-row:1 / 4;
+
+    background:#222 !important;
+    color:rgb(182, 6, 6);
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.sidebar li{
+    margin-bottom:15px;
+}
+
+/* HEADER */
+.header{
+
+    /* COLUMN SPAN */
+    grid-column:2 / 5;
+
+    display:grid;
+
+    justify-items:center;
+    align-items:center;
+}
+
+/* CARDS */
+.card{
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* CHART */
+.chart{
+
+    grid-column:2 / 4;
+
+    display:grid;
+    place-items:center;
+
+    font-size:24px;
+}
+
+/* TABLE */
+.table{
+
+    display:grid;
+    place-items:center;
+
+    font-size:20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width:900px){
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+
+        grid-template-rows:auto;
+    }
+
+    .sidebar{
+        grid-row:auto;
+    }
+
+    .header{
+        grid-column:auto;
+    }
+
+    .chart{
+        grid-column:auto;
+    }
+}

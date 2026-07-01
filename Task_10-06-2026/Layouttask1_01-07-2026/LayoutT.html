@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout task</title>
+    <link rel="stylesheet" href="./LayoutT.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <h1>ShopEasy</h1>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+
+            <ul>
+                <li>Electronics</li>
+                <li>Fashion</li>
+                <li>Groceries</li>
+                <li>Furniture</li>
+            </ul>
+        </aside>
+
+        <!-- PRODUCTS -->
+        <main class="products">
+
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.4MXig6sRc0vu3qaWdv2L-AHaHa?w=174&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+                <h3>Smart Watch</h3>
+                <p>₹2999</p>
+            </div>
+
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.K3OnTh8yE8SIseaqByIuGAHaKG?w=141&h=192&c=7&r=0&o=7&pid=1.7&rm=3">
+                <h3>Headphones</h3>
+                <p>₹1999</p>
+            </div>
+
+            <div class="card">
+                <img src="https://www.bing.com/th?id=OPAC.54dh7%2fnPslXMVQ474C474&o=5&pid=21.1&w=128&h=188&rs=1&qlt=100&dpr=1&o=2&bw=6&bc=FFFFFF">
+                <h3>Shoes</h3>
+                <p>₹2499</p>
+            </div>
+
+            <div class="card">
+                <img src="https://www.bing.com/th?id=OPAC.An992jarRl3CIg474C474&o=5&pid=21.1&w=140&h=200&rs=1&qlt=100&dpr=1&o=2&c=8&pcl=f5f5f5">
+                <h3>Backpack</h3>
+                <p>₹1499</p>
+            </div>
+
+        </main>
+
+    </div>
+
+
+    
+</body>
+</html>
+
+
+<!--
+Revise all layout concepts covered previously.
+
+Display Property:
+How an HTML element should appear on the webpage
+
+It controls:
+
+Whether element starts in new line
+Whether width & height work
+Whether elements stay side by side
+Whether element is visible or hidden
+
+types of display properties:
+
+block:
+A block element:
+Takes full width
+ Starts from new line
+
+inline:
+Stay in same line
+Do not take full width
+
+inline-block:Stay in same line
+Width & height also work
+
+
+none:Element becomes completely invisible.
+
+It:
+ Does not appear
+ Does not take space
+-->
+
+<!--Position Property
+static
+relative
+absolute
+fixed
+sticky
+
+| Property   | Meaning                                          |
+| ---------- | ------------------------------------------------ |
+| `static`   | Default normal position                          |
+| `relative` | Moves relative to original position              |
+| `absolute` | Positioned relative to nearest positioned parent |
+| `fixed`    | Fixed to browser window                          |
+| `sticky`   | Sticks while scrolling                           |
+-->
+
+<!--Float:The float property moves an element:
+
+Left side
+Right side
+
+and allows other content to wrap around it.
+
+Clear: clear stops elements from wrapping around floated elements.
+-->
+<!--
+| Float                    | Clear                    |
+| ------------------------ | ------------------------ |
+| Moves element left/right | Stops wrapping           |
+| Allows text wrapping     | Pushes element below     |
+| Used for alignment       | Used to fix float effect |
+-->
+
+<!--Flexbox:
+What is Flexbox?
+
+Flexbox is a CSS layout system used to:
+
+Align elements
+Create responsive layouts
+Arrange items in rows or columns
+Control spacing easily
+
+
+Flex Container: Parent element becomes flex container.
+
+Flex Items:Children inside flex container become flex items.
+
+flex-direction: Controls direction of flex items.
+
+justify-content : Controls horizontal alignment.
+
+align-items : Controls vertical alignment.
+
+align-content: Multiple rows exist
+ flex-wrap is enabled
+
+Controls spacing between rows.
+
+flex-wrap:Controls whether items should move to next line.
+
+gap: Creates spacing between flex items.
+
+order:Changes item order visually.
+
+flex-grow: Controls how much item should grow.
+
+flex-shrink : Controls shrinking behavior.
+
+flex-basis:Defines initial size of flex item.
+-->
+
+<!--
+| Property        | Purpose                |
+| --------------- | ---------------------- |
+| display:flex    | Creates flex container |
+| flex-direction  | Direction              |
+| justify-content | Horizontal alignment   |
+| align-items     | Vertical alignment     |
+| flex-wrap       | Next line wrapping     |
+| gap             | Space between items    |
+| order           | Change item order      |
+| flex-grow       | Grow size              |
+| flex-shrink     | Shrink control         |
+| flex-basis      | Initial size           |
+-->
+
+<!--CSS Grid:CSS Grid is a 2-dimensional layout system.
+
+It controls:
+
+Rows
+Columns
+
+at the same time.
+
+Grid Container: 
+
+Grid Items
+grid-template-columns:Defines number and size of columns.
+
+grid-template-rows:Defines row heights.
+
+gap:Creates space between rows & columns.
+
+grid-column:Makes item span multiple columns.
+
+grid-row
+justify-items:Controls horizontal alignment inside grid cells.
+
+align-items:Controls vertical alignment inside cells.
+-->
+
+<!--
+| Property              | Purpose                |
+| --------------------- | ---------------------- |
+| display:grid          | Create grid            |
+| grid-template-columns | Create columns         |
+| grid-template-rows    | Create rows            |
+| gap                   | Space between products |
+| grid-column           | Product spans columns  |
+| grid-row              | Product spans rows     |
+| justify-items         | Horizontal alignment   |
+| align-items           | Vertical alignment     |
+-->
+
+<!--Z-Index: controls Which element appears on top
+
+when multiple elements overlap.
+
+Visibility : Controls whether element is visible or hidden.
+
+Responsive Layout Basics:
+Responsive design means:
+Website adjusts properly on all devices.
+
+Examples:
+
+Mobile
+Tablet
+Laptop
+Desktop
+-->
+
+<!--
+Practice creating responsive page layouts using Flexbox.
+Responsive Page Layout Using Flexbox
+
+Flexbox is mainly used for:
+
+Navigation bars
+Card layouts
+Hero sections
+Responsive rows and columns
+Website alignment
+
+<!-Build common webpage sections such as Header, Navigation Bar, Sidebar, Main Content, Cards, and Footer.-->
+<!--
+Compare Flexbox and Grid layouts with practical examples.
+| Flexbox                | Grid                       |
+| ---------------------- | -------------------------- |
+| One-dimensional layout | Two-dimensional layout     |
+| Works in row OR column | Works in rows AND columns  |
+| Best for alignment     | Best for full page layouts |
+| Content-based layout   | Layout-based design        |
+
+-->

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive layit using media queries</title>
+    <style>
+        /*responsive layout with flesbox*/
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+}
+
+/* Main Layout */
+.container{
+    display:flex;
+    gap:20px;
+    padding:20px;
+}
+
+/* Boxes */
+.box{
+    flex:1;
+    background-color:lightblue;
+    padding:50px;
+    text-align:center;
+    font-size:20px;
+}
+
+/* Tablet Layout */
+@media (max-width:1024px){
+
+    .box{
+        background-color:lightgreen;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .box{
+        background-color:lightpink;
+    }
+}
+
+/* responsive grid*/
+.container1{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    padding:20px;
+}
+
+/* Cards */
+.card1{
+    background-color:orange;
+    padding:50px;
+    text-align:center;
+    font-size:20px;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+    .container1{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .card1{
+        background-color:lightgreen;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .container1{
+        grid-template-columns:1fr;
+    }
+
+    .card1{
+        background-color:lightpink;
+    }
+}
+/* responsive navigation bar*/
+.navbar{
+    display:flex;
+    justify-content:space-around;
+    background-color:black;
+    color:white;
+    padding:20px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+}
+/*laptop*/
+@media(max-width:800px){
+    .navbar{
+        flex-direction:column ;
+        align-items: center;
+        gap: 10px;
+    }
+}
+/*responsive sidebar*/
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container3{
+    display:flex;
+    min-height:10vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:25%;
+    background-color:black;
+    color:white;
+    padding:20px;
+}
+
+/* Main Content */
+.content{
+    width:75%;
+    background-color:lightblue;
+    padding:20px;
+}
+
+/* Mobile View */
+@media (max-width:768px){
+
+    .container3{
+        flex-direction:column;
+    }
+
+    .sidebar,
+    .content{
+        width:100%;
+    }
+}
+/* responsive image*/
+.container4{
+    width:80%;
+    margin:auto;
+}
+
+img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+}
+/*responsive text*/ 
+h1{
+    font-size:5vw;
+    text-align:left;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    h1{
+        font-size:8vw;
+        color:red;
+    }
+}
+
+
+</style>
+</head>
+<body>
+    <!--responsive with flex-->
+    <p>responsive flex</p>
+    <div class="container">
+
+    <div class="box">Home</div>
+
+    <div class="box">Products</div>
+
+    <div class="box">Contact</div>
+
+</div>
+
+<br>
+<!--responsive grid-->
+<p>responsive grid</p>
+<div class="container1">
+
+    <div class="card1">Sana</div>
+
+    <div class="card1">Tasan</div>
+
+    <div class="card1">Tasleem</div>
+
+    <div class="card1">Nashu</div>
+
+</div>
+<!--responsive navigation Bar-->
+<p>responsive navigation bar</p>
+<div class="navbar">
+
+    <div>AAA</div>
+
+    <div>BBB</div>
+
+    <div>CCC</div>
+
+    <div>DDD</div>
+
+</div>
+<!--side bar-->
+<p>responsive sidebar </p>
+<div class="container3">
+
+    <div class="sidebar">
+
+        <h2>Menu</h2>
+
+        <p>Home</p>
+        <p>About</p>
+        <p>Services</p>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Main Content</h1>
+
+        <p>Sana sulthana is good girl</p>
+
+    </div>
+
+</div>
+<br>
+<br>
+
+<!--image-->
+<p>responsive image</p>
+<div class="container4">
+
+<img src="https://www.bing.com/th/id/OIP.BD9cf1eaFBIVQLMXThVtLgHaE6?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2/300x300">
+
+<br>
+<!--responsive text-->
+<p>responsive text</p>
+<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit commodi accusantium minus iste accusamus dolor ratione soluta nesciunt. Atque sequi cum esse obcaecati eius animi ipsum culpa deleniti, accusamus blanditiis.</h1>
+
+
+
+
+
+    
+</body>
+</html>

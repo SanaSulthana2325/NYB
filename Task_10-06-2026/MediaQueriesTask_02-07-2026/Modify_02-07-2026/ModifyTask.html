@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify typography, spacing, navigation, and images for different screen sizes.</title>
+<style>
+/*typography*/
+/* Desktop */
+h1{
+    font-size:50px;
+    text-align:center;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+    h1{
+        font-size:35px;
+        color:green;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    h1{
+        font-size:25px;
+        color:red;
+    }
+}
+/*responsive space*/
+.box{
+    background-color:lightblue;
+
+    margin:50px;
+    padding:50px;
+
+    text-align:center;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+    .box{
+        margin:30px;
+        padding:30px;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .box{
+        margin:10px;
+        padding:15px;
+    }
+}
+/* navigation*/
+.navbar{
+    display:flex;
+
+    justify-content:space-around;
+
+    background:black;
+
+    color:white;
+
+    padding:20px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:10px;
+
+        background:purple;
+    }
+}
+/* responsive image*/
+.container{
+    width:80%;
+    margin:auto;
+}
+
+img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .container{
+        width:100%;
+    }
+
+    img{
+        border-radius:0;
+    }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    <!--typography-->
+    <p>typography</p>
+    <h1>The worls is beautiful</h1>
+    <br>
+    <br>
+    <p>responsive spacing</p>
+    <div class="box">
+        I want explore all the world untile i die
+    </div>
+    <br>
+    <!--navigation-->
+    <p>navigation</p>
+    <div class="navbar">
+
+    <div>Green</div>
+
+    <div>Yellow</div>
+
+    <div>Blue</div>
+
+    <div>Red</div>
+
+</div>
+<br>
+<br>
+<p>image</p>
+<div class="container">
+
+<img src="https://th.bing.com/th/id/OIP.H8CrL3D8PcGZh9pPOOiPlAHaEO?w=291&h=180&c=7&r=0&o=7&pid=1.7&rm=3/800x300">
+
+
+
+    
+</body>
+</html>
+
+<!--
+Responsive Typography
+
+Typography means:
+
+Font size
+Font style
+Line height
+Text spacing
+
+Responsive typography changes text size according to screen size
+-->
+<!--
+Responsive Spacing
+
+Spacing means:
+
+Margin
+Padding
+Gap
+
+Responsive spacing adjusts space according to device size.-->
+
+<!--
+Responsive Navigation
+
+Responsive navigation changes layout according to screen size.-->
+
+<!--
+Responsive Images
+
+Responsive images resize automatically.
+-->
+<!--
+| Feature    | What Changes?        |
+| ---------- | -------------------- |
+| Typography | Font size/color      |
+| Spacing    | Margin/Padding       |
+| Navigation | Row → Column         |
+| Images     | Resize automatically |
+-->

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web design</title>
+    <style>
+        /* example*/
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: aquamarine;
+            color:rgb(119, 53, 53);
+            padding:20px;
+        }
+        /* mobile view*/
+        @media(max-width: 700px){
+            .navbar{
+                flex-direction: column;
+                align-items: center;
+                gap:10px;
+                background-color: rgb(245, 6, 245);
+            }
+        }
+        /*responsiveness with product card*/
+        .container{
+            display:flex;
+            gap:20px;
+            padding:20px;
+        }
+        .card{
+            background-color: lightblue;
+            padding:40px;
+            flex: 1;
+            text-align: center;
+        }
+        /*mobile*/
+        @media(max-width:700px){
+            .container{
+                flex-direction: column;
+            }
+        }
+        /*responsive image*/
+         img{
+            width:100px;
+            height:auto
+         }
+         .container1{
+            width:35%;
+            border:2px solid black;
+         }
+         /*responsive text*/
+         h1{
+            font-size: 5vw;
+         }
+         /*responsive with grid layout*/
+         .container2{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap:20px;
+         }
+         .card1{
+            background-color: lightgreen;
+            padding: 40px;
+            text-align:center;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>home</div>
+        <div>about</div>
+        <div>services</div>
+        <div>Contact</div>
+    </div>
+    <div class="container">
+        <div class="card">product 1</div>
+        <div class="card">product 2</div>
+        <div class="card">product 3</div>
+
+
+    </div>
+
+    <!--responsive image-->
+    <div class="container1">
+        <img src="https://th.bing.com/th/id/OIP.QeVGuCNBm8Wprm6Jf6j1oAHaHa?w=182&h=182&c=7&r=0&o=7&pid=1.7&rm=3/600x600">
+        </div>
+    <br>
+    <br>
+    <!--responsive text-->
+    <h1> responsive text</h1>
+    <br>
+    <!--responsive with grid layout-->
+    <div class="container2">
+        <div class="card1">Card 1</div>
+        <div class="card1">Card 2</div>
+        <div class="card1">Card 3</div>
+        <div class="card1">Card 4</div>
+
+
+
+    </div>
+
+    
+</body>
+</html>
+
+<!--
+Responsive Web Design (RWD) means:
+
+A website automatically adjusts its layout, size, and content according to different screen sizes.
+
+That means:
+
+Mobile → Small layout
+Tablet → Medium layout
+Laptop/Desktop → Large layout
+
+The webpage becomes flexible and user-friendly on all devices.
+-->
+
+<!--
+| Technology        | Purpose                   |
+| ----------------- | ------------------------- |
+| Flexbox           | Flexible layouts          |
+| CSS Grid          | Grid-based layouts        |
+| Media Queries     | Change styles for devices |
+| Relative Units    | `%`, `vw`, `vh`, `rem`    |
+| Responsive Images | Fit images properly       |
+-->

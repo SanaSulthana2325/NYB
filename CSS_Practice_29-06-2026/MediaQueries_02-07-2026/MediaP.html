@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries practice</title>
+    <style>
+        /*max-width*/
+        body{
+            background-color: orange;
+            font-size: 30px;
+        }
+        /* mobile screen*/ /*above 600 orange and below 600 blue*/
+        @media(max-width:600px){
+            body{
+                background-color: lightblue;
+                font-size: 20px;
+            }
+        }
+        /*min-width*/  /*700 less then pink 700 sabove than green*/
+
+        .box{
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+        }
+        /* Tablet and desktop*/
+        @media(min-width:700px){
+            .box{
+                background-color:green;
+            }
+        }
+        /*portrait example*/
+        body{
+            background-color: white;
+        }
+        /* portrait mode*/
+        @media(orientation: portrait){
+            body{
+                background-color: aqua;
+            }
+        }
+        /*landscape*/ /*vertical purple, horizontal sky blue*/
+        body{
+            background-color: rgb(228, 16, 175);
+        }
+        /* Landscape mode*/
+        @media(orientation: landscape){
+            body{
+                background-color:skyblue;
+                color: red;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Media Query Example</h1>
+
+    <!--min-->
+    <div class="box"> Sana*</div>
+
+    <!--portrait-->
+    <h1>Portrait Mode</h1>
+    <br>
+    <!--landscape-->
+
+    <h1>landscape mode</h1>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+<!--
+what is media query
+A Media Query is a CSS technique used to make a website responsive.
+
+Responsive means:
+
+The webpage changes its design based on:
+screen size
+device width
+height
+orientation (portrait/landscape)
+mobile/tablet/desktop
+
+Media queries help websites look good on:
+
+mobiles
+tablets
+laptops
+desktops
+TVs
+-->
+<!--
+What is Portrait?
+
+When:
+
+Height is greater than width
+Mobile held vertically
+
+Example: mobile
+-->
+<!--
+What is Landscape?
+
+When:
+
+Width is greater than height
+Mobile rotated horizontally
+
+Example: laptop
+-->
+
+<!--
+| Keyword     | Meaning               |
+| ----------- | --------------------- |
+| max-width   | Up to this width      |
+| min-width   | From this width       |
+| max-height  | Up to this height     |
+| min-height  | From this height      |
+| orientation | portrait or landscape |
+| and         | combine conditions    |
+-->
+
+<!--
+Main Purpose of Media Queries
+
+Media queries are used to:
+
+Change layout on mobile
+Resize text
+Hide/show elements
+Make website responsive-->
+
+<!--
+| Flexbox                | Media Queries                       |
+| ---------------------- | ----------------------------------- |
+| Used for layout        | Used for responsiveness             |
+| Arranges items         | Changes styles based on screen size |
+| Works inside container | Works based on device/screen        |
+| Makes rows/columns     | Makes website mobile-friendly       |
+| `display:flex`         | `@media`                            |
+-->

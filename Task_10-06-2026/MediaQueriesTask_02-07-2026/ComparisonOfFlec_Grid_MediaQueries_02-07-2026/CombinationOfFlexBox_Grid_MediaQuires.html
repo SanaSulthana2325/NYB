@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Flexbox, Grid, and Media Queries to create fully responsive webpages.</title>
+    <style>
+        /* resturant menu*/
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        /*flex box nav*/
+        header{
+            background: rgb(224, 8, 152);
+            color: rgb(77, 5, 170);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:20px;
+        }
+        nav{
+            display: flex;
+            gap:20px
+        }
+        /* HERO */ 
+        .hero{ 
+            height:60vh; 
+            background:url('https://th.bing.com/th/id/OIP.5UEtSmuDbHCsWm0NhqrVyAHaE7?w=253&h=180&c=7&r=0&o=7&pid=1.7&rm=3/1200/500') center/cover;
+             display:flex; 
+             justify-content:center; 
+             align-items:center; 
+             flex-direction:column; 
+             color:rgb(6, 134, 240); 
+            } 
+        .hero 
+            h1{ font-size:50px;
+             }
+
+        /* FOOD MENU */ 
+        .menu{ 
+            display:grid; 
+            grid-template-columns:repeat(3,1fr); 
+            gap:20px; 
+            padding:40px; 
+           } 
+
+        .food-card{ 
+            background:#fff; 
+            border-radius:10px; 
+            overflow:hidden; 
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+         } 
+         .food-card img{ width:100%; } 
+         .food-content{ padding:20px; } 
+         
+         /* MOBILE */ 
+         @media(max-width:768px){
+             header{ flex-direction:column;
+             gap:15px; 
+            } 
+             .menu{ grid-template-columns:1fr; 
+            } 
+            .hero h1{ font-size:35px;
+             } 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2> Foodies</h2>
+        <nav>
+            <a>Home</a>
+            <a>Menu</a>
+            <a>Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Delicious Food</h1>
+        <p> Fresh & Healthy meals</p>
+    </section>
+    <section class="menu">
+        <div class="food-card">
+            <img src="https://www.bing.com/th/id/OIP.T03aJagv5g4JwoG0Di4gFwHaEb?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2">
+            <div class="food-content">
+                <h2>Pizza</h2>
+                <p>Cheesy delicious pizza</p>
+            </div>
+        </div>
+        <div class="food-card">
+            <img src="https://www.bing.com/th/id/OIP.xXhgmDGT37SN6sQf2gG7ogHaE7?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2">
+            <div class="food-content"> 
+            <h2>Burger</h2> 
+            <p>Tasty grilled burger</p> 
+        </div> 
+    </div> 
+    <div class="food-card"> 
+        <img src="https://th.bing.com/th/id/OIP.UxKR-rwKdG6grf5a0jWqugHaJ4?w=184&h=246&c=7&r=0&o=7&pid=1.7&rm=3"> 
+        <div class="food-content"> 
+        <h2>Pasta</h2> 
+        <p>Italian creamy pasta</p> 
+        </div> 
+    </div> 
+        </div>
+    </section>
+    
+</body>
+</html>
+
+<!--
+Flexbox, Grid, and Media Queries are the three main tools used to build fully responsive webpages.
+
+Flexbox → Best for arranging items in one direction (row or column).
+Grid → Best for full page layouts with rows and columns.
+Media Queries → Change the design for mobile, tablet, and desktop screens.-->

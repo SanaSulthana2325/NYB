@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Task</title>
+    <style>
+        /* devices*/
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /*container*/
+        .container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+            padding:20px;
+        }
+        /*product cards*/
+        .card{
+            background-color: aquamarine;
+            padding: 50px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        /*mobile*/
+        @media(max-width:700px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Tablet*/
+        @media(min-width: 768px) and (max-width:1023px){
+            .container{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .card{
+                background-color: lightgreen;
+            }
+        }        
+        /*laptop*/
+        @media(min-width:1024px) and (max-width:1439px){
+            .container{
+                grid-template-columns: repeat(3,1fr);
+            }
+            .card{
+                background-color: pink;
+            }
+        }
+
+        /*desktop*/
+        @media(min-width:1440){
+            .container{
+                grid-template-columns: repeat(4,2fr);
+
+            }
+            .card{
+                background-color: lightcoral;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">Apple</div>
+        <div class="card">banana</div>
+        <div class="card">mango</div>
+        <div class="card">graped</div>
+
+
+
+    </div>
+    
+</body>
+</html>
+
+
+<!--
+Understand the purpose of Media Queries.
+Media Queries are used in CSS to make a website responsive.
+
+Responsive means:
+
+A webpage automatically adjusts according to different screen sizes and devices
+
+A Media Query checks:
+
+Screen width
+Screen height
+Device type
+Orientation
+
+and then applies different CSS styles.
+
+*Main Purpose of Media Queries
+
+Media queries are used to:
+
+Change layout on mobile
+Resize text
+Hide/show elements
+Make website responsive-->
+
+
+<!--
+Practice different breakpoints for:
+Mobile Devices
+Tablets
+Laptops
+Desktop Screens
+-->
+<!--
+Create responsive layouts using media queries.
+
+Modify typography, spacing, navigation, and images for different screen sizes.
+
+Combine Flexbox, Grid, and Media Queries to create fully responsive webpages.
+-->
+<!--
+Test responsiveness using browser developer tools.
+Testing responsiveness means checking whether your webpage properly adapts to:
+
+Mobile screens
+Tablets
+Laptops
+Large desktops
+
+Professional frontend developers mainly use Browser Developer Tools for this testing.
+
+You can test:
+Layout changes
+ Flexbox behavior
+ Grid responsiveness
+ Media Queries working or not
+ Mobile navigation
+ Responsive images & text
+
+What Are Browser Developer Tools?
+
+Browser Developer Tools are built-in tools in browsers like:
+
+Google Chrome
+Microsoft Edge
+Mozilla Firefox
+
+They help developers inspect and test webpages.
+
+How to Open Developer Tools
+Meth
+-->
+<!--
+1. Create webpage
+        ↓
+2. Add Flexbox/Grid
+        ↓
+3. Add Media Queries
+        ↓
+4. Open Developer Tools
+        ↓
+5. Test Mobile Screens
+        ↓
+6. Fix Responsive Issues-->

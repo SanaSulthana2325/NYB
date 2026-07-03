@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice alignment techniques using Flexbox and Grid</title>
+    <style>
+        /*justify-content*/
+        .container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    background:lightgray;
+
+    padding:20px;
+}
+
+.box{
+
+    background:orange;
+
+    padding:30px;
+}
+/*justify-items*/
+.container{
+
+    height:300px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:lightblue;
+}
+/*justify content + align-items*/
+.container1{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ddd;
+}
+
+.box1{
+
+    background:orange;
+
+    padding:40px;
+}
+/*justify item*/
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,200px);
+
+    justify-items:center;
+
+    background:#ddd;
+}
+
+.item{
+
+    background:orange;
+
+    padding:20px;
+}
+    </style>
+</head>
+<body>
+    justify-content
+    <div class="container">
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+
+</div>
+<br>
+<br>
+justify-content + align-items
+<div class="container1">
+
+    <div class="box1">
+
+        Login Form
+
+    </div>
+
+</div>
+<br>
+<br>
+justify-items example
+<div class="grid">
+
+    <div class="item">1</div>
+    <div class="item">2</div>
+
+</div>
+
+    
+</body>
+</html>
+
+<!--
+| Property        | Purpose                   |
+| --------------- | ------------------------- |
+| justify-content | Horizontal alignment      |
+| align-items     | Vertical alignment        |
+| align-self      | Individual item alignment |
+| flex-direction  | Row or column             |
+| gap             | Space between items       |
+-->

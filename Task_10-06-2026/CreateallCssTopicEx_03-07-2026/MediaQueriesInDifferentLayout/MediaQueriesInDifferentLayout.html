@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply media queries to optimize layouts for different devices</title>
+    <style>
+
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        *{
+            margin:0;
+            padding:0;
+
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family:Arial;
+
+            background:#f4f4f4;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav{
+
+            background:black;
+
+            color:white;
+
+            padding:20px;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+        }
+
+        ul{
+
+            display:flex;
+
+            gap:20px;
+
+            list-style:none;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero{
+
+            height:300px;
+
+            background:orange;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            color:white;
+
+            font-size:40px;
+        }
+
+        /* =========================
+           GRID CARDS
+        ========================== */
+
+        .container{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(4,1fr);
+
+            gap:20px;
+
+            padding:20px;
+        }
+
+        .card{
+
+            background:white;
+
+            padding:40px;
+
+            text-align:center;
+
+            border-radius:10px;
+
+            box-shadow:0px 0px 10px gray;
+        }
+
+        /* =========================
+           TABLET VIEW
+        ========================== */
+
+        @media (max-width:992px){
+
+            .container{
+
+                grid-template-columns:
+                repeat(2,1fr);
+            }
+
+            .hero{
+
+                font-size:30px;
+            }
+
+        }
+
+        /* =========================
+           MOBILE VIEW
+        ========================== */
+
+        @media (max-width:768px){
+
+            nav{
+
+                flex-direction:column;
+
+                gap:20px;
+            }
+
+            ul{
+
+                flex-direction:column;
+
+                align-items:center;
+            }
+
+            .container{
+
+                grid-template-columns:1fr;
+            }
+
+            .hero{
+
+                font-size:24px;
+
+                text-align:center;
+
+                padding:20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h1>MyWebsite</h1>
+
+        <ul>
+
+            <li>Home</li>
+
+            <li>About</li>
+
+            <li>Services</li>
+
+            <li>Contact</li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        Responsive Website Design
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="container">
+
+        <div class="card">Card 1</div>
+
+        <div class="card">Card 2</div>
+
+        <div class="card">Card 3</div>
+
+        <div class="card">Card 4</div>
+
+    </section>
+
+</body>
+
+</html>
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS- Selectors</title>
+    <style>
+           
+        p{
+            color:red;
+        }
+        /*id selector*/
+        #title{
+            color:blue;
+            font-size: 30px;
+        }
+        /*class*/
+        .box{
+            background-color: yellow;
+            padding:10px;
+        }
+        /*universal*/
+         .AAA{
+                color: palevioletred;
+            }
+    
+        
+        /* group*/
+        .Group , .TTT{
+            color:rgb(12, 226, 226);
+        }
+        /*decendant*/
+        .UUU .decent{
+            color:red;
+        }
+        /* child selector*/
+        .YYY > .child{
+            color: rgb(6, 6, 85);
+        }
+        /*adjacent sibling*/
+        .adja + .adjacent{
+            color: rgb(116, 8, 216);
+        }
+        /*general sibling*/
+        #gen ~ .general{
+            color: rgb(55, 240, 38);
+        }
+        /* attribute */
+        input[type="text"]{
+            border:2px dashed blue;
+            color: cadetblue;
+        }
+        /* multiple selector*/
+        body {
+        font-family: Arial;
+        }
+
+        #title {
+        color: blue;
+         }
+
+        .card {
+        background-color: rgb(206, 228, 13);
+         padding: 20px;
+          margin: 10px;
+        }
+
+       .card mul {
+      color: rgb(35, 138, 221);
+        }
+        /*pseudo class :hover*/
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+        /*active*/
+        button:active{
+            background-color: red;
+        }
+        /*focus*/
+        input:focus{
+            border: 3px double blue;
+        }
+        /*first-child*/
+        li:first-child{
+            color:red;
+        }
+        /* last child*/
+        li:last-child{
+            color:rgb(130, 212, 7);
+        }
+        /*nth child*/
+        li:nth-child(2){
+            color: blue;
+        }
+        /*check*/
+        input:checked{
+            width:20px;
+            height: 20px;
+        }
+        .be::before{
+            content:"sana";
+            color: plum;
+        }
+        .af::after{
+            content:"GGGGGG";
+            color:rgb(15, 212, 15);
+        }
+        .f2::first-letter {
+            font-size: 50px;
+            color:red;
+        }
+        .line::first-line {
+            color:blue;
+        }
+        .line::selection{
+            background-color:yellow;
+            color: red;
+        }
+
+
+        
+
+
+        
+
+    </style>
+</head>
+<body>
+    <p>element selector</p>
+    <p>Hello</p>
+    <p>Tasan</p>
+    <br>    
+    <br>
+    <!--ID Selector-->
+    Id selector
+    <h1 id="title">Welcome</h1>
+    <br>
+    <!--class selector-->
+    class Selector
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <br>
+    <!--universal selector-->
+    univeral selector
+    <p class="AAA">welcome to universe</p>
+    <br>
+    <br>
+    <!-- Group selector-->
+     Group selector
+     <h1 class="Group">Hello</h1>
+     <p class="TTT">this world is belong to me</p>
+     <br>
+     <br>
+     <!--decendant selector-->
+     decendant selector
+     <div class="UUU">
+        <p class="decent">this paragraph becomes red</p>
+     </div>
+     <p class="decent">this paragraph stays normal</p>
+     <br>
+     <!--child selector-->
+     child Selector
+     <div class="YYY">
+        <p class="child"> I am from hyd</p>
+     </div>
+     <br>
+     <br>
+     <!--adjacent sibling selector-->
+     <h1 class="adja"> welcome</h1>
+     <p class="adjacent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat necessitatibus velit dolorum praesentium labore neque at, possimus dolores beatae aliquam voluptates accusantium deserunt magnam repudiandae id nemo. Mollitia, eligendi iste!</p>
+     <br>
+     <!--general sibling selector-->
+     <h1 id="gen">Event</h1>
+     <p class="general">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam sapiente consequatur obcaecati tenetur consequuntur aliquam nisi, ipsa id doloribus unde, reiciendis praesentium facere officia quae rerum officiis fuga temporibus. Blanditiis.</p>
+     <br>
+     <br>
+     <!--attribute-->
+     <input type="text" placeholder="enter your name"> 
+     <br>
+     <!--multiple selector-->
+     <div class="card">
+    <p class="mul">fruits</p>
+    </div>
+
+     <div class="card">
+    <p class="mul">vegetables</p>
+     </div>
+     <br>
+     <hr>
+     pseudo class
+     <br>
+
+     hover
+     <br>
+     <button>click me</button>
+     <br><hr>
+     <br>
+     active
+     <br>
+     <button>Hello</button>
+     <br><hr><br>
+     focus
+     <br>
+     <input type="text1" placeholder="Enter Name">
+     <br>
+     <br>
+     <hr>
+
+     first-child
+     <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Orange</li>
+     </ul>
+     <br><hr><br>
+     last child
+     <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Orange</li>
+     </ul>
+     <br><hr><br>
+     <input type="checkbox" checked>
+     <br>
+     <hr>
+     <br>
+     pseudo elements<br>
+     a.before<br>
+     <p class="be">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quis praesentium nemo provident iure eligendi at doloribus est, doloremque suscipit maiores dolorem temporibus, impedit exercitationem nobis illo ratione. Deleniti, cum.</p>
+     <br>
+     <hr><br>
+     b.after<br>
+     <p class="af">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nam nesciunt, exercitationem repellendus consequatur architecto minima. Eveniet eos, ipsum officiis est cumque facere culpa, ut numquam reiciendis, adipisci dolorum esse.</p>
+    <br><br><hr><br>
+    c. first-letter:<br>
+
+
+    <p class="fl  f2">Tasleem</p>
+    <br><br><hr><br>
+    d.first-line <br>
+    <p class="line">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio repudiandae saepe velit cumque nobis eum est, magni quas facilis rem illo et! Deserunt assumenda at inventore earum, nobis accusantium ex.
+    </p>
+    <br><br><hr><br>
+    e.selection <br>
+
+    
+
+
+
+
+     
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+<!--
+CSS selectors are used to select HTML elements and apply styles to them.
+
+They tell the browser:
+
+“Which HTML element should receive this style?”
+-->
+<!--
+CSS Selectors:
+CSS Selectors are used to select HTML elements and apply styles to them.
+
+//* TYPES OF CSS SELECTOR
+
+//1.Element Selector : Selects HTML elements by tag name
+
+//2. Id selector(#):Selects a specific element using its id.
+
+-An id must be unique.
+
+//3.class selector(.): Selects elements using class names.
+
+-Multiple elements can use the same class.
+
+//4. Universal selector (*) : selects all elements
+
+//5. gropu selector(,) : applies same styles to miltple elements
+
+//6.Decendant selector(space) : selects elements inside another element
+
+// child selector(>) : selects direct child child elemets
+
+// Adjacent sibling selector(+): selects the immediate next sibling
+
+//general sibling selector(~) : Selects all siblings after an element
+
+// Attribute selector : selects elements based on attributes
+-->
+<!--
+Selector         | Symbol   | Example              |
+| ---------------- | -------- | -------------------- |
+| Element          | tag name | `p`                  |
+| ID               | `#`      | `#title`             |
+| Class            | `.`      | `.box`               |
+| Universal        | `*`      | `*`                  |
+| Group            | `,`      | `h1, p`              |
+| Descendant       | space    | `div p`              |
+| Child            | `>`      | `div > p`            |
+| Adjacent Sibling | `+`      | `h1 + p`             |
+| General Sibling  | `~`      | `h1 ~ p`             |
+| Attribute        | `[]`     | `input[type="text"]` |
+-->
+<!--
+Pseudo selectors are special keywords used in CSS to style elements in a specific state or specific part of an element.
+
+They are mainly of two types:
+
+Pseudo Classes : Pseudo classes define a special state of an element.
+
+They use a single colon :
+1. :hover- Applies styles when the mouse moves over an element.
+2. : active- apply styles while clicking an element
+3. :focus applied style when an input field is selected
+
+
+Pseudo Elements:
+1.before- add content before an element
+2.after: add content after an element 
+3.first letter
+4.last-line
+5.selection
+-->
+
+<!--
+css specificity
+CSS Specificity is a rule used by browsers to decide:
+
+“Which CSS style should be applied when multiple styles target the same element?”
+
+When different CSS rules apply to the same element, the browser checks priority using specificity.-->

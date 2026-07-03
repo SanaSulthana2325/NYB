@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid system</title>
+    <style>
+        .container{
+    display:grid;
+}
+/*grid-template-column*/
+.container1{
+    display:grid;
+
+    grid-template-columns: 200px 200px 200px;
+
+    gap:10px;
+}
+
+.box{
+    background:orange;
+    padding:30px;
+}
+/*grid-template-row*/
+.container2{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:100px 200px;
+}
+
+/*example*/
+.container3{
+    display:grid;
+
+    grid-template-columns: 250px 1fr;
+
+    grid-template-rows:
+        80px
+        400px
+        80px;
+
+    gap:10px;
+}
+
+header{
+    background:orange;
+
+    grid-column:1/3;
+}
+
+aside{
+    background:lightblue;
+}
+
+main{
+    background:lightgreen;
+}
+
+footer{
+    background:gray;
+
+    grid-column:1/3;
+}
+/*product layout*/
+.products{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.card{
+    background:lightgray;
+    padding:40px;
+}
+/*example*/
+.menu{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+}
+
+.food{
+    background:orange;
+    padding:40px;
+    text-align:center;
+}
+/*gap propert*/
+.container5{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,150px);
+
+    gap:20px;
+}
+
+.box6{
+    background:orange;
+    padding:30px;
+}
+/*grid column*/
+.container9{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,100px);
+
+    gap:10px;
+}
+
+.item1{
+    background:orange;
+
+    grid-column:1/3;
+}
+/*grid row*/
+.container10{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,100px);
+
+    grid-template-rows:
+    repeat(3,100px);
+
+    gap:10px;
+}
+
+.item2{
+    background:orange;
+
+    grid-row:1/3;
+}
+    
+</style>
+</head>
+<body>
+    <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+<br>
+<br>
+<hr>
+
+<!---->
+grid-template-column
+<div class="container1">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+<br><br><hr>
+
+<!--grid-template-row-->
+grid-template-row
+<div class="container2">
+    <div class="box1">1</div>
+    <div class="box1">2</div>
+    <div class="box1">3</div>
+</div>
+<br><br><hr><br>
+gap Property
+<div class="container5">
+
+    <div class="box6">1</div>
+    <div class="box6">2</div>
+    <div class="box6">3</div>
+    <div class="box6">4</div>
+
+</div>
+<br><br><hr><br>
+<!---->
+grid-column
+<div class="container9">
+
+    <div class="item1">1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+
+</div>
+<br><br><hr><br>
+grid row
+<div class="container10">
+
+    <div class="item2">1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+
+</div>
+
+
+
+
+<br><br><hr><br>
+
+<!--example-->
+<div class="container3">
+
+    <header>Header</header>
+
+    <aside>Sidebar</aside>
+
+    <main>Main Content</main>
+
+    <footer>Footer</footer>
+
+</div>
+
+<br>
+<br>
+<hr>
+<br>
+<!--product layout-->
+<div class="products">
+
+    <div class="card">Product 1</div>
+    <div class="card">Product 2</div>
+    <div class="card">Product 3</div>
+    <div class="card">Product 4</div>
+
+</div>
+<br><br><hr><br>
+<!-- example-->
+<div class="menu">
+
+    <div class="food">Pizza</div>
+    <div class="food">Burger</div>
+    <div class="food">Pasta</div>
+    <div class="food">Biryani</div>
+
+</div>
+
+
+
+
+    
+</body>
+</html>
+
+<!--
+| Property              | Purpose              |
+| --------------------- | -------------------- |
+| display:grid          | Enables grid         |
+| grid-template-columns | Creates columns      |
+| grid-template-rows    | Creates rows         |
+| gap                   | Space between items  |
+| justify-content       | Horizontal alignment |
+| align-content         | Vertical alignment   |
+| grid-column           | Column span          |
+| grid-row              | Row span             |
+| place-items           | Center items         |
+-->
+
+<!--
+| grid-template-columns | grid-column             |
+| --------------------- | ----------------------- |
+| Creates columns       | Makes item span columns |
+| Applied on container  | Applied on item         |
+| Defines structure     | Defines item size       |
+-->
+
+<!--
+| grid-template-rows   | grid-row                      |
+| -------------------- | ----------------------------- |
+| Creates rows         | Makes item span rows          |
+| Applied on container | Applied on item               |
+| Defines row sizes    | Defines item height occupancy |
+-->

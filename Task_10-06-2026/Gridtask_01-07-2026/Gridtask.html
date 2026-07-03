@@ -6,7 +6,7 @@
     <title>Grid Task</title>
     <link rel="stylesheet" href="./Gridtask.css">
     <style>
-        .container{
+         .container{
             display: grid;
         }
         .container1{
@@ -43,21 +43,41 @@
          display:grid;
 
          justify-items:center;
-         }
-         .container{
+         } 
+         .container7{
          display:grid;
+        grid-template-columns: repeat(2,2fr);
+         grid-template-rows: repeat(3,20fr);
+         gap:40px;
+
 
          align-items:center;
          }
+         .box{
+            margin:20px;
+            border:2px solid green;
+            background-color: aqua;
+            grid-row: 2/2;
+            
+         }
+         .box1{
+            padding: 20px;
+            text-align: center;
+            grid-column: 2/5;
+         }
 
-
+/*1 tc,gc
+//2 tr,gr
+//tc gr
+//tr gc
+//tc,gc ,tr, gr*/
     </style>
 </head>
 <body>
     
     <!--container-->
     <div class="container">
-    <div class="box">1</div>
+    <div class="box ">1</div>
     <div class="box">2</div>
     <div class="box">3</div>
      </div>

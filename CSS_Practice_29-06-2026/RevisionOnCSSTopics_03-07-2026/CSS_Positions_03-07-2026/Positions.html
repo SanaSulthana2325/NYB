@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+    <style>
+    .box{
+    width:200px;
+    height:100px;
+    background-color:skyblue;
+
+    position:static;
+
+    top:50px;
+}
+/*relative*/
+.box1{
+    width:200px;
+    height:100px;
+    background-color:orange;
+
+    position:relative;
+
+    left:50px;
+    top:30px;
+}
+/*absolute*/
+.parent{
+    width:400px;
+    height:250px;
+
+    background-color:lightgray;
+
+    position:relative;
+}
+
+.child{
+    width:100px;
+    height:100px;
+
+    background-color:red;
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+}
+/*fixed*/
+.box2{
+    width:200px;
+    padding:20px;
+
+    background-color:black;
+    color:white;
+
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+}
+.header{
+    background-color:orange;
+
+    padding:20px;
+
+    position:sticky;
+
+    top:0;
+}
+
+.content{
+    height:1500px;
+}
+/*complete examle*/
+.container{
+    position:relative;
+}
+
+img{
+    width:100%;
+}
+
+.text{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:white;
+
+    font-size:40px;
+}
+
+</style>
+</head>
+<body>
+    <div class="box">static</div>
+    <br>
+    <br>
+    relative
+    <div class="box1">relative</div>
+    <br>
+    <br>
+    absolute
+    <div class="parent">
+        <div class="child"></div>
+    </div> 
+    <br>
+    <br>
+    fixed
+    <div class="box2">fixed</div>
+    <br>
+    <br>
+    sticky
+    <div class="header">stikey position</div>
+    <br><br>
+    example
+    <div class="container">
+
+    <img src="data:image/webp;base64,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">
+
+    <div class="text">
+        Explore World
+    </div>
+
+</div>
+
+
+
+
+
+    
+</body>
+</html>
+<!--
+CSS Position
+
+The position property in CSS is used to control where an element appears on a webpage.
+
+It helps you:
+
+Move elements
+Fix elements on screen
+Create sticky navigation bars
+Place buttons on images
+Build professional layouts
+-->
+<!--
+| Position   | Meaning                             |
+| ---------- | ----------------------------------- |
+| `static`   | Default position                    |
+| `relative` | Moves relative to original position |
+| `absolute` | Positions relative to parent        |
+| `fixed`    | Fixed on screen                     |
+| `sticky`   | Sticks while scrolling              |
+-->

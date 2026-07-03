@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        .box{
+    width:300px;
+    height:200px;
+    background:orange;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .box{
+        background:lightblue;
+    }
+
+}
+/*responsive flexbox*/
+.container{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.card{
+    background:orange;
+    padding:40px;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+}
+/*responsive grid*/
+.container1{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+.card1{
+    background:rgb(159, 7, 230);
+    padding:40px;
+}
+/* responsive navigation bar*/
+.navbar{
+    display:flex;
+    justify-content:space-around;
+    background-color:black;
+    color:white;
+    padding:20px;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+}
+/*laptop*/
+@media(max-width:800px){
+    .navbar{
+        flex-direction:column ;
+        align-items: center;
+        gap: 10px;
+    }
+}
+/*responsive sidebar*/
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container3{
+    display:flex;
+    min-height:10vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:25%;
+    background-color:black;
+    color:white;
+    padding:20px;
+}
+
+/* Main Content */
+.content{
+    width:75%;
+    background-color:lightblue;
+    padding:20px;
+}
+
+/* Mobile View */
+@media (max-width:768px){
+
+    .container3{
+        flex-direction:column;
+    }
+
+    .sidebar,
+    .content{
+        width:100%;
+    }
+}
+/* responsive image*/
+.container4{
+    width:80%;
+    margin:auto;
+}
+
+img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+}
+/*responsive text*/ 
+h1{
+    font-size:5vw;
+    text-align:left;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    h1{
+        font-size:8vw;
+        color:red;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="box">
+    Responsive Box
+</div>
+<br><br><hr><br>
+responsive flexbox
+<div class="container">
+
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+
+</div>
+<br><br><hr><br>
+responsive grid
+<div class="container1">
+
+    <div class="card1">Card 1</div>
+    <div class="card1">Card 2</div>
+    <div class="card1">Card 3</div>
+
+</div>
+<!--responsive navigation Bar-->
+<p>responsive navigation bar</p>
+<div class="navbar">
+
+    <div>AAA</div>
+
+    <div>BBB</div>
+
+    <div>CCC</div>
+
+    <div>DDD</div>
+
+</div>
+<!--side bar-->
+<p>responsive sidebar </p>
+<div class="container3">
+
+    <div class="sidebar">
+
+        <h2>Menu</h2>
+
+        <p>Home</p>
+        <p>About</p>
+        <p>Services</p>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Main Content</h1>
+
+        <p>Sana sulthana is good girl</p>
+
+    </div>
+
+</div>
+<br>
+<br>
+
+<!--image-->
+<p>responsive image</p>
+<div class="container4">
+
+<img src="https://www.bing.com/th/id/OIP.BD9cf1eaFBIVQLMXThVtLgHaE6?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2/300x300">
+
+<br>
+<!--responsive text-->
+<p>responsive text</p>
+<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit commodi accusantium minus iste accusamus dolor ratione soluta nesciunt. Atque sequi cum esse obcaecati eius animi ipsum culpa deleniti, accusamus blanditiis.</h1>
+
+
+    
+
+</body>
+</html>
+
+<!--
+Responsive Design means:
+
+A webpage automatically adjusts its layout, size, and content according to different screen sizes.
+
+A responsive website works properly on:
+
+Mobile phones
+Tablets
+Laptops
+Desktops
+TVs-->
+<!--
+| Concept           | Purpose                   |
+| ----------------- | ------------------------- |
+| Media Queries     | Change styles for devices |
+| Flexbox           | Flexible layouts          |
+| Grid              | Responsive grids          |
+| Relative Units    | Flexible sizing           |
+| Responsive Images | Images fit screens        |
+| Viewport Meta Tag | Mobile scaling            |
+-->

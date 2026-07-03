@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        .box1{
+    width:200px;
+    height:200px;
+
+    background:red;
+
+    position:absolute;
+
+    top:50px;
+    left:50px;
+
+    z-index:1;
+}
+
+.box2{
+    width:200px;
+    height:200px;
+
+    background:blue;
+
+    position:absolute;
+
+    top:100px;
+    left:100px;
+
+    z-index:2;
+}
+/*with 3 boxes*/
+.box3{
+    width:200px;
+    height:200px;
+
+    background:red;
+    position:fixed;
+    z-index:3;
+}
+
+.box4{
+    width:200px;
+    height:200px;
+
+    background:blue;
+    position:fixed;
+    z-index:4;
+}
+
+.box5{
+    width:200px;
+    height:200px;
+
+    background:green;
+    position:fixed;
+    z-index:5;
+}
+/**/
+p{
+    color:red;
+}
+
+.text{
+    color:blue;
+}
+/*class vs id*/
+.text{
+    color:blue;
+}
+
+#title{
+    color:red;
+}
+/**/
+.text{
+    color:blue;
+}
+
+#title{
+    color:red;
+}
+/*example*/
+button{
+    background:red;
+}
+
+.btn{
+    background:blue;
+}
+
+#loginBtn{
+    background:green;
+}
+/*important*/
+h1{
+    color:red;
+}
+
+.title{
+    color:blue;
+}
+
+#card .title{
+    color:green;
+}
+/* float left*/
+.box6{
+
+    width:150px;
+    height:150px;
+
+    background-color:lightblue;
+
+    float:left;
+
+    margin-right:20px;
+}
+
+/* float right*/
+.box9{
+
+    width:150px;
+    height:150px;
+
+    background-color:lightblue;
+
+    float:right;
+
+    margin-right:20px;
+}
+/*opacity*/
+.box67{
+
+    width:200px;
+    height:200px;
+
+    background:orange;
+
+    opacity:0.5;
+}
+/*alingment*/
+.container11{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="box3">sana</div>
+    <div class="box4">sulthana </div>
+    <div class="box5">ayesha </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br>
+    <p class="text">
+    Hello
+</p>
+<br><br><hr>
+<!--class vs id-->
+<p id="title" class="text">
+    Hello
+</p>
+<br><br><hr>
+<p
+class="text"
+id="title"
+style="color:green;">
+
+Hello
+
+</p>
+<br><br><hr>
+<br>
+<button id="loginBtn" class="btn">Login</button>
+<br><br><hr>
+<!--!important example-->
+<div id="card">
+
+    <h1 class="title">
+        Product
+    </h1>
+    <br><br><br><hr>
+
+</div>
+<!--float left-->
+    <div class="box6">BOX</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus autem aut rem ducimus ad culpa officiis, molestiae nulla corrupti itaque esse enim alias exercitationem molestias, ipsam repudiandae. Delectus, repellat!
+     
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus autem aut rem ducimus ad culpa officiis, molestiae nulla corrupti itaque esse enim alias exercitationem molestias, ipsam repudiandae. Delectus, repellat!
+    
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus autem aut rem ducimus ad culpa officiis, molestiae nulla corrupti itaque esse enim alias exercitationem molestias, ipsam repudiandae. Delectus, repellat!
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <hr>
+
+    <!--float right-->
+    
+    <div class="box9">box</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tenetur quisquam assumenda debitis, atque corporis sint iusto suscipit minus molestias aspernatur quod qui illo iure magni delectus error! Incidunt, eum?</p>
+
+    <br>
+    <br>
+    <hr>
+    <img src="./nybphoto.jpeg">
+
+     <p>
+     This is a paragraph about nature.
+      This text wraps around the image.
+     </p>
+     <br>
+     <br>
+     <br>
+     <br>
+     <hr>
+     <br>
+     <!--opacity-->
+     <div class="box67">
+    Hello
+</div>
+<br><br><hr>
+<div class="container11">
+
+    <form>
+        Login Form
+    </form>
+
+</div>
+
+
+    
+
+    
+</body>
+</html>
+
+<!--
+z-index controls the stacking order of elements.
+
+It decides:
+
+Which element appears in front
+and
+Which element appears behind-->
+
+<!--
+CSS Specificity decides:
+
+Which CSS style should be applied when multiple styles target the same element.-->
+<!--
+| Selector Type                    | Priority |
+| -------------------------------- | -------- |
+| Inline CSS                       | Highest  |
+| ID Selector                      | High     |
+| Class / Attribute / Pseudo-class | Medium   |
+| Element / Pseudo-element         | Low      |
+| Universal Selector `*`           | Lowest   |
+-->
+
+<!--
+| Selector     | Specificity |
+| ------------ | ----------- |
+| Inline style | 1000        |
+| ID           | 100         |
+| Class        | 10          |
+| Element      | 1           |
+-->
+
+<!--
+What is !important?
+
+!important overrides normal specificity.-->
+
+<!--
+CSS Float
+
+float is used to place elements:
+
+Left side
+Right side
+
+mainly for:
+
+Images beside text
+ Old webpage layouts
+ Content wrapping-->
+
+ <!--
+ CSS Opacity
+
+opacity controls transparency of an element.-->
+
+<!--
+| Value | Meaning          |
+| ----- | ---------------- |
+| 1     | Fully visible    |
+| 0.5   | Semi transparent |
+| 0     | Invisible        |
+-->
+
+<!--
+CSS Alignments
+
+Alignment means positioning content properly.
+| Alignment Type  | Usage                 |
+| --------------- | --------------------- |
+| text-align      | Align text            |
+| justify-content | Horizontal alignment  |
+| align-items     | Vertical alignment    |
+| place-items     | Center both           |
+| margin:auto     | Center block elements |
+-->

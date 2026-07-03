@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create individual examples for every CSS topic.</title>
+    <style>
+
+        /* 
+           INTRODUCTION TO CSS3 */
+
+        body{
+
+            font-family:Arial;
+
+            margin:20px;
+
+            background:#f4f4f4;
+        }
+
+        h1{
+
+            color:darkblue;
+
+            text-align:center;
+        }
+
+        section{
+
+            background:white;
+
+            padding:20px;
+
+            margin-bottom:30px;
+
+            border-radius:10px;
+
+            box-shadow:0px 0px 10px gray;
+        }
+
+        /* =========================
+           CSS COLORS
+        ========================== */
+
+        .color-text{
+
+            color:purple;
+        }
+
+        /* =========================
+           CSS BACKGROUNDS
+        ========================== */
+
+        .background-box{
+
+            width:200px;
+            height:100px;
+
+            background:orange;
+        }
+
+        /* =========================
+           CSS BORDERS
+        ========================== */
+
+        .border-box{
+
+            width:200px;
+            height:100px;
+
+            border:5px solid black;
+        }
+
+        /* =========================
+           CSS MARGIN
+        ========================== */
+
+        .margin-box{
+
+            background:lightblue;
+
+            margin:40px;
+        }
+
+        /* =========================
+           CSS PADDING
+        ========================== */
+
+        .padding-box{
+
+            background:lightgreen;
+
+            padding:30px;
+        }
+
+        /* =========================
+           CSS BOX MODEL
+        ========================== */
+
+        .box-model{
+
+            width:200px;
+
+            padding:20px;
+
+            border:5px solid red;
+
+            margin:30px;
+
+            background:yellow;
+        }
+
+        /* =========================
+           CSS FLOAT
+        ========================== */
+
+        .float-img{
+
+            width:150px;
+
+            float:left;
+
+            margin-right:20px;
+        }
+
+        .clear{
+
+            clear:both;
+        }
+
+        /* =========================
+           CSS POSITION
+        ========================== */
+
+        .position-parent{
+
+            position:relative;
+
+            height:250px;
+
+            background:#ddd;
+        }
+
+        .position-box{
+
+            width:100px;
+            height:100px;
+
+            background:red;
+
+            position:absolute;
+
+            top:50px;
+            left:100px;
+        }
+
+        /* =========================
+           CSS Z-INDEX
+        ========================== */
+
+        .zindex-container{
+
+            position:relative;
+
+            height:250px;
+        }
+
+        .red{
+
+            width:150px;
+            height:150px;
+
+            background:red;
+
+            position:absolute;
+
+            left:50px;
+
+            z-index:1;
+        }
+
+        .blue{
+
+            width:150px;
+            height:150px;
+
+            background:blue;
+
+            position:absolute;
+
+            left:120px;
+            top:50px;
+
+            z-index:2;
+        }
+
+        /* =========================
+           OPACITY
+        ========================== */
+
+        .opacity-box{
+
+            width:200px;
+            height:100px;
+
+            background:orange;
+
+            opacity:0.5;
+        }
+
+        /* =========================
+           FLEXBOX
+        ========================== */
+
+        .flex-container{
+
+            display:flex;
+
+            gap:20px;
+
+            justify-content:center;
+        }
+
+        .flex-item{
+
+            background:orange;
+
+            padding:20px;
+        }
+
+        /* =========================
+           GRID SYSTEM
+        ========================== */
+
+        .grid-container{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(3,1fr);
+
+            gap:20px;
+        }
+
+        .grid-item{
+
+            background:lightcoral;
+
+            padding:30px;
+
+            text-align:center;
+        }
+
+        /* =========================
+           ALIGNMENTS
+        ========================== */
+
+        .align-container{
+
+            height:300px;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:#ddd;
+        }
+
+        .align-box{
+
+            background:green;
+
+            color:white;
+
+            padding:30px;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        .responsive-container{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(auto-fit,minmax(200px,1fr));
+
+            gap:20px;
+        }
+
+        .responsive-card{
+
+            background:tomato;
+
+            color:white;
+
+            padding:40px;
+
+            text-align:center;
+        }
+
+        /* =========================
+           CSS SELECTORS
+        ========================== */
+
+        .selector-demo{
+
+            color:brown;
+        }
+
+        #selector-id{
+
+            color:darkgreen;
+        }
+
+        /* =========================
+           SPECIFICITY
+        ========================== */
+
+        p{
+
+            color:red;
+        }
+
+        .specificity{
+
+            color:blue;
+        }
+
+        #specificity-id{
+
+            color:green;
+        }
+
+        /* =========================
+           !IMPORTANT
+        ========================== */
+
+        .important{
+
+            color:red !important;
+        }
+
+        </style>
+
+</head>
+
+<body>
+
+    <h1>All CSS Topics in One Code</h1>
+
+    <!-- CSS COLORS -->
+
+    <section>
+
+        <h2>CSS Colors</h2>
+
+        <p class="color-text">
+            This is purple text.
+        </p>
+
+    </section>
+
+    <!-- CSS BACKGROUNDS -->
+
+    <section>
+
+        <h2>CSS Backgrounds</h2>
+
+        <div class="background-box"></div>
+
+    </section>
+
+    <!-- CSS BORDERS -->
+
+    <section>
+
+        <h2>CSS Borders</h2>
+
+        <div class="border-box"></div>
+
+    </section>
+
+    <!-- CSS MARGINS -->
+
+    <section>
+
+        <h2>CSS Margins</h2>
+
+        <div class="margin-box">
+            Margin Example
+        </div>
+
+    </section>
+
+    <!-- CSS PADDING -->
+
+    <section>
+
+        <h2>CSS Padding</h2>
+
+        <div class="padding-box">
+            Padding Example
+        </div>
+
+    </section>
+
+    <!-- CSS BOX MODEL -->
+
+    <section>
+
+        <h2>CSS Box Model</h2>
+
+        <div class="box-model">
+            Box Model
+        </div>
+
+    </section>
+
+    <!-- CSS FLOAT -->
+
+    <section>
+
+        <h2>CSS Float</h2>
+
+        <img
+        src="./logo website.webp"
+        class="float-img">
+
+        <p>
+            This text wraps around image using float.
+        </p>
+
+        <div class="clear"></div>
+
+    </section>
+
+    <!-- CSS POSITION -->
+
+    <section>
+
+        <h2>CSS Position</h2>
+
+        <div class="position-parent">
+
+            <div class="position-box"></div>
+
+        </div>
+
+    </section>
+
+    <!-- CSS Z-INDEX -->
+
+    <section>
+
+        <h2>CSS Z-Index</h2>
+
+        <div class="zindex-container">
+
+            <div class="red"></div>
+
+            <div class="blue"></div>
+
+        </div>
+
+    </section>
+
+    <!-- OPACITY -->
+
+    <section>
+
+        <h2>Opacity</h2>
+
+        <div class="opacity-box"></div>
+
+    </section>
+
+    <!-- FLEXBOX -->
+
+    <section>
+
+        <h2>CSS Flexbox</h2>
+
+        <div class="flex-container">
+
+            <div class="flex-item">1</div>
+
+            <div class="flex-item">2</div>
+
+            <div class="flex-item">3</div>
+
+        </div>
+
+    </section>
+
+    <!-- GRID SYSTEM -->
+
+    <section>
+
+        <h2>CSS Grid System</h2>
+
+        <div class="grid-container">
+
+            <div class="grid-item">1</div>
+
+            <div class="grid-item">2</div>
+
+            <div class="grid-item">3</div>
+
+            <div class="grid-item">4</div>
+
+            <div class="grid-item">5</div>
+
+            <div class="grid-item">6</div>
+
+        </div>
+
+    </section>
+
+    <!-- ALIGNMENTS -->
+
+    <section>
+
+        <h2>CSS Alignments</h2>
+
+        <div class="align-container">
+
+            <div class="align-box">
+                Centered Content
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESPONSIVE DESIGN -->
+
+    <section>
+
+        <h2>Responsive Design</h2>
+
+        <div class="responsive-container">
+
+            <div class="responsive-card">Card 1</div>
+
+            <div class="responsive-card">Card 2</div>
+
+            <div class="responsive-card">Card 3</div>
+
+            <div class="responsive-card">Card 4</div>
+
+        </div>
+
+    </section>
+
+    <!-- CSS SELECTORS -->
+
+    <section>
+
+        <h2>CSS Selectors</h2>
+
+        <p class="selector-demo">
+            Class Selector
+        </p>
+
+        <p id="selector-id">
+            ID Selector
+        </p>
+
+    </section>
+
+    <!-- CSS SPECIFICITY -->
+
+    <section>
+
+        <h2>CSS Specificity</h2>
+
+        <p
+        class="specificity"
+        id="specificity-id">
+
+        Specificity Example
+
+        </p>
+
+    </section>
+
+    <!-- !IMPORTANT -->
+
+    <section>
+
+        <h2>!important</h2>
+
+        <p class="important">
+            Important Example
+        </p>
+
+    </section>
+
+
+    
+</body>
+</html>

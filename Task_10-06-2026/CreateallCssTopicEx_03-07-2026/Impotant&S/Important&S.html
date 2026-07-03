@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstrate the proper use of CSS specificity and !important.</title>
+    <style></style>
+
+/* Element Selector */
+p{
+    color:red;
+}
+
+/* Class Selector */
+.text{
+    color:blue;
+}
+
+/* ID Selector */
+#title{
+    color:green;
+}
+
+/* !important Example */
+.important-text{
+    color:purple !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Element vs Class -->
+<p class="text">
+Hello World
+</p>
+
+<hr>
+
+<!-- Class vs ID -->
+<p class="text" id="title">
+Hello
+</p>
+
+<hr>
+
+<!-- Inline CSS -->
+<p class="text" id="title" style="color:orange;">
+Hello Inline
+</p>
+
+<hr>
+
+<!-- !important -->
+<p class="important-text" style="color:red;">
+Hello Important
+</p>
+
+</body>
+</html>
+    
+
+
+
+<!--
+CSS Specificity decides:
+
+Which CSS rule should apply when multiple rules target the same element.
+
+!important is used to force a style to apply with very high priority.-->
+
+<!--
+!important
+Inline CSS
+ID Selector
+Class Selector
+Element Selector
+Universal Selector-->

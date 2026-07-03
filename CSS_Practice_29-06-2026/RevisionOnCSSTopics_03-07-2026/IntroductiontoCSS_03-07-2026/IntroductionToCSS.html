@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introcuction to CSS</title>
+    <link rel="stylesheet" href="./IntroductionToCSS.CSS">
+    <style>
+        body{
+            background: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color:blue;
+            text-align: center;
+        }
+        p1{
+            color:darkgreen;
+            font-size: 18px;
+        }
+        /* internal element*/
+        h12{
+            color:rgb(3, 65, 3)
+        }
+        p3{
+            color:orange;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p1>this is the introduction of CSS</p1>
+     <br>
+     <p>inline element</p>
+    <!--inline element-->
+    <h1 style="color:aqua;">Sana</h1>
+    <p2 style="font-size: 20px;color:red;"> this is my world</p2>
+    <br>
+    <!--internal element-->
+    <p>internal element</p>
+    <h12>Hello</h12>
+    <br>
+    <p3>This is where you belongs</p3>
+    <br>
+    <!--external element-->
+    <P>external element</P>
+    <h1>Hai </h1>
+    <p4> This is external file</p4>
+    
+
+</body>
+</html>
+
+<!--Introducyion to CSS-->
+<!--
+Introduction to CSS
+
+CSS (Cascading Style Sheets) is a style sheet language used to control the appearance and layout of web pages. It works together with HTML.
+
+HTML defines the structure of a webpage.
+CSS defines how the webpage looks (colors, fonts, spacing, layout, etc.).
+*Why Use CSS?
+Makes web pages attractive.
+Separates content from design.
+Saves time by styling multiple pages with one stylesheet.
+Improves user experience and responsiveness.-->
+
+<!--
+| Property           | Purpose                 |
+| ------------------ | ------------------------|
+| `color`            |Changes text color       |
+| `background-color` |Changes background color |
+| `font-size`        |Sets text size           |
+| `font-family`      |Changes font             |
+| `margin`           |Adds outside spacing     |
+| `padding`          |Adds inside spacing      |
+| `border`           |Adds a border            |
+-->
+
+<!--
+TYPES OF CSS:
+ ways to Apply Styles to an Element:
+ There are 3 main ways to apply CSS styles to HTML elements:
+
+Inline CSS
+Internal CSS
+External CSS
+
+//*Inline CSS:
+
+Inline CSS is written directly inside the HTML element using the style attribute.
+
+//*Advantages
+Easy for quick styling.
+Useful for testing small changes.
+
+//Disadvantages
+Not reusable.
+Makes HTML messy.
+Difficult to maintain.
+
+//2. internal css
+Internal CSS is written inside the <style> tag within the <head> section of the HTML file.
+
+//*Advantages
+Better organization than inline CSS.
+Good for single-page websites.
+
+//*Disadvantages
+Cannot reuse styles across multiple pages.
+
+//external css
+External CSS is written in a separate .css file and linked to the HTML file.
+
+//*Advantages
+Reusable across many pages.
+Clean and maintainable.
+Best method for large projects.
+
+//*Disadvantages
+Requires separate CSS file.
+-->
+<!--
+| Feature     | Inline CSS     | Internal CSS         | External CSS         |
+| ----------- | -------------- | -------------------- | -------------------- |
+| Location    | Inside element | Inside `<style>` tag | Separate `.css` file |
+| Reusability | No             | Limited              | Yes                  |
+| Maintenance | Difficult      | Moderate             | Easy                 |
+| Best For    | Small changes  | Single page          | Large websites       |
+| Priority    | Highest        | Medium               | Lowest               |
+-->

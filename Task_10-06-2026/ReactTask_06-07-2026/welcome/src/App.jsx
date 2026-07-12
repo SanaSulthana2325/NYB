@@ -15,6 +15,12 @@ import Global_Page from './pages_07-07-2026/Global_Page_09-07-2026/Global_Page';
 import Drilling_page from './pages_07-07-2026/Prop_Drilling_Pages_09-07-2026/Drilling_page';
 import Context_page from './pages_07-07-2026/ContextApi_Page-09-07-2026/Context_page';
 import Local_Globla_page from './pages_07-07-2026/Local_Global_Pages_09-07-2026/Local_Globla_page';
+import HTTP_page from './pages_07-07-2026/HTTP_Methods_Page_10-07-2026/HTTP_page';
+import Axios_page from './pages_07-07-2026/Axios_page_10-07-2026/Axios_page';
+import Async_Page from './pages_07-07-2026/Async_Pages_10-07-2026/Async_Page';
+import Error_Page from './pages_07-07-2026/Error_Handling_Page_10-07-2026/Error_Page';
+import API_Integration_page from './pages_07-07-2026/API_Integration_Pages_10-07-2026/API_Integration_Page';
+
 
 function App(){
     return(
@@ -35,6 +41,19 @@ function App(){
             <Route path="/drilling" element={<Drilling_page/>}/>
             <Route path="/context" element={<Context_page/>}/>
             <Route path="/lg" element={<Local_Globla_page/>}/>
+            <Route path="/http" element={<HTTP_page/>}/>
+            <Route path="/axios" element={<Axios_page/>}/>
+            <Route path="/async" element={<Async_Page/>}/>
+            <Route path="/error" element={<Error_Page/>}/>
+            <Route path="/assignment" element={<API_Integration_page/>}/>
+
+
+
+
+
+
+            
+
 
 
             

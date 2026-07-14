@@ -1,0 +1,17 @@
+import { configureStore} from "@reduxjs/toolkit";
+import counterReducer from '../Counter3_14-07-2026/CounterSlice'
+import bookingReducer from"../Movie_Ticket_Booking_14-07-2026/BookingSlice";
+import todoReducer from"../Todo_List_14-07-2026/TodoSlice";
+import bankReducer from"../Banking_Application_14-07-2026/BankSlice";
+import attendanceReducer from"../Student_Attendance_14-07-2026/AttendanceSlice";
+
+
+export const store = configureStore ({
+    reducer:{
+        counter:counterReducer,
+        booking: bookingReducer,
+        todo : todoReducer,
+        bank: bankReducer,
+        attendance : attendanceReducer
+    }
+});

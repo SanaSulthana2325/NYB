@@ -21,6 +21,7 @@ import Async_Page from './pages_07-07-2026/Async_Pages_10-07-2026/Async_Page';
 import Error_Page from './pages_07-07-2026/Error_Handling_Page_10-07-2026/Error_Page';
 import API_Integration_page from './pages_07-07-2026/API_Integration_Pages_10-07-2026/API_Integration_Page';
 import Context_API_Page from "./pages_07-07-2026/Task_Pages_13-07-2026/Context_API_Page_13-07-2026/Context_API_Page";
+import Redux_Page from './pages_07-07-2026/Redux_Pages_14-07-2026/Redux_Page';
 
 function App(){
     return(
@@ -47,6 +48,8 @@ function App(){
             <Route path="/error" element={<Error_Page/>}/>
             <Route path="/assignment" element={<API_Integration_page/>}/>
             <Route path="/task1" element={<Context_API_Page/>}/>
+            <Route path="/redux" element={<Redux_Page/>}/>
+
 
 
 

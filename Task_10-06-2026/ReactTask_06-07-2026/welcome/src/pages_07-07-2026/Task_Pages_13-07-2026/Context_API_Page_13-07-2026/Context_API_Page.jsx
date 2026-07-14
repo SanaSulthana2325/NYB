@@ -21,16 +21,6 @@ import About2 from "../../../components_07-07-2026/Task_13-07-2026/Language_Sele
 import Contact2 from "../../../components_07-07-2026/Task_13-07-2026/Language_Selector_13-07-2026/Contact2";
 
 
-
-
-
-
-
-
-
-
-
-
 function Context_ApI_page() {
     const user = "Nashu";
     const [count, setCount] = useState(0);

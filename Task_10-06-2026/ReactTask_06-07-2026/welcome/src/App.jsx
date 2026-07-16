@@ -24,6 +24,7 @@ import Context_API_Page from "./pages_07-07-2026/Task_Pages_13-07-2026/Context_A
 import Redux_Page from './pages_07-07-2026/Redux_Pages_14-07-2026/Redux_Page';
 import Task2_Page from './pages_07-07-2026/Task2_Pages_15-07-2026/Task2_Page';
 import Provider_Page from './pages_07-07-2026/Context_Api_Redux_Page_15-07-2026/Provider_Page';
+import Task4_Page from './pages_07-07-2026/Task4_Page_16-07-2026/Task4_Page';
 
 function App(){
     return(
@@ -53,6 +54,8 @@ function App(){
             <Route path="/redux" element={<Redux_Page/>}/>
             <Route path="/task2" element={<Task2_Page/>}/>
             <Route path="/task3" element={<Provider_Page/>}/>
+            <Route path="/task4" element={<Task4_Page/>}/>
+
 
 
 

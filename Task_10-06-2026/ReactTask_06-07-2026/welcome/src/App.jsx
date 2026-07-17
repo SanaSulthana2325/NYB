@@ -25,6 +25,8 @@ import Redux_Page from './pages_07-07-2026/Redux_Pages_14-07-2026/Redux_Page';
 import Task2_Page from './pages_07-07-2026/Task2_Pages_15-07-2026/Task2_Page';
 import Provider_Page from './pages_07-07-2026/Context_Api_Redux_Page_15-07-2026/Provider_Page';
 import Task4_Page from './pages_07-07-2026/Task4_Page_16-07-2026/Task4_Page';
+import Task5_Page from './pages_07-07-2026/Task5_Pages_17-07-2026/Task5_page';
+
 
 function App(){
     return(
@@ -55,6 +57,8 @@ function App(){
             <Route path="/task2" element={<Task2_Page/>}/>
             <Route path="/task3" element={<Provider_Page/>}/>
             <Route path="/task4" element={<Task4_Page/>}/>
+            <Route path="/task5" element={<Task5_Page/>}/>
+
 
 
 

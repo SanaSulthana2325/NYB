@@ -26,6 +26,9 @@ import Task2_Page from './pages_07-07-2026/Task2_Pages_15-07-2026/Task2_Page';
 import Provider_Page from './pages_07-07-2026/Context_Api_Redux_Page_15-07-2026/Provider_Page';
 import Task4_Page from './pages_07-07-2026/Task4_Page_16-07-2026/Task4_Page';
 import Task5_Page from './pages_07-07-2026/Task5_Pages_17-07-2026/Task5_page';
+import Conditional_Rendering_page from './pages_07-07-2026/ConditionalRendering_Pages_20-07-2026/Conditional_Rendering_page';
+import MiniPractice_Page from './pages_07-07-2026/MiniPractice_ConditionalRendering_Page_20-07-2026/MiniPractice_Page';
+import MiniPractice1_page from './pages_07-07-2026/MiniPractice1_CR_page_20-07-2026/MiniPractice1_page';
 
 
 function App(){
@@ -58,6 +61,12 @@ function App(){
             <Route path="/task3" element={<Provider_Page/>}/>
             <Route path="/task4" element={<Task4_Page/>}/>
             <Route path="/task5" element={<Task5_Page/>}/>
+            <Route path="/cr" element={<Conditional_Rendering_page/>}/>
+            <Route path="/mini" element={<MiniPractice_Page/>}/>
+            <Route path="/mini1" element={<MiniPractice1_page/>}/>
+
+
+
 
 
 

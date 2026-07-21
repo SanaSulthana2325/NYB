@@ -62,13 +62,13 @@ const theme = "Dark";
       <hr/>
       <Counter/>
       <hr/>
-      <h4>functional component</h4>
+      <h4 className="font-bold">functional component</h4>
 
       <Student/>
 
       <Functional_with_State/>
       <hr/>
-      <h4>class componenet</h4>
+      <h4 className="font-bold">class componenet</h4>
       <Student2/>
 
       <Class_with_State/>
@@ -84,7 +84,7 @@ const theme = "Dark";
       <Home1/>
     </ThemeContext1.Provider>
 
-    <h4>useReducer</h4>
+    <h4 className="font-semibold">useReducer</h4>
     <Cart2/>
 
     <h4> redux</h4>

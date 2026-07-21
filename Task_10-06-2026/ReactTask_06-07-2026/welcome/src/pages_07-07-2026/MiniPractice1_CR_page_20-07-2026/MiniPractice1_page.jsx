@@ -11,7 +11,7 @@ function MiniPractice1_page() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Current User Role
-  const [role] = useState("admin");
+  const [role,setRole] = useState("admin");
 
   return (
 

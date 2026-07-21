@@ -28,13 +28,14 @@ function Counter() {
         +
       </button>
 
-      <button
+      <button className="bg-green-500 !p-10 text-[25px] "
         onClick={() =>
           dispatch({ type: "decrease" })
         }
       >
-        -
+        - decrease
       </button>
+
     </>
   );
 }

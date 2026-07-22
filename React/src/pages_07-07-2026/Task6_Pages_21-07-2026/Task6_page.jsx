@@ -1,5 +1,4 @@
 import React from 'react'
-import Run_Onces from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Hook_21-07-2026/Run_Onces'
 import Update_Title from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Hook_21-07-2026/Update_Title'
 import No_Dependency_Array from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Hook_21-07-2026/No_Dependency_Array'
 import Dependency_Array from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Hook_21-07-2026/Dependency_Array'
@@ -13,7 +12,8 @@ import Welcome from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Depe
 import API from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Dependencies_21-07-2026/UseEffect_Empty_Dependency/API'
 import State from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Dependencies_21-07-2026/UseEffect_With_Dependency/State'
 import Timer1 from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Dependencies_21-07-2026/UseEffect_Cleanup/Timer1'
-// import Fetch1_API from '../../components_07-07-2026/Task6_21-07-2026/API_Calls_21-07-2026/Fetch1_API'
+import Fetch1_API from '../../components_07-07-2026/Task6_21-07-2026/API_Calls_21-07-2026/Fetch1_API'
+import Run_Onces from '../../components_07-07-2026/Task6_21-07-2026/UseEffect_Hook_21-07-2026/Run_Onces'
 
 function Task6_page() {
   return (
@@ -49,9 +49,10 @@ function Task6_page() {
     <hr/>
     <h2 className='font-bold'>cleanup dependency</h2>
     <Timer1/>
-    {/* <hr/>
+    <hr/>
     <h2 className='font-bold'> API calls</h2>
-    <Fetch1_API/> */}
+    <Fetch1_API/> 
+
   
 
 

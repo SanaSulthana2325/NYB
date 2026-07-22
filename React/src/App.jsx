@@ -30,6 +30,7 @@ import Conditional_Rendering_page from './pages_07-07-2026/ConditionalRendering_
 import MiniPractice_Page from './pages_07-07-2026/MiniPractice_ConditionalRendering_Page_20-07-2026/MiniPractice_Page';
 import MiniPractice1_page from './pages_07-07-2026/MiniPractice1_CR_page_20-07-2026/MiniPractice1_page';
 import Task6_page from './pages_07-07-2026/Task6_Pages_21-07-2026/Task6_page';
+import Form_Handling_page from './pages_07-07-2026/Dynamic_Form_Handling_Pages_22-07-2026/Form_Handling_page';
 
 
 function App(){
@@ -66,6 +67,8 @@ function App(){
             <Route path="/mini" element={<MiniPractice_Page/>}/>
             <Route path="/mini1" element={<MiniPractice1_page/>}/>
             <Route path="/task6" element={<Task6_page/>}/>
+            <Route path="/form" element={<Form_Handling_page/>}/>
+
 
 
 

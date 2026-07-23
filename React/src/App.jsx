@@ -31,6 +31,9 @@ import MiniPractice_Page from './pages_07-07-2026/MiniPractice_ConditionalRender
 import MiniPractice1_page from './pages_07-07-2026/MiniPractice1_CR_page_20-07-2026/MiniPractice1_page';
 import Task6_page from './pages_07-07-2026/Task6_Pages_21-07-2026/Task6_page';
 import Form_Handling_page from './pages_07-07-2026/Dynamic_Form_Handling_Pages_22-07-2026/Form_Handling_page';
+import HOC_Page from './pages_07-07-2026/Higher_Order_Component_Pages_23-07-2026/HOC_Page';
+import Mini_Page from './pages_07-07-2026/Higher_Order_Component_Pages_23-07-2026/Mini_Page';
+
 
 
 function App(){
@@ -68,6 +71,10 @@ function App(){
             <Route path="/mini1" element={<MiniPractice1_page/>}/>
             <Route path="/task6" element={<Task6_page/>}/>
             <Route path="/form" element={<Form_Handling_page/>}/>
+            <Route path="/hoc" element={<HOC_Page/>}/>
+            <Route path="/mini3" element={<Mini_Page/>}/>
+
+
 
 
 

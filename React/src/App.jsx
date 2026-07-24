@@ -33,6 +33,7 @@ import Task6_page from './pages_07-07-2026/Task6_Pages_21-07-2026/Task6_page';
 import Form_Handling_page from './pages_07-07-2026/Dynamic_Form_Handling_Pages_22-07-2026/Form_Handling_page';
 import HOC_Page from './pages_07-07-2026/Higher_Order_Component_Pages_23-07-2026/HOC_Page';
 import Mini_Page from './pages_07-07-2026/Higher_Order_Component_Pages_23-07-2026/Mini_Page';
+import Task7_Page from './pages_07-07-2026/Task7_Pages_24-07-2026/Task7_Page';
 
 
 
@@ -73,6 +74,8 @@ function App(){
             <Route path="/form" element={<Form_Handling_page/>}/>
             <Route path="/hoc" element={<HOC_Page/>}/>
             <Route path="/mini3" element={<Mini_Page/>}/>
+            <Route path="/task7" element={<Task7_Page/>}/>
+
 
 
 

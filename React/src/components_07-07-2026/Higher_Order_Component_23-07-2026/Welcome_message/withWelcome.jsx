@@ -11,21 +11,21 @@ const withWelcome = (WrappedComponent) => {
 
 export default withWelcome;
 
-import React from "react";
-function App (){
-  return(
-    <>
+// import React from "react";
+// function App (){
+//   return(
+//     <>
     
-    </>
-  )
-}
-export default App
+//     </>
+//   )
+// }
+// export default App
 
-const EnhanchedComponent= withComponent(Component);
+// const EnhanchedComponent= withComponent(Component);
 
 
-function withSomething(WrappedComponent){
-  return function EnhancedComponent(props){
-    return <WrappedComponent{...props}/>;
-  };
-}
+// function withSomething(WrappedComponent){
+//   return function EnhancedComponent(props){
+//     return <WrappedComponent{...props}/>;
+//   };
+// }

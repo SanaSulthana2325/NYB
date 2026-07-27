@@ -34,6 +34,8 @@ import Form_Handling_page from './pages_07-07-2026/Dynamic_Form_Handling_Pages_2
 import HOC_Page from './pages_07-07-2026/Higher_Order_Component_Pages_23-07-2026/HOC_Page';
 import Mini_Page from './pages_07-07-2026/Higher_Order_Component_Pages_23-07-2026/Mini_Page';
 import Task7_Page from './pages_07-07-2026/Task7_Pages_24-07-2026/Task7_Page';
+import API_Calls_Page from './pages_07-07-2026/API_Calls_Pages_27-07-2026/API_Calls_Page';
+import React_memo_Pages from './pages_07-07-2026/API_Calls_Pages_27-07-2026/React_memo_Pages';
 
 
 
@@ -75,6 +77,10 @@ function App(){
             <Route path="/hoc" element={<HOC_Page/>}/>
             <Route path="/mini3" element={<Mini_Page/>}/>
             <Route path="/task7" element={<Task7_Page/>}/>
+            <Route path="/api" element={<API_Calls_Page/>}/>
+            <Route path="/memo" element={<React_memo_Pages/>}/>
+
+
 
 
 

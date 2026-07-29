@@ -38,6 +38,7 @@ import API_Calls_Page from './pages_07-07-2026/API_Calls_Pages_27-07-2026/API_Ca
 import React_memo_Pages from './pages_07-07-2026/API_Calls_Pages_27-07-2026/React_memo_Pages';
 import Task8_Page from './pages_07-07-2026/Task8_Pages_28-07-2026/Task8_Page';
 import Employee_Page from './pages_07-07-2026/Task8_Pages_28-07-2026/Employee_Page';
+import Task9_Page from './pages_07-07-2026/Task9_Pages_29-07-2026/Task9_Page';
 
 
 
@@ -83,6 +84,8 @@ function App(){
             <Route path="/memo" element={<React_memo_Pages/>}/>
             <Route path="/task8" element={<Task8_Page/>}/>
             <Route path="/mini4" element={<Employee_Page/>}/>
+            <Route path="/task9" element={<Task9_Page/>}/>
+
 
 
 

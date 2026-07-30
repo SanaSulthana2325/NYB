@@ -7,11 +7,11 @@ import { store } from "./components_07-07-2026/Redux_14-07-2026/Counter3_14-07-2
 
 
 createRoot(document.getElementById('root')).render(
-  /*<React.StrictMode>
-      <Provider store={store}>*/
+  <React.StrictMode>
+      <Provider store={store}>
         
         <App />
         
-      /*</Provider>
-    </React.StrictMode>*/
+      </Provider>
+    </React.StrictMode>
 )

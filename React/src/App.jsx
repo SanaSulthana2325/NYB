@@ -39,6 +39,9 @@ import React_memo_Pages from './pages_07-07-2026/API_Calls_Pages_27-07-2026/Reac
 import Task8_Page from './pages_07-07-2026/Task8_Pages_28-07-2026/Task8_Page';
 import Employee_Page from './pages_07-07-2026/Task8_Pages_28-07-2026/Employee_Page';
 import Task9_Page from './pages_07-07-2026/Task9_Pages_29-07-2026/Task9_Page';
+import Mini_Practice_Pages from './pages_07-07-2026/Task9_Pages_29-07-2026/Mini_Practice_Pages';
+import Portal_Page from './pages_07-07-2026/React_Portal_Pages_30-07-2026/Portal_Page';
+import Mini_Practice_Page from './pages_07-07-2026/React_Portal_Pages_30-07-2026/Mini_Practice_Page';
 
 
 
@@ -85,6 +88,13 @@ function App(){
             <Route path="/task8" element={<Task8_Page/>}/>
             <Route path="/mini4" element={<Employee_Page/>}/>
             <Route path="/task9" element={<Task9_Page/>}/>
+            <Route path="/mini5" element={<Mini_Practice_Pages/>}/>
+            <Route path="/portal" element={<Portal_Page/>}/>
+            <Route path="/mini6" element={<Mini_Practice_Page/>}/>
+
+
+
+
 
 
 

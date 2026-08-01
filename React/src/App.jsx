@@ -42,6 +42,7 @@ import Task9_Page from './pages_07-07-2026/Task9_Pages_29-07-2026/Task9_Page';
 import Mini_Practice_Pages from './pages_07-07-2026/Task9_Pages_29-07-2026/Mini_Practice_Pages';
 import Portal_Page from './pages_07-07-2026/React_Portal_Pages_30-07-2026/Portal_Page';
 import Mini_Practice_Page from './pages_07-07-2026/React_Portal_Pages_30-07-2026/Mini_Practice_Page';
+import List_Page from './pages_07-07-2026/List_Rendering_Pages_31-07-2026/List_Page';
 
 
 
@@ -91,6 +92,8 @@ function App(){
             <Route path="/mini5" element={<Mini_Practice_Pages/>}/>
             <Route path="/portal" element={<Portal_Page/>}/>
             <Route path="/mini6" element={<Mini_Practice_Page/>}/>
+            <Route path="/list" element={<List_Page/>}/>
+
 
 
 

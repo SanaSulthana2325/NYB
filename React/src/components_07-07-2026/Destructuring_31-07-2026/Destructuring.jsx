@@ -1,0 +1,1 @@
+// Destructuring is a JavaScript feature that lets you extract values from arrays or objects and store them in variables in a short, clean way. It is used heavily in React, especially with props, state, and hooks.

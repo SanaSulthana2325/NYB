@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes,Link} from 'react-router-dom';
 import Components from './pages_07-07-2026/Components_07-07-2026/Components';
 import Props from './pages_07-07-2026/Props_07-07-2026/PropsPage';
 import ExpressionPage from './pages_07-07-2026/JsxExpressionPage_07-07-2026/ExpressionPage';
@@ -43,12 +43,34 @@ import Mini_Practice_Pages from './pages_07-07-2026/Task9_Pages_29-07-2026/Mini_
 import Portal_Page from './pages_07-07-2026/React_Portal_Pages_30-07-2026/Portal_Page';
 import Mini_Practice_Page from './pages_07-07-2026/React_Portal_Pages_30-07-2026/Mini_Practice_Page';
 import List_Page from './pages_07-07-2026/List_Rendering_Pages_31-07-2026/List_Page';
+import Home from './components_07-07-2026/Browser_Routing_03-08-2026/Link_03-08-2026/Home';
+import About from './components_07-07-2026/Browser_Routing_03-08-2026/Link_03-08-2026/About';
+import Browser from './pages_07-07-2026/Browser_Router_Pages_3-08-2026/Browser';
+import Component from './components_07-07-2026/Browser_Routing_03-08-2026/Link_03-08-2026/Component';
+import Contact from './components_07-07-2026/Browser_Routing_03-08-2026/Link_03-08-2026/Contact';
+import About1 from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Practice_03-08-2026/About1';
+import Contact1 from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Practice_03-08-2026/Contact1';
+import Home1 from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Practice_03-08-2026/Home1';
+import Service from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Practice_03-08-2026/Service';
+import Navbar from './pages_07-07-2026/Browser_Router_Pages_3-08-2026/Navbar';
 
 
 
 function App(){
     return(
         <BrowserRouter>
+        <Browser/>
+        <Navbar/>
+          {/*<nav className='!pt-5 !p-10'>
+            <Link to='/home' className="bg-pink-500 text-white !px-5 !py-2 rounded !mr-4 hover:bg-pink-700"
+              >
+                Home
+            </Link>
+            
+            <Link to='/about'className="bg-green-500">About</Link>
+            <Link to='/component' className='bg-red-400'>Component</Link>
+
+        </nav> */}
         <Routes>
             <Route path="/components" element={<Components/>}/>
             <Route path="/props" element={<Props/>}/>
@@ -93,6 +115,30 @@ function App(){
             <Route path="/portal" element={<Portal_Page/>}/>
             <Route path="/mini6" element={<Mini_Practice_Page/>}/>
             <Route path="/list" element={<List_Page/>}/>
+            <Route path="/home" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+           {/*} <Route path="/browser" element={<Browser/>}/>*/}
+            <Route path="/component" element={<Component/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/about1" element={<About1/>}/>
+            <Route path="/contact1" element={<Contact1/>}/>
+            <Route path="/" element={<Home1/>}/>
+            <Route path="/service" element={<Service/>}/>
+
+
+
+            
+            
+
+
+
+            
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes,Link} from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Components from './pages_07-07-2026/Components_07-07-2026/Components';
 import Props from './pages_07-07-2026/Props_07-07-2026/PropsPage';
 import ExpressionPage from './pages_07-07-2026/JsxExpressionPage_07-07-2026/ExpressionPage';
@@ -53,24 +53,31 @@ import Contact1 from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Pr
 import Home1 from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Practice_03-08-2026/Home1';
 import Service from './components_07-07-2026/Browser_Routing_03-08-2026/Mini_Practice_03-08-2026/Service';
 import Navbar from './pages_07-07-2026/Browser_Router_Pages_3-08-2026/Navbar';
+import Profile from './components_07-07-2026/Task10_04-08-2026/Nested_Routing_04-08-2026/Profile';
+import Settings from './components_07-07-2026/Task10_04-08-2026/Nested_Routing_04-08-2026/Settings';
+import Dashboard from './components_07-07-2026/Task10_04-08-2026/Nested_Routing_04-08-2026/Dashboard';
+import DashboardHome from './components_07-07-2026/Task10_04-08-2026/Nested_Routing_04-08-2026/DashboardHome';
+import Task10 from './pages_07-07-2026/Task10_Pages_04-08-2026/Task10';
+import Product from './components_07-07-2026/Task10_04-08-2026/Dynamic_Routing_04-08-2026/Product';
+import Post from './components_07-07-2026/Task10_04-08-2026/Dynamic_Routing_04-08-2026/Multiple_dynamic_Parameter_04-08-2026/Post';
+import Login from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/Login';
+import Navigate_Back from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/Navigate_Back';
+import Navigate_Farward from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/Navigate_Farward';
+import Notfound from './components_07-07-2026/Task10_04-08-2026/404_Page_NotFound_04-08-2026/Notfound';
+import ProtectedRoute from './components_07-07-2026/Task10_04-08-2026/Protected_Route_04-08-2026/ProtectedRoute';
+import LoginPage from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/LoginPage';
+import HomePage from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/HomePage';
+import Logout from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/Logout';
 
 
 
 function App(){
     return(
         <BrowserRouter>
-        <Browser/>
+        {/*<Browser/>
         <Navbar/>
-          {/*<nav className='!pt-5 !p-10'>
-            <Link to='/home' className="bg-pink-500 text-white !px-5 !py-2 rounded !mr-4 hover:bg-pink-700"
-              >
-                Home
-            </Link>
-            
-            <Link to='/about'className="bg-green-500">About</Link>
-            <Link to='/component' className='bg-red-400'>Component</Link>
+        <Task10/>*/}
 
-        </nav> */}
         <Routes>
             <Route path="/components" element={<Components/>}/>
             <Route path="/props" element={<Props/>}/>
@@ -124,6 +131,41 @@ function App(){
             <Route path="/contact1" element={<Contact1/>}/>
             <Route path="/" element={<Home1/>}/>
             <Route path="/service" element={<Service/>}/>
+            <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<DashboardHome />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+   </Route>
+             <Route path="/task10" element={<Task10/>}>
+             <Route path="product/:id" element={<Product/>}/>
+             
+
+             
+             </Route>
+             
+             <Route path="/user/:userId/post/:postId" element={<Post/>}/>
+
+             <Route path="navigate" element={<Login/>}/>
+             <Route path="back" element={<Navigate_Back/>}/>
+             <Route path="farward" element={<Navigate_Farward/>}/>
+             <Route path="*" element={<Notfound/>}/>
+
+             <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
+             
+             <Route path="/login" element={<LoginPage/>}/>
+             <Route path="/hom" element={<HomePage/>}/>
+             <Route path="/logout" element={<Logout/>}/>
+
+
+
+             
+
+
+            
+            
+
+
+
 
 
 

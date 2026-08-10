@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.css","mappings":";;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA,C","sources":["webpack://webpack_07-08-2026/./src/style.css"],"sourcesContent":["body{\r\n\r\nbackground:black;\r\n\r\ncolor:white;\r\n\r\n}"],"names":[],"sourceRoot":""}

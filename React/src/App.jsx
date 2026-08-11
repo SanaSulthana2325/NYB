@@ -69,6 +69,7 @@ import LoginPage from './components_07-07-2026/Task10_04-08-2026/Navigation_04-0
 import HomePage from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/HomePage';
 import Logout from './components_07-07-2026/Task10_04-08-2026/Navigation_04-08-2026/Logout';
 import Task11_Page from './pages_07-07-2026/Task11_Pagess_10-08-2026/Task11_Page';
+import Task12_Page from './pages_07-07-2026/Task12_Pages_11-08-2026/Task12_Page';
 
 
 
@@ -158,6 +159,8 @@ function App(){
              <Route path="/hom" element={<HomePage/>}/>
              <Route path="/logout" element={<Logout/>}/>
              <Route path="/task11" element={<Task11_Page/>}/>
+             <Route path="/task12" element={<Task12_Page/>}/>
+
 
 
     

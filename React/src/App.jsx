@@ -72,6 +72,7 @@ import Task11_Page from './pages_07-07-2026/Task11_Pagess_10-08-2026/Task11_Page
 import Task12_Page from './pages_07-07-2026/Task12_Pages_11-08-2026/Task12_Page';
 import Task13_Page from './pages_07-07-2026/Task13_Pages_12-08-2026/Task13_Page';
 import Task14_Page from './pages_07-07-2026/Task14_Pages_13_08_2026/Task14_Page';
+import Task15_Page from './pages_07-07-2026/Task15_Pages_17-08-2026/Task15_Page';
 
 
 
@@ -164,6 +165,8 @@ function App(){
              <Route path="/task12" element={<Task12_Page/>}/>
              <Route path="/task13" element={<Task13_Page/>}/>
              <Route path="/task14" element={<Task14_Page/>}/>
+             <Route path="/task15" element={<Task15_Page/>}/>
+
 
 
 

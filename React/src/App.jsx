@@ -75,6 +75,7 @@ import Task14_Page from './pages_07-07-2026/Task14_Pages_13_08_2026/Task14_Page'
 import Task15_Page from './pages_07-07-2026/Task15_Pages_17-08-2026/Task15_Page';
 import Task16_Page from './pages_07-07-2026/Task16_Pages_18-08-2026/Task16_Page';
 import API_Dynamic_ID from './components_07-07-2026/Task16_18-08-2026/API_Calls_18-08-2026/API_Dynamic_ID';
+import Task17_Page from './pages_07-07-2026/Task17_Pages_19-08-2026/Task17_Page';
 
 
 
@@ -170,6 +171,8 @@ function App(){
              <Route path="/task15" element={<Task15_Page/>}/>
              <Route path="/task16" element={<Task16_Page/>}/>
              <Route path="/task16/:id" element={<API_Dynamic_ID />}/>
+             <Route path="/task17" element={<Task17_Page/>}/>
+
 
 
 

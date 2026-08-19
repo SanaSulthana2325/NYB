@@ -20,6 +20,7 @@ function Task16_Page() {
     <Fetch_Data/>
     <hr/>
     <br/>
+    <h2 className='font-bold'>Async</h2>
     <Await_Async/>
     <hr/>
     <br/>

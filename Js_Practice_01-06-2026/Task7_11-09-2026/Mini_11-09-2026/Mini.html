@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>API Data Manager</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #message {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .user {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>API Data Manager</h1>
+
+        
+        <button onclick="getUsers()">GET Users</button>
+
+        <button onclick="createUser()">POST User</button>
+
+        <button onclick="updateUser()">PUT User</button>
+
+        <button onclick="patchUser()">PATCH User</button>
+
+        <button onclick="deleteUser()">DELETE User</button>
+
+        <div id="message"></div>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script src="./Mini.js"></script>
+
+</body>
+</html>

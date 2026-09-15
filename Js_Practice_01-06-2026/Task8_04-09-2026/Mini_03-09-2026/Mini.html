@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Directory App</title>
+</head>
+
+<body>
+
+    <h1>User Directory</h1>
+
+    <!-- Search -->
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search users..."
+    >
+
+    <button id="loadUsersBtn">
+        Load Users From API
+    </button>
+
+    <hr>
+
+    <!-- Add User Form -->
+    <h2>Add New User</h2>
+
+    <form id="userForm">
+
+        <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter name"
+        >
+
+        <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter email"
+        >
+
+        <button type="submit">
+            Add User
+        </button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <hr>
+
+    <!-- User List -->
+    <h2>Users</h2>
+
+    <div id="userList"></div>
+
+
+    <script src="./Mini.js"></script>
+
+</body>
+
+</html>

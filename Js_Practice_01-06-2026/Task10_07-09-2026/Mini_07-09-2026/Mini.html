@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bill Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Shopping Bill</h1>
+
+        <label>Product Name:</label>
+        <input type="text" id="product" placeholder="Enter product">
+
+        <label>Price:</label>
+        <input type="text" id="price" placeholder="Enter price">
+
+        <label>Quantity:</label>
+        <input type="text" id="quantity" placeholder="Enter quantity">
+
+        <label>Discount (%):</label>
+        <input type="text" id="discount" placeholder="Enter discount">
+
+        <button onclick="calculateBill()">Calculate Bill</button>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script src="./Mini.js"></script>
+
+</body>
+</html>

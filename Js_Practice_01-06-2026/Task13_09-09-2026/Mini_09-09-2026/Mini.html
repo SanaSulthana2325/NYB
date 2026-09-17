@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Product Manager</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .product {
+            padding: 10px;
+            margin: 8px 0;
+            background: #e8f0fe;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Product Manager</h1>
+
+    <button onclick="showProducts()">Show Products</button>
+    <button onclick="showDiscountedProducts()">Discounted Products</button>
+    <button onclick="calculateTotal()">Calculate Total</button>
+    <button onclick="findProduct()">Find Product</button>
+    <button onclick="sortProducts()">Sort by Price</button>
+    <button onclick="showCategories()">Show Categories</button>
+    <button onclick="showObjectOperations()">Object Operations</button>
+
+    <div id="output">
+        Click a button to see the result.
+    </div>
+
+</div>
+
+<script src="./Mini.js"></script>
+
+</body>
+</html>
+

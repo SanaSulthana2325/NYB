@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            background: #eee;
+            margin: 8px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #clearBtn {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> Shopping List</h1>
+
+        <input
+            type="text"
+            id="productInput"
+            placeholder="Enter product"
+        >
+
+        <button id="addBtn">Add Product</button>
+
+        <h3>My Products</h3>
+
+        <ul id="productList"></ul>
+
+        <button id="clearBtn">Clear All</button>
+
+    </div>
+
+    <script src="./Mini.js"></script>
+
+</body>
+</html>

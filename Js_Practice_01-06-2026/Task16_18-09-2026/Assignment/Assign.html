@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Weather App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background-color: white;
+            width: 400px;
+            max-width: 90%;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #loading {
+            display: none;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #weather {
+            margin-top: 20px;
+        }
+
+        .weather-card {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .history {
+            margin-top: 20px;
+        }
+
+        .history button {
+            margin: 5px;
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> Weather App</h1>
+
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name"
+        >
+
+        <button id="searchBtn">
+            Search
+        </button>
+
+        <p id="loading">
+            Loading...
+        </p>
+
+        <p id="error"></p>
+
+        <div id="weather"></div>
+
+        <div class="history">
+
+            <h3>Recent Searches</h3>
+
+            <div id="historyList"></div>
+
+        </div>
+
+    </div>
+    <script src="./Assign.js"></script>
+
+</body>
+
+</html>
+

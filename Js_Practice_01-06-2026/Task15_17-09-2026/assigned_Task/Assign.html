@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+</head>
+<body>
+
+<h1>Todo Application</h1>
+
+<!-- Add Todo -->
+<input type="text" id="taskInput" placeholder="Enter a task">
+
+<button id="addBtn">Add Todo</button>
+
+<br><br>
+
+<!-- Filter Todos -->
+<button class="filterBtn" data-filter="all">All</button>
+<button class="filterBtn" data-filter="completed">Completed</button>
+<button class="filterBtn" data-filter="pending">Pending</button>
+
+<h2>My Todos</h2>
+
+<!-- Todos will be displayed here dynamically -->
+<ul id="todoList"></ul>
+
+<script src="./Assign.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="addProduct()">Add Product</button>
+
+<div id="cart"></div>
+<br/>
+<hr/>
+
+<!--shopping list-->
+
+<input id="taskInput" placeholder="Enter task">
+<button id="addBtn">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<!--click event-->
+
+<button id="loginBtn">Login</button>
+
+<!-- input event-->
+
+<input id="name" placeholder="Enter your name">
+
+<h3 id="output"></h3>
+
+
+<!--chande event-->
+
+<select id="country">
+    <option value="">Select Country</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+</select>
+
+<p id="result"></p>
+
+<!-- submit event-->
+
+<form id="registerForm">
+
+    <input id="username" placeholder="Username">
+
+    <button type="submit">Register</button>
+
+</form>
+<hr/>
+
+<!--Mouse event-->
+
+<div id="product"
+     style="width:200px; padding:30px; background:lightgray;">
+    Laptop
+</div>
+<hr/>
+
+<!--keyboard-->
+
+<input id="search" placeholder="Search">
+
+<hr/>
+
+<!-- event bubbling-->
+
+<div id="parent" style="padding:30px; background:lightblue;">
+
+    Parent
+
+    <button id="child">Click Me</button>
+
+</div>
+<hr/>
+
+
+<!--event capturing-->
+
+<div id="parent1">
+
+    <button id="child1">Click Me</button>
+
+</div>
+<hr/>
+
+<!-- event delegation-->
+
+<ul id="products1">
+
+    <li>Phone <button>Buy</button></li>
+
+    <li>Laptop <button>Buy</button></li>
+
+    <li>Tablet <button>Buy</button></li>
+
+</ul>
+
+<!--throttling-->
+
+<h2 id="count">Scroll</h2>
+
+
+<!--debouncing-->
+
+<input id="search1" placeholder="Search products">
+
+<!---->
+
+<button onclick="saveUser()">Save User</button>
+<button onclick="getUser()">Get User</button>
+
+<p id="output"></p>
+
+
+<!--session storage-->
+
+<button onclick="login1()">Login</button>
+<button onclick="checkLogin()">Check Login</button>
+
+<p id="result1"></p>
+
+<!---->
+
+<h2>Todo App</h2>
+
+<input id="task" placeholder="Enter task">
+<button id="add">Add</button>
+
+<ul id="list1"></ul>
+
+
+
+    <script src="./Task.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- Personal Details -->
+        <fieldset>
+
+            <legend>Personal Details</legend>
+
+            <label for="name">Student Name:</label>
+            <input 
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input 
+                type="date"
+                id="dob"
+                name="dob"
+                required
+            >
+
+            <br><br>
+
+            <label>Gender:</label>
+
+            <input 
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+                required
+            >
+            <label for="male">Male</label>
+
+            <input 
+                type="radio"
+                id="female"
+                name="gender"
+                value="Female"
+            >
+            <label for="female">Female</label>
+
+        </fieldset>
+
+        <br>
+
+
+        <!-- Contact Details -->
+        <fieldset>
+
+            <legend>Contact Details</legend>
+
+            <label for="email">Email:</label>
+            <input 
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <br><br>
+
+            <label for="phone">Phone:</label>
+            <input 
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10 digit number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+            <br><br>
+
+            <label for="address">Address:</label>
+            <br>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                cols="40"
+                placeholder="Enter your address"
+                required
+            ></textarea>
+
+        </fieldset>
+
+        <br>
+
+
+        <!-- Education -->
+        <fieldset>
+
+            <legend>Education Details</legend>
+
+            <label for="course">Select Course:</label>
+
+            <select id="course" name="course" required>
+
+                <option value="">-- Select Course --</option>
+                <option value="btech">B.Tech</option>
+                <option value="bca">BCA</option>
+                <option value="mca">MCA</option>
+                <option value="degree">Degree</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="year">Year:</label>
+
+            <select id="year" name="year" required>
+
+                <option value="">-- Select Year --</option>
+                <option value="first">1st Year</option>
+                <option value="second">2nd Year</option>
+                <option value="third">3rd Year</option>
+                <option value="final">Final Year</option>
+
+            </select>
+
+        </fieldset>
+
+        <br>
+
+
+        <!-- Skills -->
+        <fieldset>
+
+            <legend>Skills</legend>
+
+            <label>Select your skills:</label>
+
+            <br><br>
+
+            <input 
+                type="checkbox"
+                id="html"
+                name="skills"
+                value="HTML"
+            >
+            <label for="html">HTML</label>
+
+            <br>
+
+            <input 
+                type="checkbox"
+                id="css"
+                name="skills"
+                value="CSS"
+            >
+            <label for="css">CSS</label>
+
+            <br>
+
+            <input 
+                type="checkbox"
+                id="javascript"
+                name="skills"
+                value="JavaScript"
+            >
+            <label for="javascript">JavaScript</label>
+
+        </fieldset>
+
+        <br>
+
+
+        <!-- Resume -->
+        <fieldset>
+
+            <legend>Upload Document</legend>
+
+            <label for="resume">Upload Resume:</label>
+
+            <input 
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+            >
+
+        </fieldset>
+
+        <br>
+
+
+        
+        <br>
+
+
+        <!-- Buttons -->
+
+        <button type="submit">Submit</button>
+
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+
+</html>

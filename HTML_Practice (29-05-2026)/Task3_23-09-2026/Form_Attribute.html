@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Action: where the form data should be sent when the form is submitted-->
+
+    <h2> Action</h2>
+
+    <from action="/submit-form">
+        <input type="text">
+        <input type="submit">
+    </from>
+
+    <!-- method: how the form data is sent-->
+<!-- 
+    The two common methods are:
+
+GET → data is sent in the URL
+POST → data is sent in the request body -->
+<h2>method</h2>
+<form action="/login" method="Post">
+    <input type="text">
+    <input type="submit">
+</form>
+
+<!--name: gives name/keys to the form field-->
+
+<h2>name</h2>
+<input type="text"  name="username" placeholder="Username Sana">
+<button type="Submit">Submit</button>
+
+<!-- value: value of an input-->
+ <h2>Value</h2>
+
+ <input type="text" value="Tasan">
+
+ <!-- placeholder: temporary hint text-->
+
+ <h2>Placeholder</h2>
+ <input type="text" placeholder="enter your name">
+
+ <!--required: makes field mandatory-->
+
+ <h2>required</h2>
+
+ <input type="email" required>
+
+ <!-- read only: Makes the field read-only. The user can see and usually select/copy the value, but cannot edit it.-->
+
+ <h2>read-only</h2>
+
+ <input type="text" value="India" readonly>
+
+ <!-- disabled: disable from the control-->
+<h2>disabled</h2>
+ <input type="text" value="Not Available" disabled>
+
+ <!--min-->
+ <h2>min</h2>
+ <input type="number" min="18">
+
+ <input type="number" min="1" max="100">
+
+
+ <h2>max</h2>
+ <input type="number" max="100">
+
+ <!-- maxlength: maximum number of characters that can be entered.-->
+<h2> maxlength</h2>
+ <input type="text" maxlength="10">
+
+
+ <!--Pattern: Specifies a regular expression (regex) that the input must match.-->
+<h2>Pattern</h2>
+ <input type="text" pattern="[0-9]{10}">
+</body>
+</html>
+
+<!-- 
+HTML Form Attributes
+
+Form attributes are used to control, describe, and validate form fields. -->
+
+
+
+<!-- | `readonly`             | `disabled`                 |
+| ---------------------- | -------------------------- |
+| Cannot edit            | Cannot interact normally   |
+| Can usually be focused | Cannot normally be focused |
+| Value is submitted     | Value is **not submitted** |
+| Field remains active   | Field is inactive          | -->
+
+
+
+<!-- | Attribute     | Purpose                 | Example                    |
+| ------------- | ----------------------- | -------------------------- |
+| `action`      | Where to send form data | `action="/submit"`         |
+| `method`      | How to send data        | `method="post"`            |
+| `name`        | Name/key of field       | `name="email"`             |
+| `value`       | Initial/submitted value | `value="India"`            |
+| `placeholder` | Hint inside input       | `placeholder="Enter name"` |
+| `required`    | Makes field mandatory   | `required`                 |
+| `readonly`    | Prevents editing        | `readonly`                 |
+| `disabled`    | Disables field          | `disabled`                 |
+| `min`         | Minimum value           | `min="18"`                 |
+| `max`         | Maximum value           | `max="60"`                 |
+| `maxlength`   | Maximum characters      | `maxlength="10"`           |
+| `pattern`     | Required input format   | `pattern="[0-9]{10}"`      | -->
+
+<!-- 
+action → Where?
+method → How?
+name → What is it called?
+value → What value?
+placeholder → Hint?
+required → Must fill?
+readonly → Can't edit?
+disabled → Can't use?
+min/max → Range?
+maxlength → How many characters?
+pattern → What format? -->

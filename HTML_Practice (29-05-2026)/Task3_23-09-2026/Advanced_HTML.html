@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+    <h2> Form Validation</h2>
+
+    <form>
+        
+        <lable> Email:</lable>
+        <input type="email" required>
+
+        <lable>Age:</lable>
+        <input type="number" min="18" max="60" required>
+
+
+        <input type="Submit" value="Submit">
+        </fieldset>
+
+        <!--lable: provides name description for a form control-->
+
+        <h2>lable</h2>
+        <lable for="username">Username:</lable>
+        <input type="text" id="username">
+
+        <!-- fieldset: used to group related form controls togeather-->
+
+        <h2>fieldset</h2>
+        <fieldset>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Second Name">
+        </fieldset>
+
+        <!-- legend: provides caption title for a fieldset-->
+
+        <h2>legend</h2>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <lable>username:</lable>
+
+            <input type="text">
+            <lable>email:</lable>
+
+            <input type="email">
+        </fieldset>
+    </form>
+
+    <!--iframes: stand for inline frame
+     used to embed another webpage or external content inside your webpage-->
+    
+     <h2>iframe</h2>
+     <iframe src="./Forms.html" width="400" height="400">
+     </iframe>
+     <br/>
+     <hr/>
+     <iframe src="https://www.bing.com/search?pglt=43&q=google&cvid=4d20d046b8dd4065be6699fd2f969e55&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQLhhAMgYIAhAAGEAyBggDEAAYQDIGCAQQLhhAMgYIBRAuGEAyBggGEC4YQDIGCAcQLhhAMgYICBBFGDzSAQgyMjQ2ajBqN6gCCLACAQ&FORM=ANNTA1&PC=U531" width="300" height="400"></iframe>
+    
+     <hr/>
+     <br/>
+     <iframe src="https://www.youtube.com/" width="400" height="400"></iframe>
+
+     <hr>
+     <br>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/HJFxTsX0Ok0?si=J3iKR-OTdvzEBzko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+     <hr/>
+     <br/>
+     <h2>HTML5 sematic</h2>
+     <header>
+        <h1>my website</h1>
+     </header>
+     <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+     </nav>
+
+     <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to or website</p>
+        </section>
+        <article>
+            <h2>latest news</h2>
+            <p> today is the first day of our website</p>
+        </article>
+     </main>
+
+     <footer>
+        <p>&copy; 2026 my website</p>
+     </footer>
+
+     <br/>
+     <hr/>
+     <br/>
+     <!--figure:used to contain self-contained content, commonly an image, diagram, chart, or illustration.-->
+     <h2>Figure</h2>
+
+     <figure>
+        <img src="./bird logo 1.jpg" alt=" A bird sitting on a tree">
+     </figure>
+
+     <!-- details: creates an expandable section-->
+<hr/>
+<h2>details</h2>
+     <details>
+        <p>HTML stands for hyper text markup language</p>
+     </details>
+
+<!--summary: provides the visible heading that the user clicks to open or close the details section-->
+<hr>
+<br>
+<h2></h2>
+<details>
+    <summary> what is sonu</summary>
+    <p>
+         he is good boy in the wrold whp respects their elder onces
+    </p>
+</details>
+</body>
+</html>
+<!-- 
+Form Validation
+
+Form validation means checking whether the user has entered correct and required information before submitting a form.
+
+HTML provides built-in validation using attributes such as:
+
+required
+min
+max
+maxlength
+pattern
+type="email" -->
+
+<!-- 
+Why use <label>?
+Makes forms easier to understand
+Improves accessibility
+Clicking the label can focus/select the related input -->
+
+<!-- 
+HTML5 Semantic Elements
+
+Semantic elements clearly describe the meaning/purpose of their content.
+
+Common semantic elements include:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer> -->
+
+
+<!-- 
+Why semantic HTML?
+
+It helps:
+
+Browsers understand the structure
+Search engines understand the content
+Screen readers navigate the page
+Developers understand the code
+
+Simple meaning:
+ Semantic elements = elements with meaningful names -->
+
+<!-- 
+ <figure> → contains the image
+<figcaption> → describes the image -->
+
+
+
+    <!-- | Element/Concept     | Purpose                         |
+| ------------------- | ------------------------------- |
+| **Form Validation** | Checks whether input is valid   |
+| `<label>`           | Labels a form control           |
+| `<fieldset>`        | Groups related form controls    |
+| `<legend>`          | Gives a title to a fieldset     |
+| `<iframe>`          | Embeds external content/page    |
+| **Semantic HTML**   | Gives meaning to page structure |
+| `<figure>`          | Contains an image/diagram/etc.  |
+| `<figcaption>`      | Caption for a figure            |
+| `<details>`         | Creates expandable content      |
+| `<summary>`         | Clickable heading for details   | -->

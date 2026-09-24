@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+
+        /* 1. Element Selector */
+        p {
+            color: aqua;
+            font-size: 20px;
+        }
+
+        /* 2. Class Selector */
+        .t {
+            color: cadetblue;
+            font-size: 15px;
+        }
+
+        /* 3. ID Selector */
+        #u {
+            color: chartreuse;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        /* 4. Universal Selector */
+        * {
+            font-family: Arial;
+        }
+
+        /* 5. Attribute Selector */
+        input[type="email"] {
+            border: 3px double blue;
+        }
+
+        /* 6. Grouping Selector */
+        h1, h3 {
+            color: burlywood;
+        }
+
+        /* 7. Descendant Selector */
+        .box p {
+            color: red;
+        }
+
+        /* 8. Child Selector */
+        .parent > p {
+            border: 3px solid pink;
+        }
+
+        /* 9. Adjacent Sibling Selector */
+        h4 + p {
+            color: palevioletred;
+        }
+
+        /* 10. General Sibling Selector */
+        h5 ~ p {
+            color: darkgreen;
+        }
+
+        /* specificity */
+
+        p { color: blue; }
+      .text { color: red; }
+        #title { color: green; }
+
+        #jk { color: rgb(0, 225, 255); }
+         p { color: rgb(255, 0, 140); }
+
+         /* color */
+         .i{
+            color: brown;
+         }
+         .f{
+            background: rgb(248, 248, 54);
+            background-color: cadetblue;
+         }
+
+         /* border */
+         .box{
+            border: 3px solid green;
+         }
+         .box1{
+            border: 2px dashed palevioletred ;
+         }
+         .box2{
+            border:2px dotted purple;
+            border-radius: 20px;
+
+         }
+         .box3{
+            border: 2px double orange;
+
+         }
+         .box4 {
+         border-top: 2px solid red;
+         border-right: 3px solid blue;
+         border-bottom: 4px solid green;
+         border-left: 5px solid orange;
+         width: 200px;
+         height: 200px;
+         padding: 40px;
+         }
+
+         /*example*/
+
+         .outer-box {
+            width: 400px;
+            height: 250px;
+            background-color: lightblue;
+            border: 3px solid blue;
+            padding: 20px;
+        }
+
+        .inner-box {
+            width: 200px;
+            height: 200px;
+            background-color: lightpink;
+            border: 3px solid red;
+            padding: 10px;
+        }
+        /* box model */
+
+        .box5 {
+            width: 200px;
+            height: 100px;
+
+            padding: 20px;
+
+            border: 5px solid blue;
+
+            margin: 30px;
+
+            background-color: lightyellow;
+        }
+        /* margin and padding */
+        .box7 {
+         border: 2px solid blue;
+         padding: 20px;
+          margin: 20px;
+           }
+           p {
+    color: blue !important;
+}
+
+#title {
+    color: red !important;
+}
+         
+
+
+    </style>
+</head>
+
+<body>
+
+    <h2>1. Element Selector</h2>
+    <p>This is webpage in the DOM</p>
+
+    <hr>
+
+    <h2>2. Class Selector</h2>
+    <p class="t">Welcome to home page</p>
+
+    <hr>
+
+    <h2>3. ID Selector</h2>
+    <h1 id="u">Hello Sana</h1>
+
+    <hr>
+
+    <h2>4. Universal Selector</h2>
+    <p>Hello Tasana</p>
+
+    <hr>
+
+    <h2>5. Attribute Selector</h2>
+    <input type="email" placeholder="Enter your email">
+
+    <hr>
+
+    <h2>6. Grouping Selector</h2>
+    <h1>AAAA</h1>
+    <h3>BBBB</h3>
+
+    <hr>
+
+    <h2>7. Descendant Selector</h2>
+
+    <div class="box">
+        <p>Hello World!!</p>
+
+        <div>
+            <p>This is laptop</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>8. Child Selector</h2>
+
+    <div class="parent">
+        <p>Bala</p>
+
+        <div>
+            <p>Electronics</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>9. Adjacent Sibling</h2>
+
+    
+    <p>Jonjo</p>
+    <p>Yokomaha</p>
+
+    <hr>
+
+    <h2>10. General Sibling</h2>
+
+    <h5>Heading Five</h5>
+    <p>First paragraph after h5.</p>
+    <p>Second paragraph after h5.</p>
+    <div>A div element</div>
+    <p>Third paragraph after h5.</p>
+
+
+
+
+    <!-- Practice CSS specificity. -->
+
+    <hr>
+    <h2> Specificity</h2>
+    <p id="title" class="text"> TATA</p>
+
+    <hr>
+    <p id="jk" style="color:blue;">gigi</p>
+
+    <!-- Apply colors and backgrounds. -->
+
+    <h2> add color and background</h2>
+
+    <p class="i">kaki</p>
+
+    <p class="f">lulu</p>
+
+    <hr/>
+    <h2>border</h2>
+
+    <p class="box"> hello this our world</p>
+    <br>
+    <p class="box1"> hello this our world</p>
+    <br>
+    <p class="box2"> hello this our world</p>
+     <br>
+    <p class="box3"> hello this our world</p>
+
+    <br>
+    <p class="box4"> hello this our world</p>
+<hr>
+    <!-- example-->
+     <div class="outer-box">
+         welcome to outer box
+
+
+        <div class="inner-box">
+            This is the inner box.
+        </div>
+
+    </div>
+<hr>
+    <!--box model-->
+    <h2>Box model</h2>
+
+    <div class="box5">
+        Hello CSS</div>
+<hr>
+    <h2>Margin padding</h2>
+    <div class="box7">Box 1</div>
+    <div class="box7">Box 2</div>
+
+    <hr>
+    <!-- Understand when !important should and should not be used. -->
+<!-- 
+    When should you use !important?
+
+Use it only when you genuinely need to override another CSS rule and you cannot reasonably solve the conflict by fixing your selectors or stylesheet structure. -->
+
+<p id="title">Hello</p>
+  
+
+</body>
+</html>
+
+<!-- 
+Inline       → 1000
+ID           → 100
+Class        → 10
+Attribute    → 10
+Element      → 1 -->
+
+
+<!-- | Margin                                           | Padding                                    |
+| ------------------------------------------------ | ------------------------------------------ |
+| Space outside the border                         | Space inside the border                    |
+| Creates distance between elements                | Creates space around the content           |
+| Background color does **not** extend into margin | Background color extends through padding   |
+| Can be used to separate elements                 | Can be used to give content breathing room | -->

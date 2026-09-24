@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: aqua;
+        }
+        .text{
+            color: blue;
+        }
+        #para{
+            color:chartreuse;
+        }
+        /* color */
+        .t{
+            color:#00b7ff;
+        }
+        .u{
+            color:rgb(125, 148, 25);
+        }
+        /* background */
+
+        div{
+            background-color: lightcoral;
+        }
+        .box{
+            border:3px solid purple;
+        }
+        .box1{
+            border: 2px dashed greenyellow;
+        }
+        .box2{
+            border:2px dotted red;
+        }
+        .box3{
+            border:3px double rgb(34, 5, 9);
+        }
+        
+        /* width */
+        .box4{
+            height: 300px;
+            width: 500px;
+            background-color: brown;
+        }
+        /* Margin */
+
+        .w{
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+            margin:40px;
+        }
+
+
+        /* Padding */
+        .j{
+            border:3px double rgb(179, 5, 34);
+            padding:20px;
+        }
+
+        /* box modal */
+
+        .h{
+            width: 200px;
+            height: 300px;
+            border: 3px dashed green;
+            margin: 20px;
+            font-size: 30px;
+        }
+
+        /* Opacity */
+        .d{
+            background-color: blueviolet;
+            opacity: 0.5;
+        }
+
+        /* !important */
+
+        p{
+            color:rgb(3, 71, 49)
+        }
+
+        .l{
+            color: red !important;
+        }
+
+        /* content box */
+
+        .box6 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    box-sizing: content-box;
+}
+
+
+/* border-box */
+
+.box8 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h2>CSS Specificity</h2>
+
+    <p id="para" class="text"> Hello wrold</p>
+
+    <p id="para" class="tex" style="color:purple;"> Hello universe</p>
+    <hr>
+    <h2>Color</h2>
+    <!--color name-->
+
+    <p class="t"> welcome</p>
+
+    <!-- HEX value -->
+
+    <p class="u">tasan</p>
+
+    <hr>
+    <h2>Backgroung</h2>
+    <div>Hello !!!!</div>
+
+    <hr>
+    <h2>Border</h2>
+    <div class="box">JK is good</div><br>
+
+    <div class="box1">JK is good</div><br>
+
+    <div class="box2">JK is good</div><br>
+
+    <div class="box3">JK is good</div>
+
+    <hr>
+    <h2>width</h2>
+
+    <div class="box4"> hello! how are u</div>
+
+     <hr>
+    <h2>Margin</h2>
+
+    <div class="w">Box1</div>
+    <div class="w">Bpx2</div>
+
+    <hr/>
+    <h2>Padding</h2>
+    <div class="j">Hello ! hai!!!!</div>
+
+    <hr>
+    <h2>Box model</h2>
+
+    <div class="h">no power</div>
+
+    <hr>
+    <h2>Opacity</h2>
+    <div class="d">Hello CSS</div>
+
+    <hr>
+    <h2> !important</h2>
+
+    <p class="l"> Sonu is good</p>
+
+    <hr>
+    <h2>Content box</h2>
+    <div class="box6">Hello Wrold</div>
+    <br>
+
+
+    <div class="box8">Hello Wro</div>
+
+
+
+    
+</body>
+</html>
+
+<!-- 
+CSS Specificity
+
+CSS specificity decides which CSS rule is applied when multiple rules target the same element.
+
+A simple order to remember is:
+
+Inline CSS > ID > Class/Attribute/Pseudo-class > Element -->
+
+<!-- 
+Colors
+
+CSS allows you to change the color of text and other elements.
+
+There are several ways to specify colors. -->
+
+<!-- 
+Backgrounds
+
+The background properties control the background of an element. -->
+
+
+
+<!-- Borders
+
+The border property creates a border around an element. -->
+
+
+
+<!-- Width
+
+The width property controls the horizontal size of an element. -->
+
+<!-- 
+Height
+
+The height property controls the vertical size of an element. -->
+
+
+<!-- Margin
+
+Margin is the space outside an element.
+
+Think of it as the distance between one element and another. -->
+
+<!-- 
+Padding
+
+Padding is the space inside an element, between its content and border. -->
+
+
+
+<!-- 
+. Box Model
+
+The CSS box model describes how the size of an HTML element is calculated.
+
+It consists of:
+
+┌───────────────────────────────┐
+│           Margin              │
+│  ┌─────────────────────────┐  │
+│  │         Border          │  │
+│  │  ┌───────────────────┐  │  │
+│  │  │      Padding      │  │  │
+│  │  │  ┌─────────────┐  │  │  │
+│  │  │  │   Content   │  │  │  │
+│  │  │  └─────────────┘  │  │  │
+│  │  └───────────────────┘  │  │
+│  └─────────────────────────┘  │
+└───────────────────────────────┘
+
+Remember:
+
+Content → Padding → Border → Margin -->
+
+<!-- 
+box-sizing
+
+box-sizing controls how the width and height of an element are calculated.
+
+There are two important values:
+
+content-box
+border-box -->
+
+<!-- 
+Opacity
+
+opacity controls the transparency of an element.
+
+The value ranges from:
+
+0 → completely transparent
+1 → completely visible -->
+
+<!-- 
+!important
+
+!important gives a CSS declaration very high priority when resolving conflicting declarations. -->
+
+
+<!-- | Concept         | Meaning                              | Example                        |
+| --------------- | ------------------------------------ | ------------------------------ |
+| **Specificity** | Decides which conflicting rule wins  | `#id` generally beats `.class` |
+| **Colors**      | Changes text/element colors          | `color: red;`                  |
+| **Backgrounds** | Controls element background          | `background-color: yellow;`    |
+| **Borders**     | Creates boundary around element      | `border: 2px solid black;`     |
+| **Width**       | Controls horizontal size             | `width: 200px;`                |
+| **Height**      | Controls vertical size               | `height: 100px;`               |
+| **Margin**      | Space outside element                | `margin: 20px;`                |
+| **Padding**     | Space inside element                 | `padding: 20px;`               |
+| **Box Model**   | Content + padding + border + margin  | —                              |
+| **box-sizing**  | Controls width/height calculation    | `box-sizing: border-box;`      |
+| **Opacity**     | Controls transparency                | `opacity: 0.5;`                |
+| **!important**  | Gives declaration very high priority | `color: red !important;`       | -->

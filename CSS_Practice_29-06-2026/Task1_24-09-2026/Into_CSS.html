@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./Intro.css">
+    <style>
+        h1{
+            color:pink;
+            font-size:30px;
+        }
+
+        p{
+            color:blue;
+            font-size: 40px;
+        }
+
+        /* Internal CSS */
+        h2{
+            color:brown;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+        }
+        p{
+          color: cadetblue;
+          font-weight: 400;
+          font-display: auto;
+          font-size: 30px;  
+        }
+        /* Element Selector */
+
+        p2{
+            color:purple;
+            font-size: 30px;
+        }
+
+        /* Class Selector */
+
+        .AA{
+            color: lightblue;
+            font-size: 20px;
+        }
+        .BB{
+            color: lightcoral;
+            font-size: 20px;
+        }
+
+        /* ID Selector */
+
+        #heading{
+            color: rgb(154, 135, 222);
+            font-size: 20px;
+            background-color: lightcyan;
+            
+
+        }
+
+        /* Universal Selector */
+
+        *{
+            color: crimson;
+            font-size: 30px;
+        }
+
+        /* Attribute Selector */
+
+        input[type="text"]{
+            background-color: orange;
+        }
+
+        /* Group Selector */
+
+        h1,h4,p23{
+            color:rgb(255, 0, 106);
+        }
+
+        /* Descendant Selector */
+
+        div p12{
+            color:cyan;
+            font-size: 20px;
+        }
+
+        /* Child Selector */
+
+        div > p34{
+            color:darkgreen;
+        }
+
+        /* Adjacent selector */
+
+        h + p88{
+            color:darkmagenta;
+        }
+
+        /* General sibling Selector */
+
+        h5 ~ p25{
+            color:lightgreen;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- intro of css-->
+     <h1> Welcome to the wrold</h1>
+     <p> This is the new webpage in CSS which looks page attractive and colorful</p>
+<!---->
+     <hr>
+     <h2> Inline CSS</h2>
+
+     <h1 style="color:red;"> hello mom!!!</h1>
+
+     <p style="color:aqua;"> my mom is beautiful in the wrold</p>
+<hr>
+     <h2>Internal CSS</h2>
+
+     <h2>I love my family</h2>
+
+     <p> my always supports and respect me and guide me to my goals and give or show me new way of life</p>
+
+     <hr/>
+     <h2>External CSS</h2>
+
+     <h3> This is Our wrold</h3>
+
+     <p1> the wrold where we can see nature, water , environment,sun,air everything is included and every part of wrold is beautiful</p1>
+
+     <hr>
+     <!-- Element Selector
+
+An element selector selects HTML elements using their tag name. -->
+     
+     <h1>1.Element Selector</h1>
+
+     <p2> this is sana</p2>
+     <p2> she will do whatever she can do</p2>
+
+
+
+     <!-- 
+     Class Selector
+
+A class selector selects elements using the class attribute.
+
+CSS uses a dot (.) before the class name. -->
+
+<hr>
+
+<h2>2. class Selector</h2>
+
+<p class="AA"> this is new line</p>
+
+<p class="BB"> this is second line</p>
+
+
+<hr/>
+<br>
+<!-- ID Selector
+
+An ID selector selects an element using its id.
+
+CSS uses a hash (#) before the ID. -->
+
+<h2>3. ID Selector</h2>
+
+<h1 id="heading"> Welcome to home</h1>
+
+<hr>
+<!-- 
+Universal Selector
+
+The universal selector selects all HTML elements. -->
+
+
+<h2> 4. Universal Selector</h2>
+
+<h1>heading</h1>
+<p22>Paragraph</p22>
+<button>Click me</button>
+
+<!---->
+<!-- 
+Attribute Selector
+
+An attribute selector selects elements based on their attributes. -->
+
+<hr>
+<h2>5. Attribute Selector</h2>
+
+<input type="text" placeholder="enter name">
+<br><br>
+
+<input type="email" placeholder="enter email">
+
+<hr>
+<!-- 
+Grouping Selector
+
+A grouping selector allows us to apply the same CSS to multiple selectors. -->
+<h2> 6. Group selector</h2>
+<h1> Main Heading</h1>
+<h4> Sub Heading</h4>
+<p23> This is a new paragraph </p23>
+
+
+<hr>
+<!-- 
+Descendant Selector
+
+A descendant selector selects an element that is inside another element, at any level. -->
+
+<h2>7. Descendant Selector</h2>
+
+<p22> Outside the wrold</p22>
+<div>
+    <p12> Inside the wrold</p12>
+</div>
+
+<hr>
+<!-- 
+Child Selector
+
+The child selector selects only the direct children of an element. -->
+
+<h2> Child Selector</h2>
+<div>
+    <p34> Direct Child Paragraph</p34>
+
+    <section>
+        <p13>Nested where one element is inside another element</p13>
+
+    </section>
+</div>
+
+<hr>
+
+<!-- 
+Adjacent Sibling Selector
+
+The adjacent sibling selector selects the element that comes immediately after another element. -->
+
+<h2> Adjacent sibling selector</h2>
+
+<h> Heading</h><br>
+<p88> first</p88><br>
+<p77>second </p77>
+
+<hr>
+<!-- 
+General Sibling Selector
+
+The general sibling selector selects all matching siblings that come after an element. -->
+
+<h2>General Sibling Selector</h2>
+
+<h5> Heading</h5>
+
+<p25>First Paragraph</p25><br>
+<p26>second Paragraph</p26><br>
+<p27>third paragraph</p27>
+
+
+
+    
+
+</body>
+</html>
+
+
+<!-- 
+Introduction to CSS
+
+CSS (Cascading Style Sheets) is used to style HTML elements.
+
+HTML creates the structure, while CSS controls things like:
+
+Text color
+Background color
+Font size
+Borders
+Spacing
+Alignment
+Layout -->
+
+<!-- 
+Inline CSS
+
+Inline CSS is written directly inside an HTML element using the style attribute. -->
+
+<!-- 
+Internal CSS
+
+Internal CSS is written inside the <style> element, usually inside <head>. -->
+
+<!-- 
+External CSS
+
+External CSS means writing CSS in a separate .css file. -->
+
+
+<!-- 
+CSS Syntax
+
+The basic CSS syntax is:
+
+selector {
+    property: value;
+} -->
+
+<!-- 
+p {
+    color: red;
+    font-size: 20px;
+} -->
+
+
+<!-- | Part        | Meaning  |
+| ----------- | -------- |
+| `p`         | Selector |
+| `color`     | Property |
+| `red`       | Value    |
+| `font-size` | Property |
+| `20px`      | Value    | -->
+
+<!-- 
+CSS Comments
+
+Comments are notes in CSS. The browser does not display them.
+
+Syntax:
+
+/* This is a comment */ -->
+
+
+<!-- 
+CSS SELECTORS
+
+Selectors are used to select HTML elements that you want to style. -->
+
+
+
+<!-- | Selector             | Symbol | Meaning                  | Example              |
+| -------------------- | ------ | ------------------------ | -------------------- |
+| **Element**          | `tag`  | Select by tag            | `p`                  |
+| **Class**            | `.`    | Select by class          | `.box`               |
+| **ID**               | `#`    | Select by ID             | `#header`            |
+| **Universal**        | `*`    | Select everything        | `*`                  |
+| **Attribute**        | `[]`   | Select by attribute      | `input[type="text"]` |
+| **Grouping**         | `,`    | Select multiple elements | `h1, p`              |
+| **Descendant**       | space  | Any element inside       | `div p`              |
+| **Child**            | `>`    | Direct child             | `div > p`            |
+| **Adjacent Sibling** | `+`    | Immediately next sibling | `h1 + p`             |
+| **General Sibling**  | `~`    | All following siblings   | `h1 ~ p`             | -->

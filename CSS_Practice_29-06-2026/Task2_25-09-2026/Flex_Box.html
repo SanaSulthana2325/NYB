@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .Container{
+            
+            display:flex;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+        .box{
+            width: 100px;
+            height: 60px;
+            border: 3px dashed blue;
+            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .f{
+    display:flex;
+    flex-direction:row;
+}
+.o{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+}
+.p{
+    display: flex;
+    justify-content: left;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.gi{
+    display: flex;
+    align-items:center;
+    align-items: flex-end;
+    align-items: stretch;
+    margin: 20px;
+}
+.g{
+    display: flex;
+     flex-wrap: wrap; /*nowrap */
+}
+.k{
+    display: flex;
+    gap: 50px;
+}
+.one{
+    display: flex;
+   flex-grow: 1;
+}
+.two{
+    flex-grow: 7;
+}
+.three{
+    flex-grow: 1;
+}
+.con{
+    display: flex;
+    width:400px;
+    border: 2px solid brown;
+}
+.b{
+    width:200px;
+    height:80px;
+    border:2px solid green
+}
+.box1{
+    flex-shrink: 1;
+}
+.box2{
+    flex-shrink: 1;
+}
+.box3{
+    flex-shrink: 1;
+}
+/* flex-basis */
+.cont{
+    display:flex;
+    width:600px;
+}
+.c{
+    height: 80px;
+    border: 2px solid blue;
+}
+.box1{
+    flex-basis: 100px;
+}
+.box2{
+    flex-basis: 100px;
+}
+.box3{
+    flex-basis: 100px;
+}
+
+/* order */
+.container1 {
+    display: flex;
+}
+
+.one {
+    order: 2;
+}
+
+.two {
+    order: 0;
+}
+
+.three {
+    order: 1;
+}
+/* aling content */
+
+.container2 {
+    display: flex;
+    height: 300px;
+    width: 400px;
+    border: 2px solid black;
+    align-content:space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box5 {
+    width: 100px;
+    height: 50px;
+    border: 2px solid blue;
+    box-sizing: border-box;
+    
+
+}
+
+
+
+    </style>
+</head>
+<body>
+<!-- 
+    Flex Container
+
+The parent becomes a flex container when you write: -->
+
+<div class="Container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+</div>
+<hr>
+<!-- 
+Flex Direction
+
+flex-direction determines which direction the flex items are arranged. -->
+<h2> row </h2>
+<div class="f">
+    <div class="box">item 1</div>
+    <div class="box">item 2</div>
+    <div class="box">item 3</div>
+    </div>
+
+<hr>
+<h2>column</h2>
+<div class="o">
+    <div class="box">item 11</div>
+    <div class="box">item 22</div>
+    <div class="box">item 33</div>
+    </div>
+
+<!-- justify-content
+
+justify-content controls how items are positioned along the main axis.
+
+For the default row, the main axis is horizontal. -->
+
+<hr>
+<h2>justify content</h2>
+<div class="p">
+    <div class="box">AAA</div>
+    <div class="box">BBB</div>
+    <div class="box">CCC</div>
+    </div>
+<!-- 
+align-items
+
+align-items controls how items are aligned along the cross axis.
+
+If your direction is row, the cross axis is vertical. -->
+<hr>
+<h2>Align-items</h2>
+
+
+<div class="gi">
+    <div class="box">sana</div>
+    <div class="box">Baba</div>
+    <div class="box">cake</div>
+    </div>
+
+<!-- 
+    align-content
+
+This one is often confusing.
+
+align-content controls the spacing/alignment between multiple flex lines when wrapping occurs.
+
+It becomes useful when you have: -->
+<hr>
+<h2>Align-content</h2>
+
+<div class="container2">
+    <div class="box5">Box 1</div>
+    <div class="box5">Box 2</div>
+    <div class="box5">Box 3</div>
+    <div class="box5">Box 3</div>
+    <div class="box5">Box 3</div>
+    <div class="box5">Box 3</div>
+
+</div>
+
+
+
+<hr>
+<!-- flex-wrap
+
+By default, flex items try to stay on one line. -->
+<h2>flex wrap</h2>
+<div class="g">
+    <div class="box">sana</div>
+    <div class="box">Baba</div>
+    <div class="box">cake</div>
+    <div class="box">cake</div>
+    <div class="box">cake</div>
+    <div class="box">cake</div>
+    <div class="box">cake</div>
+    <div class="box">cake</div>
+    
+    
+    </div>
+<!-- 
+    gap
+
+gap creates space between flex items. -->
+
+<hr>
+<h2>gap</h2>
+<div class="k">
+    <div class="box">saba</div>
+    <div class="box">kaka</div>
+    <div class="box">call</div>
+    </div>
+
+<hr>
+<!-- flex-grow
+
+flex-grow determines how much an item can grow and take available extra space -->
+<h2> flex-grow</h2>
+<div class="v">
+    <div class="box one">logo</div>||
+    <div class="box two">search bar</div>|
+    <div class="box three"> Login</div>|
+    </div>
+
+<!-- 
+flex-shrink
+
+flex-shrink determines how much an item can shrink when there isn't enough space. -->
+<hr>
+<h2>flex-shrink</h2>
+
+<div class="con">
+    <div class="b box1">Box 1</div>
+    <div class="b box2">Box 2</div>
+    <div class="b box3">Box 3</div>
+
+</div>
+
+<!-- 
+flex-basis
+
+flex-basis specifies the initial size of a flex item before the remaining space is distributed. -->
+
+<hr>
+<h2>Flex basis</h2>
+
+<div class="cont">
+    <div class="c box1">Box 1</div>
+    <div class="c box2">Box 2</div>
+    <div class="c box3">Box 3</div>
+
+</div>
+
+<!--order
+
+order changes the visual order of flex items without changing their order in the HTML. -->
+
+<hr>
+<h2>order</h2>
+
+<div class="container1">
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+</div>
+
+
+
+
+
+    
+</body>
+</html>
+
+
+<!-- 
+CSS Flexbox
+
+Flexbox is a CSS layout system used to arrange elements easily in a row or column.
+
+A good way to learn Flexbox is to imagine a parent container with several boxes inside it. -->
+
+
+<!-- justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly; -->
+
+<!-- 
+align-items → alignment of items within a line
+align-content → alignment/spacing of multiple lines -->
+
+<!-- 
+Flex Grow = extra space → grow
+Flex Shrink = less space → shrink -->
+
+
+
+<!-- | Property          | What it controls                     |
+| ----------------- | ------------------------------------ |
+| `display: flex`   | Creates the flex container           |
+| `flex-direction`  | Row or column direction              |
+| `justify-content` | Alignment on the **main axis**       |
+| `align-items`     | Alignment on the **cross axis**      |
+| `align-content`   | Alignment of **multiple flex lines** |
+| `flex-wrap`       | Whether items move onto new lines    |
+| `gap`             | Space between items                  |
+| `flex-grow`       | How much an item grows               |
+| `flex-shrink`     | How much an item shrinks             |
+| `flex-basis`      | Initial size of an item              |
+| `order`           | Visual order of items                | -->

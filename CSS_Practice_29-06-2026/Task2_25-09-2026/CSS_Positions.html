@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        /* static */
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: lightcoral;
+            position: static;
+            top: 50px;
+            left: 50px;
+        }
+
+        /* relative */
+        .j{
+            width: 200px;
+            height: 150px;
+            background-color: aquamarine;
+            position: relative;
+            left: 50px;
+            top: 15px;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        /* absolute */
+
+        .y{
+            width: 300px;
+            height: 200px;
+            background-color: lightgreen;
+            position: relative;
+        }
+        .z{
+            width: 70px;
+            height: 60px;
+            background-color: cadetblue;
+            color: white;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            }
+
+            /* fixed */
+            body{
+                height: 1000px;
+            }
+
+            .chat{
+                width:100px;
+                padding:15px;
+                background-color: blue;
+                color: white;
+                position: fixed;
+                bottom:20px;
+                right: 20px;
+
+            }
+
+            body{
+                height: 1000px;
+            }
+
+            .head{
+                background-color: orangered;
+                padding: 15px;
+                position: sticky;
+                top:0
+            }
+    </style>
+</head>
+<body>
+    <h2>Position: Static</h2>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <hr>
+    <h2> Relative position</h2>
+
+    <div class="j">hello</div>
+    <p>This is my paragraph</p>
+
+    <hr>
+    <h2>3.absolute</h2>
+    <div class="y"> Profile of sana
+        <div class="z">New Profile</div>
+    </div>
+    <hr>
+    <h2>Fixed position</h2>
+    <p1> scroll the webpage</p1>
+
+    <p2> there is a lots of content in there</p2>
+
+    <div class="chat"> chat process</div>
+    <hr>
+    <h2>Sticky</h2>
+
+    <h2 class="head">Products</h2>
+    <p>Products 1</p>
+    <p>Products 2</p>
+    <p>Products 3</p>
+    <p>Products 4</p>
+    <p>Products 5</p>
+    <p>Products 6</p>
+    <p>Products 7</p>
+    <p>Products 8</p>
+    <p>Products 9</p>
+    <p>Products 10</p>
+    <p>Products 11</p>
+    <p>Products 8</p>
+    <p>Products 8</p>
+    <p>Products 8</p>
+    <p>Products 8</p>
+
+
+
+
+    
+</body>
+</html>
+
+<!-- 
+position: static
+This is the default position of every HTML element.
+The element stays in the normal document flow.
+top, right, bottom, and left do not work. -->
+
+
+<!-- position: relative
+The element stays in the normal document flow.
+You can move it using top, right, bottom, or left.
+The original space of the element is still reserved. -->
+
+<!-- 
+position: absolute
+The element is removed from the normal document flow.
+It is positioned relative to its nearest positioned ancestor.
+If there is no positioned ancestor, it is generally positioned relative to the initial containing block/page. -->
+
+<!-- 
+position: fixed
+The element is positioned relative to the browser viewport.
+It stays in the same place even when you scroll.
+It is removed from the normal document flow. -->
+
+
+<!-- position: sticky
+The element behaves like relative initially.
+When you scroll to a specified position, it sticks to that position.
+It remains constrained by its containing block. -->
+
+
+
+<!-- | Position     | Real-life example             | What happens?                |
+| ------------ | ----------------------------- | ---------------------------- |
+| **Static**   | Books on a shelf              | Normal position              |
+| **Relative** | Person moves from their chair | Moves from original position |
+| **Absolute** | Badge on a profile picture    | Exact position inside parent |
+| **Fixed**    | Chat button                   | Stays fixed to screen        |
+| **Sticky**   | Section heading               | Scrolls, then sticks         | -->
+
+
+
+<!-- | Position   | Normal Flow? | Moves with `top/left`? | Stays while scrolling?      |
+| ---------- | ------------ | ---------------------- | --------------------------- |
+| `static`   | ✅ Yes        | ❌ No                   | ❌                           |
+| `relative` | ✅ Yes        | ✅ Yes                  | ❌                           |
+| `absolute` | ❌ No         | ✅ Yes                  | ❌                           |
+| `fixed`    | ❌ No         | ✅ Yes                  | ✅                           |
+| `sticky`   | ✅ Initially  | ✅ Yes                  | ✅ When threshold is reached | -->
+
+<!-- 
+Easy way to remember
+
+Static → Normal
+Relative → Move from original place
+Absolute → Exact position inside positioned parent
+Fixed → Fixed to screen
+Sticky → Scroll and then stick -->

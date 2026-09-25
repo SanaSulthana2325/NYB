@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* grid container */
+        .box{
+           
+            border: 2px solid red;
+            gap:10px;
+        }
+        .pro{
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+        }
+        .prod{
+            display: grid;
+            grid-template-columns:  100px 300px 400px;
+            color: blue;
+       
+        }
+        .prodt{
+            display: grid;
+            grid-template-rows: 100px 200px;
+        }
+        .produ{
+            display: grid;
+            grid-template-columns: 200px 1fr ;
+
+            grid-template-rows: 100px 300px;
+        }
+        .produc{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .website {
+         display: grid;
+         border: 3px dashed black;
+
+         grid-template-columns: 200px 1fr;
+
+          grid-template-rows: 80px 300px 60px;
+
+        grid-template-areas:
+         "header header"
+         "sidebar content"
+         "footer footer";
+         }
+
+      header {
+    grid-area: header;
+    border: 2px solid pink;
+     }    
+
+     aside {
+    grid-area: sidebar;
+    border: 2px solid rgb(212, 8, 42);
+    }
+
+     main {
+    grid-area: content;
+    border: 2px solid rgb(113, 12, 228);
+     }
+
+     footer {
+    grid-area: footer;
+    border: 2px solid rgb(10, 238, 86);
+     }
+
+     .k{
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+     }
+     .l{
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+     }
+     .d{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 2fr));
+        gap: 20px;
+
+     }
+
+    </style>
+</head>
+<body>
+    <!-- Grid Container
+
+A Grid Container is the parent element where we write: -->
+
+<h2> grid container</h2>
+<div class="pro">
+    <div> Phone</div>
+    <div>laptop</div>
+    <div>tv</div>
+</div>
+
+
+<!-- Grid Columns
+
+grid-template-columns defines the number and size of columns. -->
+
+<h2>grid column</h2>
+
+<div class="prod">
+    <div class="box"> Phone</div>
+    <div class="box">laptop</div>
+    <div class="box">tv</div>
+</div>
+
+<!-- Grid Rows
+
+grid-template-rows defines the size of rows. -->
+
+<hr>
+<h2> grid row</h2>
+
+<div class="prodt">
+    <div class="box"> Phone111</div>
+    <div class="box">laptop111</div>
+    <div class="box">tv111</div>
+</div>
+
+<hr>
+<div class="produ">
+    <div class="box"> Phone111</div>
+    <div class="box">laptop111</div>
+    <div class="box">tv111</div>
+</div>
+<!-- 
+Gap
+
+gap creates space between rows and columns. -->
+<hr>
+<h2>gap</h2>
+
+
+<div class="produc">
+    <div class="box"> Apple</div>
+    <div class="box">mango</div>
+    <div class="box">banana</div>
+</div>
+
+
+<!-- Grid Areas
+
+grid-template-areas lets you give names to parts of the grid and then place elements into those named areas.
+
+This is extremely useful for website layouts. -->
+
+<hr>
+<h2>grid area</h2>
+
+<div class="website">
+
+    <header>Header</header>
+
+    <aside>Sidebar</aside>
+
+    <main>Content</main>
+
+    <footer>Footer</footer>
+
+</div>
+
+<!-- fr Unit
+
+fr means fraction of the available space.
+
+This is one of the most important Grid concepts. -->
+
+<hr>
+<h2> fr unit</h2>
+<div class="k">
+    <div class="box"> Apple</div>
+    <div class="box">mango</div>
+    <div class="box">banana</div>
+</div>
+
+<!-- repeat()
+
+repeat() is used to avoid writing the same column or row definition multiple times. -->
+
+<hr>
+<h2> repeat</h2>
+
+<div class="l">
+    <div class="box"> Apple</div>
+    <div class="box">mango</div>
+    <div class="box">banana</div>
+</div>
+
+<!-- minmax()
+
+minmax() allows you to specify a minimum and maximum size for a grid track. -->
+
+<hr>
+<h2>minmax</h2>
+<div class="d">
+    <div class="box"> Apple</div>
+    <div class="box">mango</div>
+    <div class="box">banana</div>
+</div>
+
+
+
+
+
+    
+</body>
+</html>
+
+<!-- 
+CSS Grid
+
+CSS Grid is a layout system that lets you arrange elements in rows and columns. -->
+
+
+
+<!-- 
+| Concept            | Meaning                             | Example                 |
+| ------------------ | ----------------------------------- | ----------------------- |
+| **Grid Container** | Parent using Grid                   | `display: grid`         |
+| **Grid Columns**   | Defines columns                     | `grid-template-columns` |
+| **Grid Rows**      | Defines rows                        | `grid-template-rows`    |
+| **Gap**            | Space between rows/columns          | `gap: 20px`             |
+| **Grid Areas**     | Names and arranges layout regions   | `grid-template-areas`   |
+| **`fr`**           | Fraction of available space         | `1fr 2fr`               |
+| **`repeat()`**     | Repeats track definitions           | `repeat(3, 1fr)`        |
+| **`minmax()`**     | Sets minimum and maximum track size | `minmax(200px, 1fr)`    | -->
+
+
+<!-- fr = how available space is divided
+repeat() = repeat a track pattern
+minmax() = define the minimum and maximum size of a track -->

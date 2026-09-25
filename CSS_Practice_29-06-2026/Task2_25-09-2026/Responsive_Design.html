@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+
+        .box {
+    width: 500px;
+    background-color: orange;
+}
+
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+        background-color: lightblue;
+    }
+}
+
+/* Mobile first design*/
+
+.card {
+    width: 100%;
+    padding: 10px;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .card {
+        width: 50%;
+    }
+}
+/*break point*/
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+.box1 {
+    flex: 1;
+    padding: 30px;
+    border: 2px solid black;
+    background-color: aqua;
+}
+
+/* Breakpoint */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+/* image */
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* layout */
+
+.container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .box4 {
+            flex: 1;
+            padding: 30px;
+            border: 2px solid rgb(60, 11, 236);
+            text-align: center;
+            background-color: rgb(67, 220, 20);
+            color: rgb(9, 31, 235);
+        }
+
+        /* Breakpoint */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Media Queries
+What is a Media Query?
+
+A media query allows us to apply different CSS styles depending on the screen size or device characteristics. -->
+
+<div class="box">Hello</div>
+
+
+<!-- Mobile-First Design
+What is Mobile-First Design?
+
+Mobile-first design means we first design the website for small screens, then add styles for larger screens. -->
+<div class="card">Welcome</div>
+
+<!--Break points-->
+<!-- Breakpoints
+What is a Breakpoint?
+
+A breakpoint is a screen width where we change the CSS layout to make the website responsive. -->
+<h2> break points</h2>
+<div class="container">
+    <div class="box1">Box 1</div>
+    <div class="box1">Box 2</div>
+    <div class="box1">Box 3</div>
+</div>
+<hr>
+<!-- Responsive Images
+What are Responsive Images?
+
+Responsive images automatically resize according to the available screen width so they don't overflow the screen. -->
+
+<h2> responsive image</h2>
+
+<img src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonaskakaroto-736230.jpg&fm=jpg" alt="Flower">
+
+<hr/>
+<!-- Responsive Layouts
+What is a Responsive Layout?
+
+A responsive layout changes its structure according to the available screen size. -->
+    
+<h2> layout</h2>
+
+<div class="container1">
+
+        <div class="box4">Box 1</div>
+        <div class="box4">Box 2</div>
+        <div class="box4">Box 3</div>
+
+    </div>
+
+
+</body>
+</html>
+
+
+<!-- Responsive Design
+
+Responsive Design means designing a website so that it automatically adjusts its layout, images, text, and components to different screen sizes such as:
+
+ Mobile
+ Tablet
+ Laptop
+ Desktop -->
+
+
+
+ <!-- | Topic                 | Meaning                                              |
+| --------------------- | ---------------------------------------------------- |
+| **Responsive Design** | Website adapts to different screen sizes             |
+| **Media Query**       | Applies CSS based on conditions such as screen width |
+| **Mobile-First**      | Design mobile first, then larger screens             |
+| **Breakpoint**        | Width where layout/style changes                     |
+| **Responsive Images** | Images resize to fit available space                 |
+| **Responsive Layout** | Layout changes according to screen size              | -->
+
+

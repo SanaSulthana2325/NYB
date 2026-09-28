@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* specificity */
+
+        p{
+            color:green
+        }
+        .message{
+            color: blue;
+        }
+        #text{
+            color:red;
+        }
+        .o{
+            color: rgb(8, 220, 228);
+
+            border:2px solid pink;
+        }
+
+        :root{
+            --main-color:blue;
+        }
+        h1{
+            color:var(--main-color);
+        }
+        btn{
+            background-color:  var(--main-color);
+        }
+        p2{
+            color: green;
+        }
+        p3{
+            color: rgb(48, 48, 228);
+        }
+        p4{
+            color: #a12626;
+        }
+
+       .f{
+            color: rgb(8, 90, 241);
+            background-color: aqua;
+        } 
+        .box {
+    background-image: url("https://wallpapers.com/images/featured/most-beautiful-nature-pictures-hdb30wtkjbn08xlf.jpg");
+    background-size: cover;
+    background-position:center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgb(235, 11, 48);
+}
+.box1{
+    border: 3px dotted blueviolet;
+    border-radius: 10px;
+
+}
+.box2{
+    border: 3px solid green;
+    border-radius: 2px;
+}
+.box3{
+    border: 3px dashed rgb(0, 124, 128);
+    border-radius: 2px;
+}
+.box4{
+    border: 3px double rgb(128, 41, 0);
+    border-radius: 2px;
+}
+.box5{
+
+    border-top: 3px solid red;
+    border-left:3px solid green;
+    border-right:3px solid  yellow;
+    border-bottom:3px solid blue;
+}
+.box6{
+    width:200px;
+    padding:20px;
+    border: 5px solid blue;
+    margin:30px
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h2> Specificity</h2>
+    <p id="text" class="message"> hai wrold!!!</p>
+
+    <!-- CSS Inheritance
+
+Inheritance means some CSS properties are automatically passed from a parent to its children. -->
+
+<hr>
+<h2> inheritance</h2>
+
+<div class="o">
+    <p class="o">Hello</p>
+    <p class="o">Welcome</p>
+</div>
+
+
+<!-- CSS Variables
+
+CSS variables allow you to store a value and reuse it. -->
+
+
+<!-- --variable-name: value; -->
+
+<hr>
+<h2> variable</h2>
+
+<h1> Hello</h1>
+<btn> click me</btn>
+
+<hr>
+
+<!-- Colors and Backgrounds
+
+CSS provides different ways to specify colors. -->
+
+<h2> color</h2>
+<p2> hello sana</p2><br><br>
+
+<p3> hii welcome to wrold </p3><br><br>
+
+<p4> lulu is a good boy</p4>
+<hr>
+<h2>background</h2>
+
+<div class="f"> hello affu</div>
+
+<h2>image</h2>
+<div class="box">
+    haii mom
+</div>
+
+
+<!-- Borders
+
+Borders are used to create a boundary around an element. -->
+
+<hr>
+<h2>border</h2>
+
+<div class="box1">
+    hello tasan
+</div><br><br>
+
+<div class="box2">
+    hello tasan
+</div><br><br>
+
+
+<div class="box3">
+    hello tasan
+</div><br><br>
+
+<div class="box4">
+    hello tasan
+</div><br><br>
+
+<div class="box5">
+    hello tasan
+</div>
+
+<!-- CSS Box Model
+
+Every HTML element is treated like a box. -->
+
+<hr>
+<h2> box model</h2>
+
+<div class="box6"> Hello wrold!!</div>
+
+
+</body>
+</html>
+
+
+<!-- CSS Specificity
+
+Specificity decides which CSS rule wins when multiple rules target the same element. -->
+
+
+<!-- Inline CSS
+   ↓
+ID
+   ↓
+Class / Attribute / Pseudo-class
+   ↓
+Element -->
+
+
+
+<!--  CSS Box Model
+
+Every HTML element is treated like a box.
+
+The box model has four parts:
+
+┌──────────────────────────────┐
+│           MARGIN             │
+│  ┌────────────────────────┐  │
+│  │         BORDER         │  │
+│  │  ┌──────────────────┐  │  │
+│  │  │     PADDING      │  │  │
+│  │  │  ┌────────────┐  │  │  │
+│  │  │  │  CONTENT   │  │  │  │
+│  │  │  └────────────┘  │  │  │
+│  │  └──────────────────┘  │  │
+│  └────────────────────────┘  │
+└──────────────────────────────┘
+1. Content
+
+The actual text/image.
+
+width: 200px;
+height: 100px;
+2. Padding
+
+Space inside the border.
+
+padding: 20px;
+3. Border
+
+The boundary.
+
+border: 2px solid black;
+4. Margin
+
+Space outside the border.
+
+margin: 20px; -->
+
+
+
+<!-- | Topic              | Easy Meaning                        | Example                       |
+| ------------------ | ----------------------------------- | ----------------------------- |
+| Selector           | Selects HTML element                | `p {}`                        |
+| Attribute selector | Selects by attribute                | `input[type="text"]`          |
+| Descendant         | Any element inside                  | `.box p`                      |
+| Child              | Direct child only                   | `.box > p`                    |
+| Adjacent sibling   | Next sibling                        | `h2 + p`                      |
+| General sibling    | All following siblings              | `h2 ~ p`                      |
+| `:hover`           | Mouse over                          | `button:hover`                |
+| `:focus`           | Element is focused                  | `input:focus`                 |
+| `:active`          | Being clicked                       | `button:active`               |
+| `:visited`         | Visited link                        | `a:visited`                   |
+| `:first-child`     | First child                         | `p:first-child`               |
+| `:last-child`      | Last child                          | `p:last-child`                |
+| `:nth-child()`     | Specific position                   | `p:nth-child(2)`              |
+| `::before`         | Content before                      | `p::before`                   |
+| `::after`          | Content after                       | `p::after`                    |
+| `::first-letter`   | First letter                        | `p::first-letter`             |
+| `::first-line`     | First line                          | `p::first-line`               |
+| Specific       | Decides which rule wins             | `ID > class > element`        |
+| Inheritance        | Parent style → child                | `color`                       |
+| Variables          | Reusable values                     | `--color`                     |
+| Colors             | Text/background colors              | `color: red`                  |
+| Background         | Background styling                  | `background-color`            |
+| Border             | Boundary around element             | `border: 2px solid`           |
+| Box Model          | Content + padding + border + margin | `width/padding/border/margin` | -->

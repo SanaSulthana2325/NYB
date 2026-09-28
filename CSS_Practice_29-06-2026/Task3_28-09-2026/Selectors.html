@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="text"]{
+            border: 3px dashed pink;
+            margin: 20px;
+            color: green
+        }
+
+        input[type="number"]{
+            border:2px solid blue;
+        }
+
+        /* decendant */
+        .box p{
+            color: red;
+        }
+        .a p1{
+            color: rgb(55, 241, 241);
+        }
+
+        /* child */
+        .c > p2{
+            color: chocolate;
+
+        }
+        /* Ajacent */
+
+        h2 + p{
+            color: blueviolet;
+        }
+        /* general */
+
+        h2 ~ p3{
+            color: rgb(240, 84, 240);
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+<!-- Attribute Selectors
+
+Attribute selectors select elements based on their attributes.  -->
+
+<h2> Attribute</h2>
+<lable>name:</lable>
+<input type="text"  placeholder="enter your name" > <br>
+
+<label>ph no:</label>
+<input type="number" placeholder="enter 10 didits number">
+
+<!-- Descendant Selector
+
+A descendant selector selects an element that is inside another element, at any level. -->
+
+<hr>
+<h2> Descendant</h2>
+<div class="box">
+    <p>Hello</p>
+    <section>
+        <p> Welcome</p>
+    </section>
+</div>
+
+<div class="a">
+    <p1>sana</p1>
+    <div>
+        <p1>sulthana</p1>
+    </div>
+</div>
+
+<!-- Child Selector
+
+The child selector selects direct children only. -->
+
+<hr>
+<h2> Child Selector</h2>
+
+<div class="c">
+    <p2> tasan</p2><br>
+    <p2>hai</p2>
+    <div>
+        <p2> tasleem</p2>
+    </div>
+</div>
+
+
+<!-- Sibling Selectors
+
+Sibling means elements that have the same parent.
+
+There are two important sibling selectors.
+
+A. Adjacent sibling +
+
+Selects the immediately next sibling. -->
+
+<hr>
+<h2> Adjacent sibling Selector</h2>
+
+<h2>Heading</h2>
+<p> First paragraph</p>
+<p> second paragraph</p>
+
+
+<!-- General sibling ~
+
+Selects all following siblings. -->
+<hr>
+<h2> General sibling</h2>
+
+<h3> head</h3>
+
+<p3>hello everyone</p3><br>
+<p3> this is me </p3>
+</body>
+</html>
+
+
+
+<!-- CSS Selectors
+
+A selector tells CSS which HTML element you want to style.
+
+Common selectors
+
+
+
+
+!-- | Selector             | Symbol | Meaning                  | Example              |
+| -------------------- | ------ | ------------------------ | -------------------- |
+| **Element**          | `tag`  | Select by tag            | `p`                  |
+| **Class**            | `.`    | Select by class          | `.box`               |
+| **ID**               | `#`    | Select by ID             | `#header`            |
+| **Universal**        | `*`    | Select everything        | `*`                  |
+| **Attribute**        | `[]`   | Select by attribute      | `input[type="text"]` |
+| **Grouping**         | `,`    | Select multiple elements | `h1, p`              |
+| **Descendant**       | space  | Any element inside       | `div p`              |
+| **Child**            | `>`    | Direct child             | `div > p`            |
+| **Adjacent Sibling** | `+`    | Immediately next sibling | `h1 + p`             |
+| **General Sibling**  | `~`    | All following siblings   | `h1 ~ p`             | -->

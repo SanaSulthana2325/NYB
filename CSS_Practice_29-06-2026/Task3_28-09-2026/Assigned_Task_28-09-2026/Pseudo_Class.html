@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* with button */
+        button{
+            padding:12px 25px;
+            margin:10px;
+            border:none;
+            border-radius:5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+        /* Hover */
+        .btn1:hover{
+            background-color: green;
+        }
+
+        /* Active */
+        .btn2:active{
+            background-color: red;
+            transform: scale(0.95);
+        }
+
+        /* focus */
+        .btn3:focus{
+            outline:3px solid orange;
+            background-color: purple;
+        }
+
+        button:disabled{
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        /* with Links */
+
+        a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* Normal unvisited link */
+a:link {
+    color: blue;
+}
+
+/* Visited link */
+a:visited {
+    color: purple;
+}
+
+/* Mouse hover */
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* While clicking */
+a:active {
+    color: green;
+}
+
+/* Pseudo-Classes on Cards */
+
+.card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* Mouse hover */
+.card:hover {
+    background-color: lightblue;
+}
+
+/* Button click */
+button:active {
+    background-color: green;
+    color: white;
+}
+
+/* First card */
+.card:first-child {
+    border: 2px solid red;
+}
+
+
+form {
+    width: 300px;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/* Focus */
+input:focus {
+    outline: 2px solid blue;
+    border: 1px solid blue;
+}
+
+/* Required */
+input:required {
+    border-left: 4px solid orange;
+}
+
+/* Optional */
+input:optional {
+    border-left: 4px solid green;
+}
+
+/* Valid */
+input:valid {
+    background-color: #e0ffe0;
+}
+
+/* Invalid */
+input:invalid {
+    background-color: #ffe0e0;
+}
+
+/* Checked */
+input:checked {
+    accent-color: green;
+}
+
+/* Disabled */
+input:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Pseudo-Classes on Buttons -->
+
+    <h2> with buttons</h2>
+    <button class="btn1">Hover me</button>
+
+    <button class="btn2">Click me</button>
+
+    <button class="btn3"> Focus on</button>
+
+    <button disabled>Disabled</button>
+
+
+    <hr><h2>Pseudo-Classes on Links</h2>
+
+    <h2>Link Examples</h2>
+
+<a href="https://www.google.com">Google</a>
+
+<a href="https://www.youtube.com">YouTube</a>
+
+<a href="https://www.wikipedia.org">Wikipedia</a>
+
+<hr>
+<h2>Pseudo-Classes on Cards</h2>
+
+<div class="card">
+    <h2> card title</h2>
+    <p1> this is a simple card</p1>
+    <button class="btn4"> click me</button>
+</div>
+<hr>
+<h2> Pseudo-Classes on Forms</h2>
+
+<h2>Registration Form</h2>
+
+<form>
+
+    <label>Name:</label>
+    <input type="text" placeholder="Enter name" required>
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter email" required>
+
+    <label>Age:</label>
+    <input type="number" placeholder="Enter age">
+
+    <label>
+        <input type="checkbox" required>
+        I agree to the terms
+    </label>
+
+    <input type="text" value="Student" disabled>
+
+    <button type="submit">Register</button>
+
+</form>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>    h2::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 25px;
+    background-color: blue;
+    margin-right: 10px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: red;
+}
+
+
+button::before {
+    content: "✓";
+    margin-right: 8px;
+}
+
+.card {
+    position: relative;
+    padding: 25px;
+    border: 1px solid gray;
+}
+
+.card::after {
+    content: "NEW";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+
+.quote::before {
+    content: "“";
+    color: blue;
+    font-size: 30px;
+}
+
+.quote::after {
+    content: "”";
+    color: blue;
+    font-size: 30px;
+}
+
+:root {
+    --main-color: blue;
+    --box-color: lightblue;
+    --text-size: 20px;
+}
+
+h1 {
+    color: var(--main-color);
+}
+
+.box {
+    background-color: var(--box-color);
+    font-size: var(--text-size);
+    padding: 20px;
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+}
+
+</style>
+
+</head>
+<body>
+    <h2>Our Services</h2>
+
+    <h2>About us</h2>
+
+
+    <button>Submit</button>
+
+    <hr>
+    <div class="card">
+    <h3>Sana</h3>
+    <p>this is the wrold of sana</p>
+</div>
+    
+<hr>
+<p class="quote">This wrold is  beautiful.</p>
+<hr>
+
+<h1>Welcome</h1>
+
+<div class="box">
+    Hello! This is a box.
+</div>
+
+<button>Click Me</button>
+
+
+</body>
+</html>

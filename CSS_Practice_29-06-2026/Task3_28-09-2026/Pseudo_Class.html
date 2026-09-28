@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn:hover{
+            background-color: aqua;
+            color: blue;
+        }
+        input:focus{
+            border: 4px double plum;
+            color: crimson;
+        }
+        .btn1:active{
+            background-color: rgb(247, 7, 7);
+        }
+        /* visit */
+
+        a:visited{
+            color: purple;
+        }
+
+        p:first-child{
+            color: chocolate;
+        }
+        p1:last-child{
+            color: darkorange;
+        }
+        li:nth-child(odd){
+            color: cyan;
+        }
+        p4:nth-child(2){
+            color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- :hover
+
+Works when the mouse is over an element. -->
+<h2> hover</h2>
+
+<button class="btn"> Hover Me</button>
+
+<!-- :focus
+
+Works when an element receives focus, usually an input. -->
+<hr>
+<h2>focus</h2>
+<input type="text" placeholder="enter name">
+
+
+<!-- :active
+
+Works while an element is being clicked/pressed. -->
+
+<hr>
+<h2>Active</h2>
+<button class="btn1"> heelo sana</button>
+
+
+<!-- :visited
+
+Applies to a link that the user has already visited. -->
+
+<hr>
+<h2> Visited</h2>
+<a href="https://www.bing.com/search?pglt=43&q=google&cvid=1fa34ee334ce474ca3af83eebec61ba4&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQLhhAMgYIAhAuGEAyBggDEAAYQDIGCAQQABhAMgYIBRAuGEAyBggGEC4YQDIGCAcQLhhAMgYICBAFGEDSAQgxNjg5ajBqN6gCCLACAQ&FORM=ANNTA1&PC=U531"> Visit</a>
+
+<!-- :first-child
+
+Selects the first child of its parent. -->
+
+<hr>
+<h2> first-child</h2>
+
+<div>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+
+</div>
+
+<!-- :last-child
+
+Selects the last child. -->
+<hr>
+<h2>last-child</h2>
+
+<div>
+    <p1>AAAA</p1><br>
+    <p1>BBBB</p1><br>
+    <p1>CCCC</p1><br>
+    <p1>DDDD</p1>
+</div>
+
+
+<!-- :nth-child()
+
+Selects a child based on its position. -->
+<hr>
+<h2> nth child</h2>
+
+
+<ul>
+    <li> one </li>
+    <li> two </li>
+    <li> three </li>
+    <li> four </li>
+    <li> five </li>
+
+</ul>
+
+<hr>
+<div>
+    <p4>gig</p4>
+    <p4>zag</p4>
+    <p4>zoo</p4>
+</div>
+</body>
+</html>
+
+
+<!-- Pseudo-Classes
+
+Pseudo-classes select an element based on its state or position. -->

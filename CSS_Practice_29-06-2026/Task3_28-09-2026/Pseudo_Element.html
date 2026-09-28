@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .r::before{
+            content: "welcome";
+        }
+        .f::after{
+            content:"Tasan";
+        }
+        .h::first-letter{
+            font-size: 50px;
+            color:cadetblue;
+        }
+        .d::first-line{
+            color: cornflowerblue;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ::before
+
+Adds content before an element's content. -->
+
+<p class="r"> sana<p>
+
+
+    <!-- ::after
+
+Adds content after the content. -->
+<hr>
+<h2>after</h2>
+
+<p class="f"> Hello</p>
+
+<!-- ::first-letter
+
+Styles only the first letter. -->
+
+<hr>
+<h2>first-letter</h2>
+<p class="h"> Hello universe this is me</p>
+
+<!-- ::first-line
+
+Styles the first line of a paragraph. -->
+
+<hr>
+<h2>first-line</h2>
+<p class="d">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas adipisci asperiores aliquam, ratione quaerat iure numquam excepturi ex debitis aperiam beatae, voluptate repudiandae exercitationem dignissimos, tempora ullam laborum facilis facere!</p>
+
+    
+</body>
+</html>
+
+
+
+<!-- Pseudo-Elements
+
+Pseudo-elements style a specific part of an element.
+
+They use ::. -->

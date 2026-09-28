@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bright Solutions</title>
+
+    <style>
+
+        /* ---------- BASIC ---------- */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background-color: navy;
+            color: white;
+            padding: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            background-color: lightblue;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero button {
+            background-color: navy;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            background-color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+
+        /* ---------- SERVICES ---------- */
+
+        .services {
+            padding: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+        }
+
+
+        /* ---------- IMAGE ---------- */
+
+        .image-section {
+            background-color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .image-section img {
+            width: 60%;
+            border-radius: 10px;
+        }
+
+
+        /* ---------- TABLE ---------- */
+
+        .table-section {
+            padding: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: navy;
+            color: white;
+        }
+
+
+        /* ---------- FORM ---------- */
+
+        .contact {
+            background-color: lightblue;
+            padding: 40px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid gray;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: navy;
+            color: white;
+            border: none;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .image-section img {
+                width: 100%;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h2>Bright Solutions</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <h1>Welcome to Bright Solutions</h1>
+
+        <p>
+            We provide simple and effective
+            technology solutions.
+        </p>
+
+        <button>
+            Learn More
+        </button>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Bright Solutions is a company that provides
+            web development and digital services.
+        </p>
+
+        <!-- List -->
+
+        <ul>
+            <li>Experienced Team</li>
+            <li>Quality Services</li>
+            <li>Customer Support</li>
+        </ul>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>We create responsive websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>App Development</h3>
+                <p>We create simple mobile apps.</p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Marketing</h3>
+                <p>We help businesses grow online.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMAGE -->
+
+    <section class="image-section">
+
+        <h2>Our Team</h2>
+
+        <img
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902"
+            alt="Company team"
+        >
+
+    </section>
+
+
+    <!-- TABLE -->
+
+    <section class="table-section">
+
+        <h2>Our Plans</h2>
+
+        <table>
+
+            <tr>
+                <th>Plan</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Basic</td>
+                <td>5</td>
+                <td>₹5,000</td>
+            </tr>
+
+            <tr>
+                <td>Standard</td>
+                <td>10</td>
+                <td>₹10,000</td>
+            </tr>
+
+            <tr>
+                <td>Premium</td>
+                <td>20</td>
+                <td>₹20,000</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- CONTACT FORM -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <label>Name</label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Message</label>
+
+            <textarea
+                placeholder="Enter your message"
+            ></textarea>
+
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Bright Solutions
+        </p>
+
+        <p>
+            Email: info@brightsolutions.com
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+

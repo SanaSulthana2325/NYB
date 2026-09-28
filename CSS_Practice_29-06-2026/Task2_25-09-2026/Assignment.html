@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Alignment</title>
+
+    <style>
+        /* Horizontal Alignment */
+        .horizontal {
+            text-align: center;
+        }
+
+        /* Vertical Alignment */
+        .vertical {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        /* Flex Alignment */
+        .flex {
+            display: flex;
+            justify-content: center; /* Horizontal */
+            align-items: center;     /* Vertical */
+            height: 150px;
+        }
+
+        /* Grid Alignment */
+        .grid {
+            display: grid;
+            place-items: center;
+            height: 150px;
+        }
+
+        .box {
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>1. Horizontal Alignment</h2>
+    <div class="box horizontal">
+        Text is horizontally centered
+    </div>
+
+    <h2>2. Vertical Alignment</h2>
+    <div class="box vertical">
+        Text is vertically centered
+    </div>
+
+    <h2>3. Flex Alignment</h2>
+    <div class="box flex">
+        Flex Item
+    </div>
+
+    <h2>4. Grid Alignment</h2>
+    <div class="box grid">
+        Grid Item
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- | Alignment      | Main Property                                 | What it does                                     |
+| -------------- | --------------------------------------------- | ------------------------------------------------ |
+| **Horizontal** | `text-align`                                  | Aligns text left, center, or right               |
+| **Vertical**   | `line-height` / `vertical-align`              | Aligns content vertically in specific situations |
+| **Flex**       | `justify-content`, `align-items`              | Aligns flex items horizontally and vertically    |
+| **Grid**       | `justify-items`, `align-items`, `place-items` | Aligns grid items                                | -->

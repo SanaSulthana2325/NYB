@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Task</title>
+    <style>
+        input[type="text"]{
+            background-color: lightblue;
+            color: brown;
+        }
+
+        input[type^="te"]{
+            border: 3px solid red;
+        }
+        a[href$=".jpg"]{
+            color: cadetblue;
+        }
+
+        input[placeholder*="Name"]{
+            background-color: yellow;
+        }
+        /* decendant */
+
+        .box p{
+            color: palevioletred;
+        }
+        .box2 > p1{
+            color: blueviolet;
+        }
+        /* adjacent */
+
+        h2 + p2{
+            color: crimson;
+        }
+        /* general */
+
+        h2~p3{
+            color: chartreuse;
+        }
+        p4:not(.special){
+            color:red
+        }
+        /* :is(h1,h2,p){
+            color: palevioletred;
+        } */
+
+        :where(p6,p7){
+            color:blue
+        }
+        p6{
+            color: red;
+        }
+        .r:has(p8){
+            background-color: lightblue;
+            border: 3px solid red;
+        }
+        li:nth-child(odd){
+            color:pink;
+        }
+
+        li:nth-child(n+3){
+            background-color: rgb(240, 240, 123);
+        }
+        p:first-of-type{
+            color:red
+        }
+        p9:last-of-type{
+            color:green
+        }
+        .box3:empty{
+            background-color: yellow;
+            height: 50px;
+        }
+        .p li::marker{
+            color:red;
+            font-size: 28px;
+        }
+        p11::selection {
+            background-color: aqua;
+            color: brown;
+        }
+        input:checked{
+            accent-color: green;
+        }
+
+        input:disabled{
+            background-color: aqua;
+        }
+        input:enabled{
+            border: 3px solid green;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Create examples for different advanced selectors. -->
+     <h2> Attribute selector</h2>
+
+     <input type="text" placeholder="enter name"><br><br>
+
+     <input type="date" placeholder=" enter date"><br><br>
+
+     <input type="email" placeholder=" enter email">
+
+     <hr>
+     <input type="text1">
+     <input type="email">
+     <input type="tel">
+
+     <hr>
+     <h2>$=</h2>
+     <a href="https://static.vecteezy.com/system/resources/previews/032/242/170/large_2x/beautiful-waterfall-flowers-water-nature-waterfall-hd-wallpaper-ai-generated-free-photo.jpg"> image</a>
+
+     <a href="./Pseudo_Class.html"> notes</a>
+
+     <hr>
+     <h2>*=</h2>
+
+     <input placeholder="Enter Name">
+
+     <input placeholder="enter email">
+
+     <!-- Descendant Selector
+
+Selects elements located anywhere inside another element. -->
+<hr>
+<h2>decendant selector</h2>
+
+<div class="box">
+    <p> para 1</p>
+    <section>
+        <p> para 2</p>
+    </section>
+</div>
+<p> para 3</p>
+
+<hr>
+<h2> child</h2>
+<div class="box2">
+    <p1> first para</p1>
+    <section>
+        <p1> second para</p1>
+    </section>
+</div>
+<hr>
+
+<h2>adjacent</h2>
+
+<h2>heading</h2>
+<p2> paragraph 1</p2>
+<p2> paragraph 2</p2>
+
+
+<hr>
+<h2> general</h2>
+
+<h2> heading</h2>
+
+<p3> one</p3><br>
+<p3> two</p3><br>
+<p3> three</p3><br>
+<p3> four</p3><br>
+<p3> five</p3><br>
+<p3> six</p3>
+
+
+<!-- :not() Selector
+
+Selects everything except the specified element. -->
+
+<hr><h2>Not selctor</h2>
+
+<p class="special">Hello</p>
+<p4> welcome</p4>
+<p4>Good Morning</p4>
+
+
+<!-- :is() Selector
+
+Allows you to group multiple selectors and apply the same style. -->
+<hr>
+<h2> is selector</h2>
+<h1> Heading 1</h1>
+<h2> Heading 2</h2>
+<p>tasan sulthana</p>
+
+
+<!-- :where() Selector
+
+Works similarly to :is(), but its specificity is always zero. -->
+<hr>
+<h2> where selector</h2>
+<p6> hello</p6>
+<p7> Welcome</p7>
+
+
+<!-- :has() Selector
+
+Selects a parent element based on what it contains.
+
+This is sometimes called a parent selector. -->
+<hr>
+<h2> has selector</h2>
+<div class="r">
+    <h2> Product</h2>
+    <p8> Available</p8>
+</div>
+
+<div class="r">
+    <h2> Product</h2>
+    <p> normal background</p>
+</div>
+
+<hr>
+<h2> nth-child</h2>
+
+<!-- :nth-child() Advanced Examples
+
+Selects elements based on their position. -->
+
+<ul>
+    <li> Apple</li>
+    <li> Mango</li>
+    <li> Banana</li>
+    <li> Orange</li>
+    <li> Grapes</li>
+    <li> Watermelon</li>
+    <li> Cherry</li>
+
+</ul>
+
+<!---->
+
+<ul>
+    <li> Apple</li>
+    <li> Mango</li>
+    <li> Banana</li>
+    <li> Orange</li>
+    <li> Grapes</li>
+    <li> Watermelon</li>
+    <li> Cherry</li>
+
+</ul>
+
+<hr>
+<h2> first of type</h2>
+
+<div>
+    <h2>Heading 1</h2>
+    <p> green</p>
+    <p>hello</p>
+</div>
+
+<hr>
+<h2>last-of-type</h2>
+<!-- :last-of-type
+
+Selects the last element of its type. -->
+
+<div>
+    <h2>Heading 3</h2>
+    <p9> Apple</p9><br>
+    <p9>hello</p9>
+</div>
+
+<!-- :empty
+
+Selects elements that have no children or text content. -->
+<hr>
+<h2> empty</h2>
+<div class="box3"></div>
+<div class="box3">Hello hai!!!!</div>
+
+
+<hr>
+<h2> marker</h2>
+
+<!-- ::marker
+
+Styles the bullet or number of a list item. -->
+
+<ul class="p">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+</ul>
+
+<!-- ::selection
+
+Styles the text selected by the user. -->
+
+<hr>
+<h2> selection</h2>
+<p11>Select this text</p11>
+
+<hr>
+<h2>Checked</h2>
+<!-- :checked
+
+Selects checked radio buttons and checkboxes. -->
+
+<lable>
+    <input type="checkbox">AAAA
+</lable>
+<lable>
+    <input type="checkbox">BBB
+</lable>
+
+<!-- :disabled and :enabled
+
+These selectors select disabled and enabled form controls. -->
+
+<hr>
+<h2> disabled</h2>
+
+<input type="text" placeholder="enabled">
+
+<input type="text" placeholder="Disabled" disabled>
+
+
+</body>
+</html>
+
+
+
+
+<!-- 
+Selector	Purpose
+[type="text"]	Exact attribute value
+[type^="te"]	Starts with
+[type$="ail"]	Ends with
+[type*="ma"]	Contains
+.box p	Descendant
+.box > p	Direct child
+h2 + p	Immediate sibling
+h2 ~ p	All following siblings
+:not()	Excludes an element
+:is()	Groups selectors
+:where()	Groups selectors with zero specificity
+:has()	Selects based on matching descendants
+:nth-child()	Selects by position
+:first-of-type	First of its type
+:last-of-type	Last of its type
+:empty	Empty elements
+:checked	Checked inputs
+:disabled	Disabled inputs
+:enabled	Enabled inputs
+::marker	List bullet/number
+::selection	Selected text -->

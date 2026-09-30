@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+
+        .container{
+            display: flex;
+            background-color: lightblue;
+        }
+        .container div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+        .container1{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .container1 div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+
+
+        .container2{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .container2 div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+
+
+        .container3{
+            display: flex;
+            align-items:flex-start ;
+            height: 200px;
+        }
+        .container3 div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .container4{
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            align-content:stretch;
+        }
+        .container4 div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .container5{
+            display: flex;
+            flex-wrap:wrap-reverse;
+            
+        }
+        .container5 div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .container6{
+            display: flex;
+            gap: 90px;
+            row-gap:50px ;
+            column-gap: 90px;
+            
+        }
+        .container6 div{
+            background-color:chocolate ;
+            padding: 20px;
+           
+        }
+
+
+         .container7 {
+            display: flex;
+            width: 600px;
+            height: 150px;
+            border: 2px solid black;
+        }
+
+        .box1 {
+            background-color: lightcoral;
+            flex-grow: 1;
+        }
+
+        .box2 {
+            background-color: lightblue;
+            flex-grow: 3;
+        }
+
+        .box3 {
+            background-color: lightgreen;
+            flex-grow: 1;
+        }
+
+        .box {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+
+        .container8 {
+            display: flex;
+            width: 600px;
+            height: 150px;
+           
+        }
+
+        .box11{
+            flex-shrink: 0;
+            background-color: aqua;
+        }
+        .box21{
+            flex-shrink: 1;
+            background-color: blueviolet;
+        }
+        .box31{
+            flex-shrink: 2;
+            background-color: palevioletred;
+        }
+
+        .container9{
+            display: flex;
+            flex-basis: 200px;
+            background: lightblue;
+        }
+        .container10{
+            display: flex;
+            background-color: lightblue;
+        }
+        .container10 div{
+            background-color:chocolate ;
+            padding: 20px;
+            margin: 10px;
+        }
+        .box12{
+            order:2
+        }
+        .box22{
+            order:3
+        }
+        .box32{
+            order:1
+        }
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+
+    <hr>
+    <h2> flex-direction</h2>
+    <div class="container1">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+    <hr><h2> justify-content</h2>
+
+    <div class="container2">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+
+    <hr>
+    <h2>align-items</h2>
+    <div class="container3">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+
+    <hr><h2> align-content</h2>
+    <div class="container4">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+
+    <hr><h2> flex-wrap</h2>
+    <div class="container5">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+
+
+    <!-- gap
+
+Meaning: Creates space between flex items. -->
+
+<hr>
+<h2>Gap</h2>
+
+<div class="container6">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+    </div>
+
+
+    <!-- flex-grow
+
+Meaning: Controls how much an item can grow to occupy extra available space. -->
+
+<hr>
+<h2> flex grow</h2>
+
+ <div class="container7">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+    </div>
+
+    <hr>
+    <h2> flex-shrink</h2>
+    <div class="container8">
+        <div class="box box11">Box 1</div>
+        <div class="box box21">Box 2</div>
+        <div class="box box31">Box 3</div>
+    </div>
+
+
+    <!-- flex-basis
+
+Meaning: Defines the initial size of a flex item before growing or shrinking. -->
+
+<hr>
+<h2> flex-basis</h2>
+
+<div class="container9">
+    <div >box1</div>
+</div>
+
+<!-- order
+
+Meaning: Changes the visual order of flex items without changing the HTML structure. -->
+
+<hr>
+<h2> order</h2>
+<div class="container10">
+        <div class="box box12">Box 1</div>
+        <div class="box box22">Box 2</div>
+        <div class="box box32">Box 3</div>
+    </div>
+
+
+
+    
+</body>
+</html>
+
+
+
+<!-- flex-direction
+
+Meaning: Defines the direction in which flex items are arranged.
+
+Value            Meaning
+
+row              Items appear horizontally (left to right)
+
+row-reverse       Items appear horizontally (right to left)
+
+column            Items appear vertically (top to bottom)
+
+column-reverse     Items appear vertically (bottom to top) -->
+
+
+
+
+
+
+<!-- justify-content
+
+Meaning: Aligns items along the main axis.
+
+Value                              Meaning
+
+flex-start                      Items start from the beginning
+
+flex-end                         Items move to the end
+
+center                        Items move to the center
+
+space-between                Equal space between items
+
+space-around                  Equal space around items
+
+space-evenly                   Equal space between and around items -->
+
+
+
+
+<!-- align-items
+
+Meaning: Aligns items along the cross axis.
+
+Value                   Meaning
+
+stretch               Items stretch to fill the available space
+
+flex-start              Items align at the beginning
+
+flex-end                  Items align at the end
+
+center                    Items align in the center
+
+baseline                    Items align according to their text baseline -->
+
+
+
+<!-- align-content
+
+Meaning: Aligns multiple rows or columns of flex items when there is extra space in the cross axis.
+
+Important: It works only when:
+
+flex-wrap: wrap is used.
+
+Multiple rows or columns are present.
+
+There is extra space in the container.
+
+Value                 Meaning
+
+flex-start          Rows move to the beginning
+
+flex-end           Rows move to the end
+
+center              Rows move to the center
+
+space-between       Equal space between rows
+
+space-around         Equal space around rows
+
+space-evenly         Equal space between and around rows
+
+stretch               Rows stretch to fill available space -->
+
+
+
+<!-- flex-wrap
+
+Meaning: Controls whether flex items stay in one line or move to the next line.
+
+Value                       Meaning
+
+nowrap                       All items stay in one line (default)
+
+wrap                           Items move to the next line
+
+wrap-reverse                    Items move to the previous line -->
+
+
+
+<!-- flex-shrink
+
+Meaning: Controls how much an item can shrink when there is not enough space.
+
+Value                         Meaning
+
+0                           Item will not shrink
+
+1                            Item can shrink (default)
+
+2                             Item shrinks twice as much as an item with shrink 1, assuming equal bases -->
+
+
+

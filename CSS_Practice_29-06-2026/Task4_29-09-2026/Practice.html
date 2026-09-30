@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Dashboard</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        header {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: lightgray;
+            width: 200px;
+            padding: 20px;
+        }
+
+        .sidebar p {
+            padding: 10px;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background-color: lightblue;
+            padding: 30px;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>My Dashboard</h2>
+    </header>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <p>Home</p>
+            <p>Students</p>
+            <p>Courses</p>
+            <p>Settings</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+
+            <h2>Welcome Back!</h2>
+
+            <!-- Cards -->
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Students</h3>
+                    <h2>100</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Courses</h3>
+                    <h2>10</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Tasks</h3>
+                    <h2>25</h2>
+                </div>
+
+            </div>
+
+            <!-- Table -->
+            <h3>Student Details</h3>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+
+                <tr>
+                    <td>Rahul</td>
+                    <td>HTML</td>
+                </tr>
+
+                <tr>
+                    <td>Priya</td>
+                    <td>CSS</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>My Dashboard 2026</p>
+    </footer>
+
+</body>
+</html>

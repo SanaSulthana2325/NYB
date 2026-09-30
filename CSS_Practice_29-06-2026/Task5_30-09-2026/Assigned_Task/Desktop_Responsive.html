@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Main Layout */
+
+.layout {
+    display: flex;
+    min-height: 400px;
+}
+
+/* Sidebar */
+
+aside {
+    background-color: rgb(240, 157, 157);
+    width: 250px;
+    padding: 20px;
+}
+
+/* Main Content */
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 15px;
+}
+
+.card {
+    background-color: lightblue;
+    padding: 25px;
+    text-align: center;
+}
+
+/* mobile */
+
+@media(max-width:600px){
+    .layout{
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* tablet */
+
+@media(min-width:601px) and (max-width:900px){
+    aside{
+        width:180px;
+
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* desktop layout */
+
+@media(min-width: 901px){
+    aside{
+        width: 250px;
+    }
+    .cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>My layout</h2>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside>
+            <h3>Menu</h3>
+            <p>Home</p>
+            <p>Profile</p>
+            <p>Settings</p>
+            <p>Logout</p>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>Welcome to card.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>This is  my friend.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p> we are Tasan.</p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+   
+
+</body>
+</html>

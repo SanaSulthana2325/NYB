@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Responsive Typography Using Media Queries */
+        /* Common CSS */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Desktop */
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    font-size: 16px;
+    padding: 12px 25px;
+    color: blue;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 24px;
+        color: pink;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: green;
+    }
+
+    p {
+        font-size: 14px;
+        color: orange;
+    }
+
+}
+/* desktop */
+@media (max-width: 1201px) {
+
+    h1 {
+        font-size: 29px;
+        color: rgb(109, 4, 21);
+    }
+
+    h2 {
+        font-size: 30px;
+        color: rgb(196, 238, 7);
+    }
+
+    p {
+        font-size: 14px;
+        color: rgb(0, 238, 255);
+    }
+
+}
+
+
+/* Responsive Typography Using clamp() */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container1 {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(24px, 5vw, 50px);
+}
+
+p {
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Responsive Typography Using Media Queries -->
+
+    <div class="container">
+
+        <h1>Responsive Typography</h1>
+
+        <h2>Welcome to home</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, perferendis adipisci. Cupiditate blanditiis magnam, ullam aperiam dolorum nihil voluptate excepturi sunt dolores facilis mollitia qui rem obcaecati molestias aut cumque?
+        </p>
+
+        <button>Learn More</button>
+
+    </div>
+
+    <!-- Responsive Typography Using clamp() -->
+     <hr>
+
+     <div class="container1">
+
+        <h1>Learn Responsive CSS</h1>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dolor qui fugiat eos? Sed harum provident tempora possimus quisquam laboriosam atque sint, quia voluptatem exercitationem error totam necessitatibus mollitia pariatur.
+        </p>
+
+    </div>
+
+
+    
+</body>
+</html>
+
+
+<!-- What is Responsive Typography?
+
+Responsive typography means adjusting the font size, line height, and spacing of text according to different screen sizes.
+
+For example:
+
+Mobile: Small heading
+
+Tablet: Medium heading
+
+Desktop: Large heading
+
+We can achieve this using:
+
+Media Queries
+
+clamp()
+
+vw
+
+rem
+
+min(), max() -->

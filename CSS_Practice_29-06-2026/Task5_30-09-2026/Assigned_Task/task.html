@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Common CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* Main Container */
+
+.container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cards */
+
+.card {
+    background-color: lightblue;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+
+
+    .container {
+       padding: 20px;
+       margin:30px;
+       color: chocolate;
+       background-color: chartreuse;
+    }
+
+}
+
+
+/* TABLET LAYOUT */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .container {
+         padding: 20px;
+       margin:30px;
+       color:red;
+       background-color:lightpink;
+        
+    }
+
+}
+
+
+/* DESKTOP LAYOUT */
+
+@media (min-width: 901px) {
+
+    .container {
+         padding: 20px;
+       margin:30px;
+       color:darkblue;
+       background-color:lightsalmon;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>My Website</h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>This is the first card.</p>
+        </div>
+
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>This is the second card.</p>
+        </div>
+
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>This is the third card.</p>
+        </div>
+
+    </main>
+
+    
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: lightcoral;
+            padding: 30px;
+            
+            
+            text-align: center;
+        }
+        @media(max-width:400px){
+            .box{
+                background-color: lightblue;
+                
+            }
+        }
+        .box1{
+            background-color: lightgreen;
+            padding: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        @media (min-width:768px){
+            .box1{
+                width: 50%;
+            }
+
+        }
+        h1{
+            color: brown;
+            background-color: aquamarine;
+        }
+        @media(max-width:600px){
+            h1{
+                color: darkblue;
+                background-color: rgb(206, 158, 198);
+            }
+        }
+        .box2{
+            background-color: lightcyan;
+            padding: 30px;
+            text-align: center;
+
+        }
+        @media(max-width:480px){
+            .box2{
+                background-color: red;
+
+            }
+        }
+        @media(min-width:481) and (max-width:768px){
+            .box2{
+                background-color: pink;
+            }
+        }
+        @media(min-width:769px){
+            .box2{
+                background-color: orange;
+            }
+        }
+        /* image */
+        img{
+            max-width: 900px;
+            height: 400px;
+            margin: auto;
+        }
+
+        /* min-width */
+        .box3{
+            background-color: lightblue;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        /* max-width */
+        .box4{
+            background-color: lightgreen;
+            width: 200px;
+            max-width: 500px;
+            padding: 20px;
+            margin: auto;
+        }
+        /* clamp */
+        p1{
+            font-size: clamp(20px, 5vw,50px);
+            text-align: center;
+            color: cadetblue;
+        }
+        @media (max-width:600px){
+            p1{
+                background-color: burlywood;
+                color: crimson;
+            }
+        }
+
+        /* transition */
+
+        .btn{
+            background-color: blueviolet;
+            color: cornsilk;
+            padding: 30px;
+            border: none;
+            transition: background-color 2s;
+            transition: color 1s;
+        }
+        .btn:hover{
+            background-color: red;
+            color: chartreuse;
+        }
+        /* transforms */
+
+        .box5{
+            background-color: orange;
+            width:150px;
+            padding: 30px;
+            text-align: center;
+            transform: rotate(20deg); 
+            /* transform: translateX(50px); */
+            /* transform: scale(1.2); */
+        }
+
+        /* animation */
+        .box6{
+            background-color: blue;
+            color: beige;
+            padding: 30px;
+            width: 200px;
+            text-align: center;
+
+            animation: move 3s infinite;
+        }
+        @keyframes move{
+            from{
+                transform: translateX(0);
+
+            }
+            to{
+                transform: translateX(100px);
+            }
+        }
+
+        /* @keyframes */
+
+        .box7{
+            background-color: blueviolet;
+            color: aqua;
+            padding: 30px;
+            width: 100px;
+            text-align: center;
+
+            animation: colorChange 4s infinite;
+        }
+
+
+        @keyframes colorChange{
+            0%{
+                background-color: rgb(85, 42, 165);
+            }
+            50%{
+                background-color: red;
+            }
+            100%{
+                background-color: green;
+            }
+        }
+
+        /* hover effects */
+
+        .card{
+            background-color: lightblue;
+            padding: 30px;
+            width: 200px;
+            text-align: center;
+            transition: 0.5s;
+
+        }
+        .card:hover{
+            background-color: orange;
+            transform: scale(1.1);
+        }
+        .box8{
+            background-color: aquamarine;
+            padding: 30px;
+            position: static;
+        }
+
+        .box9{
+            background-color: cadetblue;
+            padding: 30px;
+            position: relative;
+            top: 20px;
+            left: 70px;
+        }
+
+        .parent{
+            background-color: lightblue;
+            width: 3oopx;
+            height: 200px;
+            position: relative;
+            padding: 20px;
+        }
+        .child{
+            background-color: orangered;
+            padding: 30px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .box10{
+            background-color: darkgreen;
+            color: wheat;
+            padding: 20px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .header{
+            background-color: blue;
+            color: bisque;
+            padding:20px;
+            position:sticky;
+            top:0;
+        }
+        /* Z-Index */
+        .box11{
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .box12{
+            background-color: blue;
+            color: wheat;
+            width: 150px;
+            height:150px;
+            position:absolute;
+            bottom: 150px;
+            left: 100px;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Welcome to the new genZ wrold</h2>
+        <p> experience new</p>
+    </div>
+
+    <!-- Mobile-First Design
+
+Meaning: Mobile-first design means designing the website for mobile screens first and then adjusting it for larger screens. -->
+
+<hr>
+
+<h2>Mobile view</h2>
+<div class="box1">
+    <h2> hello</h2>
+    <p>this is mobive view</p>
+</div>
+
+<!-- Media Queries
+
+Meaning: Media queries are used to apply different CSS styles based on screen size or device characteristics. -->
+
+<hr>
+<h2> media queries</h2>
+
+<h1> hello mom</h1>
+
+<!-- Breakpoints
+
+Meaning: Breakpoints are specific screen widths where the website layout changes to fit different devices. -->
+
+<div class="box2">
+    <p> responsive box </p>
+</div>
+
+<hr>
+<h2> Responsive Image</h2>
+
+<!-- Responsive Images
+
+Meaning: Responsive images automatically adjust their size according to the screen size without overflowing. -->
+
+<img src="https://static.vecteezy.com/system/resources/thumbnails/050/391/615/small_2x/abstract-teal-landscape-with-silhouetted-trees-reflected-photo.jpg" width="300px" height="200px" alt="Nature">
+
+<!-- min-width
+
+Meaning: min-width specifies the minimum width an element can have. The element cannot become smaller than the given width. -->
+
+<hr><h2> Min- width</h2>
+
+<div class="box3">
+    hello!! bro
+</div>
+
+
+<!-- max-width
+
+Meaning: max-width specifies the maximum width an element can have. The element cannot grow beyond the given width. -->
+
+<hr>
+<h2>max-width</h2>
+
+<div class="box4">
+    hai!!! sis!
+</div>
+
+
+<!-- clamp()
+
+Meaning: clamp() allows a value to grow and shrink within a specified minimum and maximum range. -->
+
+<hr>
+<h2> clamp</h2>
+<p1> this wrold is belong to you</p1>
+
+
+<!-- CSS Transitions
+
+Meaning: CSS transitions create a smooth change between two CSS styles. -->
+
+<hr>
+<h2> CSS Transition</h2>
+
+<button class="btn"> Hover me</button>
+
+
+<!-- CSS Transforms
+
+Meaning: CSS transforms are used to move, rotate, scale, or skew an element. -->
+
+<hr>
+<h2>Transforms</h2>
+<div class="box5">
+    hello !! wrold
+</div>
+
+
+<!-- CSS Animations
+
+Meaning: CSS animations allow an element to change its style automatically over time without requiring the user to hover or click.-->
+
+<hr>
+<h2> Animation</h2>
+
+<div class="box6">
+    sam can u do some Animation
+</div>
+
+
+<!-- @keyframes
+
+Meaning: @keyframes defines the steps of an animation. It tells the browser how an element should change during the animation. -->
+
+<hr>
+<h2> @keyframes</h2>
+<div class="box7"> be as you used to be</div>
+
+
+<!-- Hover Effects
+
+Meaning: Hover effects are used to change the appearance of an element when the mouse pointer moves over it. -->
+
+<hr>
+<h2>Hover effect</h2>
+<div class="card">
+    <h3> my card</h3>
+    <p2> I am here</p2>
+</div>
+
+<hr>
+<h2> positioning</h2>
+
+<h3> static</h3>
+<!-- Static is the default position of every HTML element. -->
+
+<div class="box8"> Hello Box</div>
+
+
+<hr><h3> relative</h3>
+<!-- Relative positioning moves an element from its original position. -->
+
+
+<div class="box9"> hello tasan!!!!</div>
+
+
+<hr>
+<h3>Absolute</h3>
+<!-- Absolute positioning places an element relative to its nearest positioned parent. -->
+
+<div class="parent">
+    parent element
+    <div class="child">Child element</div>
+</div>
+
+<hr>
+<h3>Fixed</h3>
+<!-- Fixed positioning keeps an element in the same position on the screen even when the page is scrolled. -->
+
+<div class="box10">
+    tasan box
+</div>
+
+<hr>
+<h3>Sticky position</h3>
+
+<!-- Meaning: Sticky positioning behaves like relative positioning initially, but sticks to a specified position when scrolling. -->
+
+<div class="header"> minnu</div><br>
+
+<p3> item 1</p3><br>
+
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3>
+
+
+
+<!-- Z-Index
+
+Meaning: z-index controls the stacking order of elements. It determines which element appears in front of another element. -->
+
+<!-- Higher z-index = Appears in front.
+
+Lower z-index = Appears behind. -->
+<hr>
+<h2> z-index</h2>
+
+<div class="box11">apple</div>
+<div class="box12">banana</div>
+
+    
+</body>
+</html>
+
+<!-- Responsive Web Design
+
+Meaning: Responsive Web Design means creating a website that automatically adjusts its layout according to the screen size (mobile, tablet, and desktop). -->
+
+
+
+<!-- Device                          Breakpoint
+
+Mobile                             480px
+
+Tablet                               768px
+
+Laptop                               1024px
+
+Desktop                              1200px -->
+
+
+
+
+
+<!-- Property                           Meaning
+
+translate()                    Moves an element
+
+rotate()                       Rotates an element
+
+scale()                         Changes the size
+
+skew()                         Slants an element -->
+
+
+
+
+<!-- CSS Positioning
+
+Meaning: CSS positioning controls where an element appears on a webpage.
+
+There are five types of positioning:
+
+Static
+
+Relative
+
+Absolute
+
+Fixed
+
+Sticky -->
+

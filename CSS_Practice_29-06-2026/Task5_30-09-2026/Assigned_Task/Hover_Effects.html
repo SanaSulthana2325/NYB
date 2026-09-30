@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+    background-color: blue;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: green;
+}
+/* card */
+.card {
+    width: 200px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    border-radius: 10px;
+
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+/* image */
+
+.image {
+    width: 200px;
+    transition: transform 0.5s ease;
+}
+
+.image:hover {
+    transform: rotate(5deg);
+    
+}
+
+/* Practice scale, rotate, translate, and other transforms. */
+
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+
+    transition: transform 0.5s;
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+/* rotate */
+.box1 {
+    width: 150px;
+    height: 100px;
+    background-color: lightgreen;
+    text-align: center;
+    line-height: 100px;
+
+    transition: transform 0.5s;
+}
+
+.box1:hover {
+    transform: rotate(10deg);
+}
+
+/* move element */
+
+.box2 {
+    width: 150px;
+    height: 100px;
+    background-color: lightcoral;
+    text-align: center;
+    line-height: 100px;
+
+    transition: transform 0.5s;
+}
+
+.box2:hover {
+    transform: translate(30px, 90px);
+}
+
+/* Skew – Slant an Element */
+.box3 {
+    width: 150px;
+    height: 100px;
+    background-color: orange;
+    text-align: center;
+    line-height: 100px;
+
+    transition: transform 0.5s;
+}
+
+.box3:hover {
+    transform: skew(10deg);
+}
+
+/* multiple */
+
+.box4 {
+    width: 150px;
+    height: 100px;
+    background-color: plum;
+    text-align: center;
+    line-height: 100px;
+
+    transition: transform 0.5s;
+}
+
+.box4:hover {
+    transform: scale(1.1) rotate(10deg) translateX(20px);
+}
+
+/* Bounce */
+
+.box6 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    text-align: center;
+    line-height: 100px;
+
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Create hover effects using transitions. -->
+
+    <h2> button </h2>
+     <button class="btn">Click Me</button>
+
+     <hr>
+     <h2> card </h2>
+     <div class="card">
+        <h2>My Card</h2>
+        <p>This is a simple card.</p>
+    </div>
+    <hr>
+    <h2> image </h2>
+    <img src="https://th.bing.com/th/id/OIP.VviB4M-AOvn5s5YGWnkNhAHaEO?w=292&h=180&c=7&r=0&o=7&pid=1.7&rm=3" class="image" alt="image of AI">
+
+    <hr>
+    <h2>Practice scale, rotate, translate, and other transforms.</h2>
+
+
+    <h3> scale</h3>
+    <div class="box"> click me</div>
+
+    <hr>
+    <h2>rotate</h2>
+    <div class="box1">Rotate me</div>
+
+    <hr>
+    <h2>Move element</h2>
+
+    <div class="box2">move me sam</div>
+
+    <hr>
+    <h2> Skew – Slant an Element</h2>
+
+    <div class="box3"> skew me</div>
+
+    <hr>
+    <h2>Combine Multiple Transforms</h2>
+
+    <div class="box4"> hover me again </div>
+
+
+    <hr>
+    <h2>Create basic animations using @keyframes.</h2>
+
+    <h3> Bouncing box animation</h3>
+
+    <div class="box6"> bounce</div>
+    
+</body>
+</html>
+
+
+
+<!-- Transform           Purpose          Example
+
+scale()           Changes size       scale(1.2)
+
+rotate()         Rotates element       rotate(10deg)
+
+translate()       Moves element         translate(20px, 10px)
+
+skew()           Slants element         skew(10deg) -->
+
+
+
+
+<!-- translateX()
+
+translateX() moves an element horizontally (left or right).
+
+Positive value (100px) → Moves right.
+
+Negative value (-100px) → Moves left. -->
+
+
+
+<!-- translateY()
+
+translateY() moves an element vertically (up or down).
+
+Positive value (100px) → Moves down.
+
+Negative value (-100px) → Moves up. -->

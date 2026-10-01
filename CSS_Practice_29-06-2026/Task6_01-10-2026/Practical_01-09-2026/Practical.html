@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleNest - Fashion Store</title>
+
+    <style>
+
+/* CSS Variables */
+
+:root {
+    --primary: #8e3b63;
+    --dark: #222;
+    --light: #fff;
+    --background: #f8f4f5;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+}
+
+
+/* Header */
+
+.header {
+    background-color: var(--light);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: var(--primary);
+}
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a,
+.cart {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
+.cart {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 350px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        linear-gradient(135deg, #d9a7bd, #8e3b63);
+
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin: 12px 0;
+}
+
+.offer {
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.shop-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: white;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+
+/* Common Section Heading */
+
+.categories,
+.products {
+    padding: 50px 6%;
+    text-align: center;
+}
+
+.categories h2,
+.products h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+/* Categories */
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 35px;
+    transition: 0.3s;
+}
+
+.category h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #00000020;
+}
+
+
+/* Products */
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #00000015;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-info button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-info button:hover {
+    background-color: var(--dark);
+}
+
+
+/* Sale Banner */
+
+.sale {
+    background-color: #f0dce5;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sale h2 {
+    color: var(--primary);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sale a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 1.8;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 300px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <h1 class="logo">StyleNest</h1>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#products" class="cart">Cart</a>
+
+    </header>
+
+
+    <!-- Hero Banner -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="offer">NEW COLLECTION 2026</p>
+
+            <h2>Find Your Style</h2>
+
+            <p>Discover fashion that matches your personality.</p>
+
+            <a href="#products" class="shop-btn">Shop Now</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section class="categories" id="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                
+                <h3>Clothing</h3>
+            </div>
+
+            <div class="category">
+                
+                <h3>Shoes</h3>
+            </div>
+
+            <div class="category">
+                
+                <h3>Bags</h3>
+            </div>
+
+            <div class="category">
+                
+                <h3>Accessories</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+
+    <section class="products" id="products">
+
+        <h2>Featured Products</h2>
+
+        <div class="product-container">
+
+            <article class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                    alt="Red sports shoes">
+
+                <div class="product-info">
+
+                    <h3>Red Sports Shoes</h3>
+
+                    <p class="price">₹1,499</p>
+
+                    <button type="button">Add to Cart</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600"
+                    alt="Brown handbag">
+
+                <div class="product-info">
+
+                    <h3>Classic Handbag</h3>
+
+                    <p class="price">₹1,999</p>
+
+                    <button type="button">Add to Cart</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                    alt="White casual t-shirt">
+
+                <div class="product-info">
+
+                    <h3>White T-Shirt</h3>
+
+                    <p class="price">₹599</p>
+
+                    <button type="button">Add to Cart</button>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+                    alt="Classic wrist watch">
+
+                <div class="product-info">
+
+                    <h3>Classic Watch</h3>
+
+                    <p class="price">₹2,499</p>
+
+                    <button type="button">Add to Cart</button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Sale Banner -->
+
+    <section class="sale">
+
+        <h2>Special Offer!</h2>
+
+        <p>Get up to 30% OFF on selected products.</p>
+
+        <a href="#products">Explore Products</a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer id="contact">
+
+        
+        <p>Email: support@stylenest.com</p>
+
+        <p>© 2026 StyleNest. All rights reserved.</p>
+
+    </footer>
+
+
+</body>
+</html>

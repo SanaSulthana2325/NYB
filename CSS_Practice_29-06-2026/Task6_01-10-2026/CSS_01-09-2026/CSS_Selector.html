@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: blue;
+        }
+        .text{
+            color: red;
+        }
+        #head{
+            color: green;
+        }
+        *p3{
+
+            margin:0;
+            padding: 0;
+        }
+        h3,p4,p5{
+            color: palevioletred;
+        }
+        input[type="text"]{
+            border: 2px solid blue;
+        }
+        div p{
+            color:brown
+        }
+        div > p6{
+            color: darkseagreen;
+        }
+        h2 + p7{
+            color: darkcyan;
+        }
+        h2 ~ p8{
+            color: darkmagenta;
+        }
+        button{
+            background-color: blue;
+            color: white;
+        }
+        button:hover{
+            background-color: red;
+        }
+        /* element */
+        p::first-letter{
+            color: red;
+            font-size: 30px;
+        }
+        p::first-letter{
+            font-weight: bold;
+        }
+
+        /* Specificity */
+        p{
+            color: blue;
+        }
+        .text{
+            color: green;
+        }
+        #head{
+            color: red;
+        }
+        /* Variable */
+
+        :root {
+    --main-color: blue;
+    --text-color: white;
+    --box-padding: 20px;
+}
+
+h1 {
+    color: var(--main-color);
+}
+
+.box {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: var(--box-padding);
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+}
+/* css Colors */
+.cor1{
+    color: pink;
+}
+.cor2{
+    color: rgb(219, 148, 15)
+}
+.cor3{
+    color: #00e1ff;
+
+}
+.cor4{
+    color: hsl(270, 100%, 50);
+}
+/* background */
+.box1{
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    background-image: url("https://th.bing.com/th/id/R.81eff46eb7506990f4eea84f5fc5da72?rik=CfkCSALCJV97nQ&riu=http%3a%2f%2fwww.forestwander.com%2fwp-content%2foriginal%2f2011_06%2fbeautiful-flower.jpg&ehk=2OKuJYct%2fBGxUgZNwZdUPUTkaA1fLYlgsG3M4mEAz6I%3d&risl=&pid=ImgRaw&r=0");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:chartreuse
+}
+.box2{
+    border:3px solid red;
+    padding:20px;
+    margin:10px;
+}
+.box3{
+    border: 3px dashed blue;
+    padding:20px;
+    margin:10px;
+}
+.box4{
+    border:3px double green;
+    border-radius:15px;
+    padding:20px;
+    margin:10px;
+}
+.box5{
+    border: 2px dotted rgb(221, 14, 49);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Margin */
+.box6{
+    background-color: lightblue;
+    margin: 10px 20px;
+}
+
+.box7{
+    background-color: lightgreen;
+    margin-top: 10px 20px 30px 40px;
+}
+
+.box8{
+    background-color: lightblue;
+    border:2px dashed blue;
+    padding: 30px;
+}
+
+/* Box model */
+
+.box9{
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px double red;
+    margin:30px;
+    background-color: lightblue;
+}
+
+.box10{
+            background-color: aquamarine;
+            padding: 30px;
+            position: static;
+        }
+
+        .box11{
+            background-color: cadetblue;
+            padding: 30px;
+            position: relative;
+            top: 20px;
+            left: 70px;
+        }
+
+        .parent{
+            background-color: lightblue;
+            width: 3oopx;
+            height: 200px;
+            position: relative;
+            padding: 20px;
+        }
+        .child{
+            background-color: orangered;
+            padding: 30px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .box12{
+            background-color: darkgreen;
+            color: wheat;
+            padding: 20px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .header{
+            background-color: blue;
+            color: bisque;
+            padding:20px;
+            position:sticky;
+            top:0;
+        }
+        /* Z-Index */
+        .box13{
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .box14{
+            background-color: blue;
+            color: wheat;
+            width: 150px;
+            height:150px;
+            position:absolute;
+            bottom: 150px;
+            left: 100px;
+            z-index: 2;
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- CSS Selectors
+
+Meaning: CSS selectors are used to select HTML elements and apply styles to them. -->
+
+<h2> Element Selector</h2>
+<!-- Element Selector
+
+Selects all elements with the same tag name. -->
+
+<h1> hello</h1>
+<p> Welcome</p>
+<p>Tasan</p>
+
+<hr>
+<h2>Class Selector</h2>
+
+<!-- Selects elements using a class name. Class selectors start with .. -->
+
+<p1 class="text">Hello mom</p1>
+<p1 class="text">Welcome</p1>
+
+<hr>
+<h2>ID Selector</h2>
+
+<!-- Selects an element using its unique ID. ID selectors start with #. -->
+
+<h1 id="head"> my website</h1>
+<hr>
+
+<h2>Universal Selector</h2>
+
+<!-- Selects all elements. -->
+
+<p3> AAAAA</p3><br>
+<p3>Hai!!</p3>
+
+<h2>Grouping Selector</h2>
+
+<!-- Applies the same styles to multiple selectors. -->
+
+<h3> sana sultana</h3>
+<p4>Minnu</p4>
+<p5> mira</p5>
+
+<hr>
+<h2>Attribute Selector</h2>
+
+<!-- Selects elements based on their attributes. -->
+
+<input type="text">
+<input type="password">
+
+<hr>
+<h2>Descendant Selector</h2>
+
+<!-- Selects elements inside another element, at any depth. -->
+
+<div>
+    <p>hello</p>
+    <section>
+        <p> Welcome sam</p>
+    </section>
+</div>
+<hr>
+<h2>Child Selector</h2>
+
+<!-- Selects only direct children. -->
+
+<div>
+    <p6>Direct Child</p6>
+
+    <section>
+        <p6>Neated Child</p6>
+    </section>
+</div>
+
+<hr>
+<h2>Adjacent Sibling Selector</h2>
+
+<!-- Selects the immediately following sibling. -->
+
+<h2> Heading</h2>
+<p7> First Para</p7><br>
+<p7> Second Para</p7>
+
+<hr>
+<h2>General Sibling Selector</h2>
+
+<!-- Selects all matching siblings that come after an element. -->
+
+<h2> welcome</h2>
+
+<p8> para 1</p8><br>
+<p8> para 2</p8><br>
+<p8> para 3</p8><br>
+<p8> para 4</p8>
+
+
+<hr>
+<h2>Pseudo-Class Selector</h2>
+
+<!-- Used to style an element when it is in a particular state. -->
+
+<button> click me</button>
+
+<hr>
+<h2>Pseudo-Elements</h2>
+
+<!-- Used to style a specific part of an element. -->
+
+<p> Hello Wrold</p>
+
+<hr>
+<h2>CSS Specificity</h2>
+
+<!-- Meaning: Specificity determines which CSS rule gets applied when multiple rules target the same element. -->
+
+<p id="head" class="text"> Hello Tasan welcome to home</p>
+
+<hr>
+<h2>CSS Variables</h2>
+<!-- 
+Meaning: CSS variables allow us to store values and reuse them throughout our stylesheet. -->
+
+ <h1>Welcome</h1>
+
+    <div class="box">
+        Learning CSS Variables
+    </div>
+
+    <button>Click Me</button>
+
+    <hr>
+<h2>CSS Colors</h2>
+
+<!-- Meaning: Colors are used to change the appearance of text, backgrounds, borders, etc. -->
+
+<h1 class="cor1"> item1</h1>
+<h1 class="cor2">item2</h1>
+<h1 class="cor3">item 3</h1>
+<h1 class="cor4"> item 4</h1>
+
+
+<hr>
+ <h2>CSS Backgrounds</h2>
+
+<!--Meaning: Background properties are used to set colors or images behind an element. -->
+
+<div class="box1">
+    Welcome to HTML
+</div>
+
+<hr>
+<h2>CSS Borders</h2>
+
+<!-- Meaning: Borders create an outline around an HTML element. -->
+
+<div class="box2">solid border</div>
+
+<div class="box3">Apple</div>
+<div class="box4">banana</div>
+
+<div class="box5"> Mango</div>
+
+<hr>
+<h2>CSS Margins</h2>
+
+<!-- Meaning: Margin creates space outside an element's border. -->
+
+<div class="box6"> Box 1</div>
+
+<div class="box7"> Box 2</div>
+
+<hr>
+<h2>CSS Padding</h2>
+
+<!-- Meaning: Padding creates space inside an element, between its content and border. -->
+
+<div class="box8">
+    Hello Wrold
+</div>
+
+
+<!-- CSS Box Model
+
+Meaning: Every HTML element is treated as a rectangular box.
+
+The box model consists of:
+
+Content
+
+Padding
+
+Border
+
+Margin -->
+
+<div class="box9"> Box Model</div>
+
+<hr>
+
+<h2> positioning</h2>
+
+<h3> static</h3>
+<!-- Static is the default position of every HTML element. -->
+
+<div class="box10"> Hello Box</div>
+
+
+<hr><h3> relative</h3>
+<!-- Relative positioning moves an element from its original position. -->
+
+
+<div class="box11"> hello tasan!!!!</div>
+
+
+<hr>
+<h3>Absolute</h3>
+<!-- Absolute positioning places an element relative to its nearest positioned parent. -->
+
+<div class="parent">
+    parent element
+    <div class="child">Child element</div>
+</div>
+
+<hr>
+<h3>Fixed</h3>
+<!-- Fixed positioning keeps an element in the same position on the screen even when the page is scrolled. -->
+
+<div class="box12">
+    tasan box
+</div>
+
+<hr>
+<h3>Sticky position</h3>
+
+<!-- Meaning: Sticky positioning behaves like relative positioning initially, but sticks to a specified position when scrolling. -->
+
+<div class="header"> minnu</div><br>
+
+<p3> item 1</p3><br>
+
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3><br>
+<p3> item 1</p3>
+
+
+
+<!-- Z-Index
+
+Meaning: z-index controls the stacking order of elements. It determines which element appears in front of another element. -->
+
+<!-- Higher z-index = Appears in front.
+
+Lower z-index = Appears behind. -->
+<hr>
+<h2> z-index</h2>
+
+<div class="box13">apple</div>
+<div class="box14">banana</div>
+
+
+
+
+
+    
+</body>
+</html>
+
+
+
+<!-- Selector                     Meaning
+
+:hover                        Mouse over element
+
+:focus                         Element receives focus
+
+:active                       Element is being activated
+
+:first-child                   First child
+
+:last-child                        Last child
+
+:nth-child(2)                      Second child
+
+:checked                            Checked input
+
+:disabled                            Disabled element -->
+
+
+
+
+<!-- Selector                       Specificity
+
+Inline style                       1000
+
+ID selector                         100
+
+Class selector                      10
+
+Element selector                     1
+
+Universal selector                   0 -->
+
+
+
+<!-- Property                                 Purpose
+
+background-color                         Sets background color
+
+background-image                         Adds background image
+
+background-size                         Controls image size
+
+background-position                     Sets image position
+
+background-repeat                       Controls image repetition -->
+
+
+
+
+<!-- Margin                                    Padding
+
+Outside the border                       Inside the border
+
+Creates external space                    Creates internal space
+
+Background does not paint the margin         Background paints the padding -->

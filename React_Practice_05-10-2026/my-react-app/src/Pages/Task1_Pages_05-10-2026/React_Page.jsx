@@ -1,8 +1,8 @@
 
-import { Foot, Head, MainContent, Navbar } from '../../Component/Assigned_Task_05-10-2026/Assign';
-import { Aye, Ba, Du, Kar, Na, Sa } from '../../Component/Assigned_Task_05-10-2026/Js_Expression _inside_Jsx';
-import { AA, Dada, Fr, Fu, Hu, Ji, Ka, Tata, Wara, Wo } from '../../Component/Assigned_Task_05-10-2026/JSX_Syntax';
-import Button1 from '../../Component/Assigned_Task_05-10-2026/Resusable_Component';
+import { Foot, Head, MainContent, Navbar } from '../../Component/Task1_05-10-2026/Assigned_Task_05-10-2026/Assign';
+import { Aye, Ba, Du, Kar, Na, Sa } from '../../Component/Task1_05-10-2026/Assigned_Task_05-10-2026/Js_Expression _inside_Jsx';
+import { AA, Dada, Fr, Fu, Hu, Ji, Ka, Tata, Wara, Wo } from '../../Component/Task1_05-10-2026/Assigned_Task_05-10-2026/JSX_Syntax';
+import Button1 from '../../Component/Task1_05-10-2026/Assigned_Task_05-10-2026/Resusable_Component';
 import {Add, Fragments,  Render } from '../../Component/Task1_05-10-2026/Fragments';
 import {Functional_Component,  Gi, Age } from '../../Component/Task1_05-10-2026/Functional_Component';
 import { Class, Da, Image, Ud } from '../../Component/Task1_05-10-2026/JSX_Rule';

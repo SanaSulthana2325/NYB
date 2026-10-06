@@ -1,5 +1,4 @@
 
-import Axios_Get from './../../../../../React/src/components_07-07-2026/Task5_17-07-2026/Comparison_17-07-2026/FetchAPI_Axios/Axios/Axios_Get';
 // js Variable
 
 function Aye(){

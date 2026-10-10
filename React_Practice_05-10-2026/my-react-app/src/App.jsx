@@ -7,6 +7,10 @@ import Task2_Pages from "./Pages/Task2_Pages_06-10-2026/Task2_Pages";
 import Mini_Pages from "./Pages/Task2_Pages_06-10-2026/Mini_Pages";
 import Task3_Pages from "./Pages/Task3-Pages_07-10-2026/Task3_Pages";
 import Mini1_Pages from "./Pages/Task3-Pages_07-10-2026/Mini1_Pages";
+import Task4_pages from "./Pages/Task4_Pages_08-10-2026/Task4_pages";
+import Task5_Pages from "./Pages/Task5_Pages_09-10-2026/Task5_Pages";
+import Mini2_Pages from './Pages/Task4_Pages_08-10-2026/Mini2_Pages';
+import Mini3_Pages from "./Pages/Task5_Pages_09-10-2026/Mini3_Pages";
 
 function App(){
     return(
@@ -20,6 +24,16 @@ function App(){
   <Route path="mini" element={<Mini_Pages/>}/>
   <Route path="task3" element={<Task3_Pages/>}/>
   <Route path="mini1" element={<Mini1_Pages/>}/>
+  <Route path="task4" element={<Task4_pages/>}/>
+  <Route path="mini2" element={<Mini2_Pages/>}/>
+
+  <Route path="task5" element={<Task5_Pages/>}/>
+  <Route path="mini3" element={<Mini3_Pages/>}/>
+
+  
+
+
+
 
 
 

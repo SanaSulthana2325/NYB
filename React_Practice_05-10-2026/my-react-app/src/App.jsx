@@ -46,6 +46,10 @@ import Task8_Pages from "./Pages/Task8_Pages_14-10-2026/Task8_Pages";
 import Task9_Pages from "./Pages/Task9_Pages_15-10-2026/Task9_Pages";
 import Mini4_Pages from "./Pages/Task9_Pages_15-10-2026/Mini4_Pages";
 import Task10_Pages from "./Pages/Task10_Pages_16-10-2026/Task10_Pages";
+import Task11_Pages from "./Pages/Task11_Pages_21-10-2026/Task11_Pages";
+import Mini5_Pages from "./Pages/Task11_Pages_21-10-2026/Mini5_Pages";
+import Task12_Pages from "./Pages/Task12_Pages_22-10-2026/Task12_Pages";
+import Task14_Pages from "./Pages/Task14_Pages_23-10-2026/Task14_Pages";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -148,6 +152,14 @@ function App() {
         <Route path="task9" element={<Task9_Pages/>} />
         <Route path="mini4" element={<Mini4_Pages/>} />
         <Route path="task10" element={<Task10_Pages/>} />
+        <Route path="task11" element={<Task11_Pages/>} />
+        <Route path="mini5" element={<Mini5_Pages/>} />
+        <Route path="task12" element={<Task12_Pages/>} />
+        <Route path="task14" element={<Task14_Pages/>} />
+
+
+
+
 
 
 

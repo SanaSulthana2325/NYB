@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript DOM Practice</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 15px;
+    background: #f2f5f9;
+}
+
+section {
+    background: white;
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.highlight {
+    background: yellow;
+}
+
+li {
+    margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>JavaScript DOM Practice Project</h1>
+
+<!-- 1. DOM Selection and Manipulation -->
+<section>
+<h2>1. DOM Selection and Manipulation</h2>
+<p id="cart">Cart Items: 0</p>
+<button id="addCart">Add Item</button>
+</section>
+
+<!-- 2. Dynamic HTML Elements -->
+<section>
+<h2>2. Create Dynamic Elements</h2>
+<button id="notifyBtn">Show Notification</button>
+<div id="notifications"></div>
+</section>
+
+<!-- 3. CSS Classes -->
+<section>
+<h2>3. Add and Remove CSS Classes</h2>
+<p id="payment">Payment Pending</p>
+<button id="paymentBtn">Confirm Payment</button>
+<button id="toggleBtn">Toggle Highlight</button>
+</section>
+
+<!-- 4. Browser Events -->
+<section>
+<h2>4. Browser Events</h2>
+<input id="liveInput" placeholder="Type something">
+<p id="liveOutput">Your text will appear here.</p>
+</section>
+
+<!-- 5. Event Delegation -->
+<section>
+<h2>5. Event Delegation</h2>
+<ul id="taskList">
+    <li>Learn HTML <button>Remove</button></li>
+    <li>Learn CSS <button>Remove</button></li>
+</ul>
+<input id="taskInput" placeholder="Enter a task">
+<button id="addTask">Add Task</button>
+</section>
+
+<!-- 6 and 7. Form Validation -->
+<section>
+<h2>6–7. Registration and Validation</h2>
+<form id="registerForm">
+    <input id="userName" placeholder="Enter your name">
+    <input id="userEmail" type="email" placeholder="Enter your email">
+    <button type="submit">Register</button>
+</form>
+<p id="formResult"></p>
+</section>
+
+<!-- 8 and 9. Local Storage -->
+<section>
+<h2>8–9. Local Storage</h2>
+<input id="savedName" placeholder="Enter your name">
+<button id="saveBtn">Save Name</button>
+<button id="readBtn">Show Name</button>
+<p id="storageResult"></p>
+</section>
+
+<!-- 10. JSON -->
+<section>
+<h2>10. JSON Objects and Arrays</h2>
+<button id="jsonBtn">Save Employee Data</button>
+<p id="jsonResult"></p>
+</section>
+
+<!-- 11 and 12. Timers -->
+<section>
+<h2>11–12. Browser Timers</h2>
+<button id="delayBtn">Show Delayed Message</button>
+<p id="delayResult"></p>
+
+<p id="timerResult">Countdown: Not started</p>
+<button id="startTimer">Start Countdown</button>
+<button id="stopTimer">Stop Countdown</button>
+</section>
+
+<script>
+
+// 1. DOM Selection and Manipulation
+let cartCount = 0;
+
+document.getElementById("addCart").addEventListener("click", function() {
+    cartCount++;
+    document.getElementById("cart").textContent =
+        "Cart Items: " + cartCount;
+});
+
+
+// 2. Create Dynamic HTML Elements
+document.getElementById("notifyBtn").addEventListener("click", function() {
+    const message = document.createElement("p");
+    message.textContent = "Your order has been shipped!";
+    document.getElementById("notifications").appendChild(message);
+});
+
+
+// 3. Add and Remove CSS Classes
+const payment = document.getElementById("payment");
+
+document.getElementById("paymentBtn").addEventListener("click", function() {
+    payment.textContent = "Payment Successful!";
+    payment.classList.add("success");
+});
+
+document.getElementById("toggleBtn").addEventListener("click", function() {
+    payment.classList.toggle("highlight");
+});
+
+
+// 4. Browser Events
+document.getElementById("liveInput").addEventListener("input", function() {
+    document.getElementById("liveOutput").textContent =
+        "You typed: " + this.value;
+});
+
+
+// 5. Event Delegation
+const taskList = document.getElementById("taskList");
+
+taskList.addEventListener("click", function(event) {
+    if (event.target.tagName === "BUTTON") {
+        event.target.parentElement.remove();
+    }
+});
+
+document.getElementById("addTask").addEventListener("click", function() {
+    const input = document.getElementById("taskInput");
+    const taskName = input.value.trim();
+
+    if (taskName === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    const item = document.createElement("li");
+    item.textContent = taskName + " ";
+
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+
+    item.appendChild(removeButton);
+    taskList.appendChild(item);
+    input.value = "";
+});
+
+
+// 6 and 7. Form Creation and Validation
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("userName").value.trim();
+    const email = document.getElementById("userEmail").value.trim();
+    const result = document.getElementById("formResult");
+
+    if (name === "" || email === "") {
+        result.textContent = "Please fill in all fields.";
+        result.className = "error";
+        return;
+    }
+
+    result.textContent = "Registration successful for " + name;
+    result.className = "success";
+});
+
+
+// 8. Store Data in Local Storage
+document.getElementById("saveBtn").addEventListener("click", function() {
+    const name = document.getElementById("savedName").value.trim();
+
+    if (name === "") {
+        document.getElementById("storageResult").textContent =
+            "Please enter your name.";
+        return;
+    }
+
+    localStorage.setItem("savedName", name);
+
+    document.getElementById("storageResult").textContent =
+        "Name saved successfully!";
+});
+
+
+// 9. Retrieve and Update Stored Data
+document.getElementById("readBtn").addEventListener("click", function() {
+    const name = localStorage.getItem("savedName");
+
+    document.getElementById("storageResult").textContent =
+        name !== null ? "Hello, " + name : "No saved name found.";
+});
+
+
+// 10. Convert Objects and Arrays Using JSON
+document.getElementById("jsonBtn").addEventListener("click", function() {
+    const employees = [
+        { id: 101, name: "Rahul", department: "IT" },
+        { id: 102, name: "Priya", department: "HR" }
+    ];
+
+    const jsonString = JSON.stringify(employees);
+    localStorage.setItem("employees", jsonString);
+
+    const storedData = localStorage.getItem("employees");
+    const employeeArray = JSON.parse(storedData);
+
+    document.getElementById("jsonResult").textContent =
+        employeeArray.map(employee =>
+            employee.name + " - " + employee.department
+        ).join(" | ");
+});
+
+
+// 11. setTimeout()
+document.getElementById("delayBtn").addEventListener("click", function() {
+    const output = document.getElementById("delayResult");
+
+    output.textContent = "Please wait 2 seconds...";
+
+    setTimeout(function() {
+        output.textContent = "Your order is ready!";
+    }, 2000);
+});
+
+
+// 12. setInterval() and clearInterval()
+let countdown = 5;
+let timer = null;
+
+document.getElementById("startTimer").addEventListener("click", function() {
+    if (timer !== null) return;
+
+    countdown = 5;
+    document.getElementById("timerResult").textContent =
+        "Countdown: " + countdown;
+
+    timer = setInterval(function() {
+        countdown--;
+
+        if (countdown <= 0) {
+            clearInterval(timer);
+            timer = null;
+            document.getElementById("timerResult").textContent =
+                "Countdown finished!";
+            return;
+        }
+
+        document.getElementById("timerResult").textContent =
+            "Countdown: " + countdown;
+    }, 1000);
+});
+
+document.getElementById("stopTimer").addEventListener("click", function() {
+    if (timer !== null) {
+        clearInterval(timer);
+        timer = null;
+
+        document.getElementById("timerResult").textContent =
+            "Countdown stopped!";
+    }
+});
+
+</script>
+
+</body>
+</html>

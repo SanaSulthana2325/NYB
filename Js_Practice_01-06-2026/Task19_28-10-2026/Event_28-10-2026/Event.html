@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- event handling-->
+
+    <button id="welcomeBtn">Click me</button>
+
+    <p id="msg">waiting for your action...</p>
+
+    <hr/>
+    <hr/>
+    <!--click events-->
+
+    <p id="cart1">Cat Items:0</p>
+    <button id="addBtn">Add to cart</button>
+
+    <hr/>
+    <!--Input Event-->
+
+    <input id="username" placeholder="enter your username">
+    <p id="preview">your name will appear here</p>
+
+    <!--Change Event-->
+
+    <lable for="department">Choose Department</lable>
+
+    <select id="department">
+        <option value=""> select a department</option>
+        <option value="Hr">HR</option>
+        <option value="It">It</option>
+        <option value="Finance">Finance</option>
+        <option value="Marketing">marketing</option>
+
+        <p id="result">No Department selected</p>
+
+
+    </select>
+
+    <hr/>
+    <!--Submit events-->
+
+    <form id="loginForm">
+        <input id="username1" placeholder="Enter username">
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="result1"></p>
+    <hr/>
+    <!--keyboard events-->
+    <input id="chatInput" placeholder="Type a message">
+
+    <p id="chatOutput"> No message for u</p>
+
+    <!--mouse events-->
+    <br/>
+    <br/>
+
+    <div id="pro" style="padding:20px; border:1px solid gray"> Laptop - ₹50000</div>
+
+    <button id="saveBtn">save</button>
+
+    <button id="deleteBtn">Delete</button>
+    <hr/>
+    <br/>
+    <!--event capturing-->
+
+    <div id="cartPanel">
+        Shopping Cart
+        <button id="buyBtn">Buy Now</button>
+    </div>
+    <hr/>
+    <br/>
+    <!-- event capturing-->
+     <div id="profile">
+        employee Portal
+        <button id="viewBtn"> Vire Details</button>
+     </div>
+     <hr/>
+     <br/>
+     <!-- event delegation-->
+
+     <ul id="cartList">
+        <li>laptop <button class="delete">Delete</button></li>
+        <li>mouse<button class="delete">Delete</button></li>
+        <li>keyboard <button class="delete">Delete</button></li>
+
+     </ul>
+
+     <hr/>
+     <br/>
+     <!--preventDefault()-->
+
+     <form id="registerForm">
+        <input id="name" placeholder="Enter your name">
+
+        <button type="submit">Register</button>
+     </form>
+     <p id="result2"></p>
+
+     <hr/>
+     <br/>
+     <!--Stop propagation-->
+
+     <div id="employeeCard">
+        <h3> Employee: Neha</h3>
+        <button id="delBtn">Delete Employee</button>
+     </div>
+    
+    <script src="./Event.js"></script>
+</body>
+</html>

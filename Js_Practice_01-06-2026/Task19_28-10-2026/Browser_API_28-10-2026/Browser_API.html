@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+    <h1>JavaScript Browser APIs</h1>
+    <p>Click the buttons to test each Browser API.</p>
+
+    <!-- 1. WINDOW -->
+    <div class="card">
+        <h2>1. window</h2>
+        <p>Accesses browser window features.</p>
+
+        <button onclick="showWindow()">Check Window</button>
+
+        <p id="windowOutput" class="output">Output appears here.</p>
+    </div>
+
+    <!-- 2. DOCUMENT -->
+    <div class="card">
+        <h2>2. document</h2>
+        <p>Changes HTML content on the webpage.</p>
+
+        <h3 id="heading">Welcome to JavaScript</h3>
+
+        <button onclick="changeHeading()">Change Heading</button>
+
+        <p id="documentOutput" class="output">Output appears here.</p>
+    </div>
+
+    <!-- 3. LOCATION -->
+    <div class="card">
+        <h2>3. location</h2>
+        <p>Displays information about the current URL.</p>
+
+        <button onclick="showLocation()">Check Location</button>
+
+        <p id="locationOutput" class="output">Output appears here.</p>
+    </div>
+
+    <!-- 4. HISTORY -->
+    <div class="card">
+        <h2>4. history</h2>
+        <p>Provides browser session navigation.</p>
+
+        <button onclick="showHistory()">Check History</button>
+        <button onclick="goBack()">Go Back</button>
+
+        <p id="historyOutput" class="output">Output appears here.</p>
+    </div>
+
+    <!-- 5. TIMERS -->
+    <div class="card">
+        <h2>5. Timers</h2>
+        <p>Timers schedule JavaScript to run later or repeatedly.</p>
+        <p id="timerOutput" class="output">Timer examples are below.</p>
+    </div>
+
+    <!-- 6. SETTIMEOUT -->
+    <div class="card">
+        <h2>6. setTimeout()</h2>
+        <p>Shows a reminder after 3 seconds.</p>
+
+        <button onclick="startTimeout()">Start Reminder</button>
+
+        <p id="timeoutOutput" class="output">No reminder yet.</p>
+    </div>
+
+    <!-- 7. SETINTERVAL -->
+    <div class="card">
+        <h2>7. setInterval()</h2>
+        <p>Runs a countdown every second.</p>
+
+        <button onclick="startCountdown()">Start Countdown</button>
+        <button onclick="stopCountdown()">Stop Countdown</button>
+
+        <p id="intervalOutput" class="output">Countdown not started.</p>
+    </div>
+
+</div>
+<script src="./Browser_API.js"></script>
+</body>
+</html>

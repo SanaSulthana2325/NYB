@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="username" placeholder="Enter your name">
+    <button onclick="saveName()"> Save Name</button>
+    <button onclick="showName()">show Name</button>
+
+    <p id="result"></p>
+    <hr/>
+    <br/>
+
+    <!-- session storage-->
+
+    <input id="raga" placeholder="enter your name">
+    <button onclick="saveSession()">Save</button>
+    <button onclick="readSession()">Show</button>
+
+    <p id="result1"></p>
+
+    <hr/>
+    <br/>
+    <!--storing objects-->
+     <h2>User Profile</h2>
+    <button onclick="saveUser()">Save User</button>
+    <button onclick="showUser()">Show User</button>
+    <p id="result2"></p>
+
+    <hr/>
+    <br/>
+    <!--storing array-->
+
+     <h2>Shopping Cart</h2>
+  <button onclick="saveCart()">Save Cart</button>
+  <button onclick="showCart()">Show Cart</button>
+  <ul id="cartList"></ul>
+
+
+
+
+    <script src="./Browser.js"></script>
+</body>
+</html>

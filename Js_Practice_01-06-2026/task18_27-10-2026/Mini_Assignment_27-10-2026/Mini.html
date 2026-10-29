@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Processing</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            margin: 0;
+            padding: 25px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000012;
+        }
+
+        h1, h2 {
+            color: #1d3557;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        input, select, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: #eaf1ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .stat-card p {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #1d3557;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f9fc;
+        }
+
+        #message {
+            color: #b91c1c;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Employee Data Processing Application</h1>
+       
+
+        <h2>Employee Operations</h2>
+
+        <div class="controls">
+            <select id="department">
+                <option value="All">All Departments</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+            </select>
+
+            <button id="filterBtn">Filter Department</button>
+
+            <input
+                type="number"
+                id="employeeId"
+                placeholder="Enter employee ID"
+            >
+
+            <button id="searchBtn">Search by ID</button>
+            <button id="sortBtn">Sort by Salary</button>
+            <button id="resetBtn">Show All</button>
+        </div>
+
+        <p id="message" role="status"></p>
+
+        <h2>Salary Statistics</h2>
+
+        <div class="stats">
+            <div class="stat-card">
+                Total Employees
+                <p id="totalEmployees">0</p>
+            </div>
+
+            <div class="stat-card">
+                Total Salary
+                <p id="totalSalary">₹0</p>
+            </div>
+
+            <div class="stat-card">
+                Average Salary
+                <p id="averageSalary">₹0</p>
+            </div>
+
+            <div class="stat-card">
+                Highest Salary
+                <p id="highestSalary">-</p>
+            </div>
+
+            <div class="stat-card">
+                Lowest Salary
+                <p id="lowestSalary">-</p>
+            </div>
+        </div>
+
+        <h2>Employee List</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody id="employeeTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./Mini.js"></script>
+</body>
+</html>

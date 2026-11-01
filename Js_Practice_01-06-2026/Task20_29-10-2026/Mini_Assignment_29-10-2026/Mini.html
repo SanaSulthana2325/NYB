@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f4f4f4;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 280px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Management System</h1>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+    >
+
+    <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="beauty">Beauty</option>
+        <option value="fragrances">Fragrances</option>
+        <option value="furniture">Furniture</option>
+    </select>
+
+    <button id="loadBtn">Load Products</button>
+    <button id="addBtn">Add Product</button>
+
+    <p id="message">Click Load Products to begin.</p>
+
+    <div id="productList"></div>
+
+    <script src="./Mini.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+/* General styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #243b64;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+}
+
+/* Form and list sections */
+
+.form-section,
+.list-section {
+    background-color: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #243b64;
+}
+
+/* Form elements */
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+
+button {
+    background-color: #2457a7;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #183f80;
+}
+
+.delete-btn {
+    background-color: #d93636;
+    margin-top: 0;
+}
+
+.delete-btn:hover {
+    background-color: #a82020;
+}
+
+/* Employee table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2457a7;
+    color: white;
+}
+
+#message {
+    font-weight: bold;
+    color: green;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Mobile-friendly layout */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 15px;
+    }
+}

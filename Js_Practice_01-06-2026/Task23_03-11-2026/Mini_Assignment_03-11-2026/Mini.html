@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="./Mini.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Employee Management System</h1>
+        <p class="subtitle">Manage your employees easily</p>
+
+        <!-- Employee Registration Form -->
+        <section class="form-section">
+
+            <h2>Add New Employee</h2>
+
+            <form id="employeeForm">
+
+                <label for="name">Employee Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter employee name"
+                    required
+                >
+
+                <label for="department">Department</label>
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Enter department"
+                    required
+                >
+
+                <label for="salary">Monthly Salary</label>
+                <input
+                    type="number"
+                    id="salary"
+                    placeholder="Enter salary"
+                    min="1"
+                    required
+                >
+
+                <label for="role">Employee Role</label>
+                <select id="role">
+                    <option value="Employee">Employee</option>
+                    <option value="Manager">Manager</option>
+                </select>
+
+                <label for="teamSize">Team Size (for Manager)</label>
+                <input
+                    type="number"
+                    id="teamSize"
+                    placeholder="Enter team size"
+                    min="1"
+                    value="1"
+                >
+
+                <button type="submit">Add Employee</button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+        <!-- Employee List -->
+        <section class="list-section">
+
+            <h2>Employee List</h2>
+
+            <p>Total Employees: <span id="employeeCount">0</span></p>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name or department"
+            >
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th>Salary</th>
+                            <th>Details</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+                        <!-- Employee records appear here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="emptyMessage">No employees added yet.</p>
+
+        </section>
+
+    </div>
+
+    
+    <script src="./Mini.js"></script>
+
+</body>
+</html>

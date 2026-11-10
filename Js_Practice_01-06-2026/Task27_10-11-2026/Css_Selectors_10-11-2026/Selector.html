@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            color:blue;
+            text-align:center;
+        }
+        p{
+            color: green;
+            font-size: 18px;
+        }
+        /* class */
+        .active{
+            color:rgb(212, 11, 162);
+            font-weight: bold;
+        }
+        .inactive{
+            color:red;
+            font-weight: bold;
+        }
+
+        /* ID */
+
+        #header{
+            background-color: navy;
+            color:rgb(211, 208, 208);
+            padding:10px;
+            text-align:center;
+            
+        }
+        * {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+/* group */
+
+h1,h2,p{
+    color:rgb(112, 114, 216);
+    font-family:Arial;
+}
+
+/* descendant selector */
+.emp p2{
+    color: rgb(7, 235, 102);
+}
+
+/* child */
+.emp1 > p{
+    color:darkmagenta;
+}
+
+/* Adjacent Slibling Selector */
+
+h2 + p{
+    color:brown;
+    font-weight: bold;
+}
+
+/* general Sibling Selector */
+
+h2 ~ p{
+    color:red;
+}
+
+/* hover */
+
+button{
+    background-color: blue;
+    color: white;
+    padding:12px 25px;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: green;
+}
+
+/* focus */
+input{
+    padding:12px;
+    border:2px solid gray;
+    outline:none;
+}
+
+input:focus{
+    border-color: blue;
+}
+
+/* active */
+btn:active{
+    background-color: orange;
+    transform:scale(0.95);
+}
+
+/* first-child */
+p:first-child{
+    color:plum
+}
+
+/* :last-child */
+
+p:last-child{
+    color:green;
+}
+
+/* nth child */
+
+.employees p:nth-child(even){
+    background-color: lightseagreen;
+}
+
+/* checked */
+
+input:checked{
+    accent-color:green;
+}
+
+/* ::before */
+.Fi::before{
+    content:"*";
+    color:gold;
+}
+
+/* After */
+.ga::after{
+    content:"*";
+    color:crimson;
+}
+
+/* first-letter */
+
+.welcome::first-letter{
+    color:coral;
+    font-size:35px;
+    font-weight:bold;
+}
+
+/* first-line */
+
+.ta::first-line{
+    color:darkblue;
+    font-weight: bold;
+}
+.ka::selection{
+    background-color: yellow;
+    color: rgb(14, 235, 62);
+}
+
+/* placeholder */
+
+input::placeholder{
+    color:blue;
+    font-style:italic;
+}
+
+        
+    </style>
+</head>
+<body>
+    <!--Element Selector-->
+    <h1> hello welcome</h1>
+    <p> this the place of birth</p>
+    <hr/>
+    <br/>
+
+    <!-- Class Selector
+Definition: A class selector selects HTML elements based on their class attribute.
+
+In CSS, we use a dot (.) before the class name. -->
+
+<h1> hello</h1>
+<p class="active">Sam-Active</p>
+<p class="inactive">Ayesha-inactive</p>
+<p class="active"> Arun-active</p>
+<hr/>
+<br/>
+
+<!-- ID Selector
+Definition: An ID selector selects an HTML element using its unique ID attribute.
+
+In CSS, we use the hash (#) symbol before the ID name. -->
+
+<div id="header">
+    <h1> my company</h1>
+</div>
+<p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum molestias dolores sit, unde fuga optio incidunt, deleniti dignissimos facilis recusandae numquam perspiciatis debitis! Nostrum veritatis similique numquam! Quas, ipsum eius?</p>
+
+<hr/>
+<br/>
+
+<!-- Universal Selector
+Definition: The universal selector selects all HTML elements on a webpage.
+
+In CSS, we use the asterisk (*) symbol. -->
+
+<h1>hello ! how are you</h1>
+<p> please enter this in your mind your fine and good</p>
+
+<input type="text" placeholder="Employee name">
+
+<button>submit</button>
+
+<hr/>
+<br/>
+<!-- Grouping Selector
+Definition: A grouping selector allows us to apply the same CSS styles to multiple HTML elements using a single CSS rule.
+
+We use a comma (,) to separate selectors. -->
+    
+
+<h1> HR management</h1>
+<h2> Employee details</h2>
+<h2> department details</h2>
+<p> Welcome to HR portal</p>
+
+<!-- Combinator Selectors
+This is an important topic in CSS interviews and real-time development.
+
+Definition: Combinator selectors are used to select HTML elements based on their relationship with other HTML elements.
+
+In simple words, they help us select elements depending on where they are located in the HTML structure. -->
+
+<hr/>
+<br/>
+<!-- Descendant Selector (Space)
+Definition: Selects all matching elements inside a specified parent element, even if they are deeply nested -->
+
+<div class="emp">
+    <h2> hello sam</h2>
+    <p>name:tata</p>
+    <div>
+        <p>Role:Hr</p>
+    </div>
+</div>
+<p2> welcome to website</p2>
+
+<hr/>
+<br/>
+
+<!-- Child Selector (>)
+Definition: Selects only the direct child elements of a parent. -->
+
+<div class="emp1">
+    <p>Employee:Tasan</p>
+    <div>
+        <p> Department: finance</p>
+    </div>
+    <p> Experience:6 months</p>
+</div>
+
+<hr/>
+<br/>
+
+<!-- Adjacent Sibling Selector (+)
+Definition: Selects the immediately following sibling element. -->
+
+
+<h2>welcome</h2>
+<p> this is the cool place</p>
+<p> here u can enjao the weather</p>
+<p> along with that food is also good here </p>
+
+<hr/>
+<br/>
+
+<!-- General Sibling Selector (~)
+Definition: Selects all matching sibling elements that appear after a specified element and share the same parent. -->
+
+<h2> hello! Welcome</h2>
+<p>hai</p>
+<p> come back to the place</p>
+<p> sit and eat</p>
+
+<hr/>
+<br/>
+<!-- Pseudo-classes
+Definition: A pseudo-class is used to define the special state of an HTML element.
+
+In simple words, it helps us change the appearance of an element when a user interacts with it or when it meets a particular condition.
+
+Pseudo-classes use a single colon (:). -->
+
+<!--Hover-->
+
+<button>Login</button>
+<hr/>
+<br/>
+<!--Focus-->
+<input type="text" placeholder="Enter your name">
+
+<hr/>
+<br/>
+<!--active-->
+
+<btn> click</btn>
+
+<hr/>
+<br/>
+<!--first child-->
+
+<div>
+    <p>AAA</p>
+    <p>BBB</p>
+    <p>CCC</p>
+</div>
+
+<hr/>
+<br/>
+<div class="employees">
+    <p>dada - hr</p>
+    <p>gaga - deveper</p>
+    <p>haha - designer</p>
+    <p>tata - tester</p>
+</div>
+
+<hr/>
+<br/>
+
+<!--checked-->
+<lable>
+    <input type="checkbox">
+
+    I am good at every thing
+</lable>
+
+<hr/>
+<br/>
+<h1>pseudo-element</h1>
+<!--before-->
+
+<h2 class="Fi"> Sanju</h2>
+<br/>
+<hr/>
+
+<!--After-->
+<lable class="ga"> Employee Name </lable>
+
+<hr/>
+<br/>
+<!--first letter-->
+
+<p class="Welcome">
+     welcome to our HR Management System
+</p>
+
+<hr/>
+<br/>
+<!-- first-line-->
+<p class="ta">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet, fugiat, quis aperiam non unde corrupti blanditiis distinctio incidunt cum laboriosam pariatur. Quidem voluptate dolor sit autem fugiat, asperiores commodi.This is our company which is based on our strong aim and target
+</p>
+
+<hr/>
+<br/>
+<!-- selection-->
+
+<p class="ka">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam dolor perspiciatis, expedita quam maxime sint consequatur illo consequuntur sit aliquid obcaecati saepe placeat reprehenderit quo exercitationem ea magnam corporis ullam?</p>
+
+<hr/>
+<br/>
+<!--placeholder-->
+
+<input type="text" placeholder="Enter Employee name">
+
+</body>
+
+</html>
+
+
+<!-- What are CSS Selectors?
+CSS selectors are used to select HTML elements so that we can apply styles to them. -->
+
+
+<!-- Element Selector
+Definition: An element selector selects HTML elements based on their tag names. -->
+
+
+<!-- Pseudo-class	Purpose
+:hover	        When mouse moves over an element
+:focus	         When an input gets focus
+:active	        While an element is being activated
+:visited	    Visited links
+:first-child	Selects the first child
+:last-child	     Selects the last child
+:nth-child()	Selects children based on position
+:checked	    Selects checked checkboxes or radio buttons
+:disabled	    Selects disabled form controls -->
+
+
+
+<!-- Pseudo-elements
+Definition: Pseudo-elements are used to style a specific part of an HTML element or insert generated content before or after an element.
+
+Pseudo-elements generally use double colons (::). -->
+
+<!-- Pseudo-element	   Purpose
+::before	       Inserts content before an element's content
+::after	Inserts   content after an element's content
+::first-letter	  Styles the first letter
+::first-line	  Styles the first line
+::selection	       Styles selected text
+::placeholder	  Styles placeholder text -->
+
+
+
+<!-- Pseudo-class	                                    Pseudo-element
+Selects a special state or condition	Styles a specific part of an element or generates content
+Uses single colon :	                       Generally uses double colon ::
+:hover	                                    ::before
+:focus	                                    ::after
+:first-child	                            ::first-letter
+:checked	                                ::placeholder -->

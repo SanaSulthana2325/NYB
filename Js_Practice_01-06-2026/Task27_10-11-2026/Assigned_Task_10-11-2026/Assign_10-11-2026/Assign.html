@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS All Topics Practice</title>
+
+    <style>
+
+        /* COMMON PAGE STYLING */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5fa;
+            margin: 20px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .section h2 {
+            color: darkblue;
+        }
+
+
+        /* =================================
+           OUTPUT 1: CSS SELECTORS
+        ================================= */
+
+        /* Element selector */
+        h3 {
+            color: blue;
+        }
+
+        /* Class selector */
+        .student {
+            color: green;
+        }
+
+        /* ID selector */
+        #studentName {
+            color: red;
+        }
+
+        /* Universal selector */
+        .selector-example * {
+            font-family: Arial;
+        }
+
+        /* Group selector */
+        .selector-example h3,
+        .selector-example p {
+            text-align: center;
+        }
+
+        /* Descendant selector */
+        .selector-example .details p {
+            background-color: lightyellow;
+        }
+
+        /* Child selector */
+        .selector-example > .direct-child {
+            border: 2px solid purple;
+        }
+
+        /* Attribute selector */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+        }
+
+
+        /* =================================
+           OUTPUT 2: SPECIFICITY
+           AND INHERITANCE
+        ================================= */
+
+        .specificity-example p {
+            color: green;
+        }
+
+        .specificity-example .message {
+            color: orange;
+        }
+
+        .specificity-example #specialMessage {
+            color: blue;
+        }
+
+        .inheritance-example {
+            color: purple;
+            font-family: Arial;
+        }
+
+
+        /* =================================
+           OUTPUT 3: TYPOGRAPHY
+        ================================= */
+
+        .typography-example h3 {
+            color: darkblue;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .typography-example p {
+            font-size: 18px;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+
+        /* =================================
+           OUTPUT 4: BACKGROUNDS
+           AND GRADIENTS
+        ================================= */
+
+        .color-box {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        .image-box {
+            background-image:
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .gradient-box {
+            background: linear-gradient(to right, blue, purple);
+            color: white;
+            padding: 25px;
+        }
+
+        .radial-box {
+            background: radial-gradient(circle, yellow, orange, red);
+            padding: 25px;
+        }
+
+
+        /* =================================
+           OUTPUT 5: CSS UNITS
+        ================================= */
+
+        .px-box {
+            width: 200px;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .percent-box {
+            width: 80%;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .em-box {
+            font-size: 20px;
+            padding: 1em;
+            background-color: lightpink;
+            margin-bottom: 10px;
+        }
+
+        .rem-box {
+            font-size: 1.5rem;
+            background-color: lightyellow;
+            padding: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .vh-box {
+            height: 10vh;
+            background-color: lightgray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vw-box {
+            width: 50vw;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+
+        /* =================================
+           OUTPUT 6: PSEUDO-CLASSES
+        ================================= */
+
+        .pseudo-example button {
+            background-color: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hover */
+        .pseudo-example button:hover {
+            background-color: green;
+        }
+
+        /* Focus */
+        .pseudo-example input:focus {
+            background-color: lightyellow;
+            outline: 2px solid blue;
+        }
+
+        /* Active */
+        .pseudo-example button:active {
+            background-color: red;
+        }
+
+
+        /* =================================
+           OUTPUT 7: PSEUDO-ELEMENTS
+        ================================= */
+
+        .pseudo-element-example h3::before {
+            content: "★ ";
+            color: orange;
+        }
+
+        .pseudo-element-example h3::after {
+            content: " ✓";
+            color: green;
+        }
+
+        .pseudo-element-example p::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+        .pseudo-element-example p::first-line {
+            font-weight: bold;
+        }
+
+        .pseudo-element-example ::selection {
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+
+
+    <!--  SELECTORS -->
+
+    <div class="section selector-example">
+
+        
+        <h3>Student Details</h3>
+
+        <p class="student">Course: Frontend Development</p>
+
+        <p id="studentName">Name: Sana</p>
+
+        <div class="details">
+            <p>Skill: HTML</p>
+            <p>Skill: CSS</p>
+        </div>
+
+        <p class="direct-child">
+            Direct Child Example
+        </p>
+
+        <input type="text" placeholder="Enter your name">
+
+    </div>
+
+
+
+    <!--  SPECIFICITY AND INHERITANCE -->
+
+    <div class="section specificity-example">
+
+
+        <p class="message" id="specialMessage">
+            This text will be blue.
+        </p>
+
+        <h2>Inheritance</h2>
+
+        <div class="inheritance-example">
+
+            <p>hai this my wrold.</p>
+
+            <p>u also belog to this.</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!--  TYPOGRAPHY -->
+
+    <div class="section typography-example">
+
+
+        <h3>Welcome to CSS</h3>
+
+        <p>
+            I am learning frontend development.
+        </p>
+
+    </div>
+
+
+
+    <!--  BACKGROUNDS AND GRADIENTS -->
+
+    <div class="section">
+
+        
+        <div class="color-box">
+            Background Color Example
+        </div>
+
+        <div class="image-box">
+            Background Image Example
+        </div>
+
+        <div class="gradient-box">
+            Linear Gradient Example
+        </div>
+
+        <div class="radial-box">
+            Radial Gradient Example
+        </div>
+
+    </div>
+
+
+
+    <!--  CSS UNITS -->
+
+    <div class="section">
+
+        
+        <div class="px-box">
+            Width: 200px
+        </div>
+
+        <div class="percent-box">
+            Width: 80%
+        </div>
+
+        <div class="em-box">
+            Padding: 1em
+        </div>
+
+        <div class="rem-box">
+            Font size: 1.5rem
+        </div>
+
+        <div class="vh-box">
+            Height: 10vh
+        </div>
+
+        <div class="vw-box">
+            Width: 50vw
+        </div>
+
+    </div>
+
+
+
+    <!--  PSEUDO-CLASSES -->
+
+    <div class="section pseudo-example">
+
+        
+        <button>Move Mouse Here</button>
+
+        <br><br>
+
+        <input type="text" placeholder="Click here to test focus">
+
+    </div>
+
+
+
+    <!--  PSEUDO-ELEMENTS -->
+
+    <div class="section pseudo-element-example">
+
+        
+        <h3>Student Information</h3>
+
+        <p>
+            Welcome to my CSS learning practice.
+            I am learning how to design webpages.
+        </p>
+
+    </div>
+
+
+</body>
+</html>

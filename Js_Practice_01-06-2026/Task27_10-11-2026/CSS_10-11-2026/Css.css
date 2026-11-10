@@ -1,0 +1,36 @@
+body {
+    background-color: #f0f4f8;
+    font-family: Arial;
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: green;
+}
+
+p {
+    font-size: 18px;
+    color: gray;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

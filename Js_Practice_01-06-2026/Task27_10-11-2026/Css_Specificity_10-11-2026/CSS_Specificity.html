@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* specificity */
+        h1{
+            color:blue;
+        }
+        .title{
+            color:green;
+        }
+        #heading{
+            color:red;
+        }
+
+        /* class vs ID */
+        .ctive{
+            color:green;
+        }
+        #emp{
+            color:rgb(0, 174, 255);
+        }
+        .ja{
+            color: cadetblue;
+            font-family: Arial;
+        }
+
+        /* color */
+        h1{
+            /* color: blue; */
+            /* color: #8fe3e5; */
+            color: rgba(235, 10, 216, 0.699);
+
+        }
+        p{
+            /* color: green; */
+            color: rgb(216, 123, 123);
+        }
+        .dashboard{
+            background-color: lightblue;
+            padding: 30px;
+        }
+        /* bg-image */
+        .banner{
+            background-image: url("./bird\ logo\ 1.jpg");
+            background-size: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+
+        /* linearGradient */
+        .box{
+            background: linear-gradient(
+                to right,
+                blue,
+                purple
+            );
+
+            padding:40px;
+            color:white;
+        }
+
+        .box1{
+            background: radial-gradient(
+                circle,
+                yellow,
+                orange,
+                red
+            );
+        }
+
+        /* Conic */
+        .box2{
+            background: conic-gradient(
+                red,
+                yellow,
+                green,
+                pink,
+                blue,
+                red
+            );
+        }
+
+        /* font family */
+        h1 {
+              font-family: Arial, sans-serif;
+              font-size: 32px;
+              font-weight: 100;
+              font-style: oblique;
+              text-align: center;
+              /* text-decoration: line-through; */
+              line-height: 1.8;
+        }
+
+         p {
+          font-family: Georgia, serif;
+          text-decoration: underline;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          word-spacing: 20px;
+        }
+
+        /* px */
+        .box3{
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+        /* % */
+        .container {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.box {
+    width: 50%;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+}
+
+/* em */
+
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 2em;
+}
+/* 
+REM */
+
+/* html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+} */
+
+/* vh */
+
+.login-page {
+    height: 100vh;
+    background-color: lightblue;
+    text-align: center;
+    padding: 50px;
+    width: 40vw;
+}
+    </style>
+</head>
+<body>
+
+    <!-- specificity-->
+
+    <h1 id="heading" class="title"> Welcome to CSS</h1>
+
+    <hr/>
+    <!--class vs ID-->
+
+    <p id="emp" class="active"> employee: papa</p>
+
+    <!-- CSS Inheritance
+What is CSS Inheritance?
+Inheritance means that some CSS properties automatically pass from a parent element to its child elements.
+
+In simple words, when you apply certain styles to a parent element, its children can receive those styles automatically. -->
+
+<div class="ja">
+    <h1>asas</h1>
+    <h2>bsbs</h2>
+    <p>cscs</p>
+    <p>dsds</p>
+</div>
+<hr/>
+<br/>
+
+<!-- CSS Colors
+CSS colors are used to change the appearance of text, backgrounds, borders, and other elements.
+
+There are several ways to define colors in CSS.
+Types of CSS color values
+1. Color names.
+2. HEX values.
+3. RGB values.
+4. RGBA values.
+5. HSL values.
+6. HSLA values. -->
+
+<h1> Welcome to wrold</h1>
+
+<p> employee are working really hard</p>
+
+<hr/>
+<br/>
+
+<!--background color-->
+
+<div class="dashboard">
+    <h1> Employee dashboard</h1>
+    <p> Welcom sana !</p>
+</div>
+
+<!--background- image-->
+
+<div class="banner">
+    <h1> Welcome to Our Company</h1>
+</div>
+
+<hr/>
+<br/>
+
+<!--CSS Gradients
+What is a CSS Gradient?
+A CSS gradient is used to create a smooth transition between two or more colors.
+
+Instead of using a single background color, we can blend multiple colors.-->
+    
+<!--Linear -->
+
+<div class="box">
+    <h1>welcome to world</h1>
+</div>
+
+<!-- Radial Gradient
+A radial gradient creates a circular or elliptical color transition from an origin point outward. -->
+
+<div class="box1">
+    <h2> AAA is good in maths</h2>
+</div>
+
+<hr/>
+<br/>
+<!--Conic Gradient
+A conic gradient creates a color transition around a central point, like a color wheel.-->
+
+<div class="box2">
+    <h2> this wrold is so harmful</h2>
+</div>
+<hr/>
+<br/>
+<!-- font family-->
+ <h1> Tasan is good friend of Nashu</h1>
+
+ <p>Welcome back to college</p>
+
+ <hr/>
+ <br/>
+ <!--CSS units-->
+<!--px-->
+<div class="box3">
+    <p2> welcome to nanis homes</p2>
+</div>
+
+<hr/>
+<br/>
+<!--Percentage (%)
+Definition: Percentage is a relative unit. Its reference depends on the property being used.-->
+
+<div class="container">
+    <div class="box">
+        Employee Dashboard
+    </div>
+</div>
+<hr/>
+<br/>
+<!--EM (em)
+Definition: em is a relative unit based on the computed font size of the element's parent for properties such as font-size.-->
+
+<div class="parent">
+    <p class="child">
+        Welcome to CSS
+    </p>
+</div>
+
+<hr/>
+<br/>
+<!--REM (Root EM)
+Definition: rem is a relative unit based on the computed font size of the root HTML element, normally <html>.-->
+
+<div class="login-page">
+    <h1>Welcome Back</h1>
+    <p>Please login to continue.</p>
+</div>
+
+
+</body>
+</html>
+
+
+<!-- What is CSS Specificity?
+CSS Specificity is a set of rules that determines which CSS style will be applied when multiple CSS rules target the same HTML element.
+
+In simple words, imagine you apply three different colors to the same heading:
+- Element selector says blue.
+- Class selector says green.
+- ID selector says red. 
+
+first - inline
+second - ID
+third - class
+fourth - element
+fifth - universal-->
+
+<!-- What is !important?
+!important gives a declaration priority over normal declarations in the cascade. -->
+
+
+<!-- Specificity	                                  Inheritance
+Determines which declaration wins	          Passes certain properties from parent to child
+Uses selector weight and cascade rules	    Depends on whether a property is inherited
+Example: ID vs class	                    Example: Parent color to child
+Resolves competing styles	                Provides default styles to descendants -->
+
+
+<!-- Format	      Example
+Name	       red
+HEX	         #ff0000
+RGB	        rgb(255,0,0)
+RGBA	rgba(255,0,0,0.5)
+HSL	        hsl(0,100%,50%)
+HSLA	hsla(0,100%,50%,0.5) -->
+
+
+<!-- CSS Backgrounds
+CSS background properties are used to control the background appearance of HTML elements.
+
+For example:
+- Background colors.
+- Background images.
+- Image positions.
+- Image sizes.
+- Image repetition. -->
+
+
+<!-- Property	               Purpose
+background-color	    Sets background color
+background-image	     Adds an image
+background-repeat	    Controls image repetition
+background-position	      Sets image position
+background-size	              Controls image size
+background-attachment	   Controls image scrolling behavior -->
+
+
+<!-- CSS Fonts, Text Styling, and Typography
+This is one of the most important topics in frontend development because every website needs readable and attractive text.
+What is CSS Typography?
+Typography is the way text is displayed and organized on a webpage.
+
+It includes:
+- Font family.
+- Font size.
+- Font weight.
+- Text color.
+- Text alignment.
+- Line spacing.
+- Letter spacing.
+- Text decoration. -->
+
+
+<!-- Property	      Purpose
+font-family	     Font type
+font-size	     Font size
+font-weight	     Font thickness
+font-style	     Italic or normal
+text-align	       Text alignment
+text-decoration	   Underline, overline, etc.
+text-transform	   Uppercase/lowercase
+letter-spacing	  Space between letters
+word-spacing	  Space between words
+line-height	     Vertical line spacing -->
+
+
+<!-- CSS Units
+This is a very important concept in responsive web development and frontend interviews.
+What are CSS Units?
+CSS units define the size of different CSS properties.
+
+For example:
+- Width.
+- Height.
+- Font size.
+- Margin.
+- Padding.
+- Spacing.
+CSS units are divided into two major categories.
+-->

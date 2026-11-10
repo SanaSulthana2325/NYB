@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile Card</title>
+
+    <style>
+        /* 1. Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 2. Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* 3. Class Selector */
+        .profile-card {
+            background-color: white;
+            width: 320px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        /* 4. Image Styling */
+        .profile-card img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* 5. ID Selector */
+        #name {
+            color: darkblue;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        /* 6. Group Selector */
+        h2, p {
+            margin-top: 10px;
+        }
+
+        /* 7. Typography */
+        .role {
+            color: #008080;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .description {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* 8. Descendant Selector */
+        .skills span {
+            background-color: #dbeafe;
+            color: darkblue;
+            padding: 7px 12px;
+            margin: 4px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* 9. Pseudo-class: Hover */
+        .contact-btn:hover {
+            background-color: darkblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* 10. Pseudo-class: Active */
+        .contact-btn:active {
+            background-color: orange;
+        }
+
+        /* 11. Pseudo-element: Before */
+        .role::before {
+            content: "@ ";
+        }
+
+        /* 12. Pseudo-element: After */
+        .name::after {
+            content: " ★";
+            color: orange;
+        }
+
+        /* 13. Button Styling */
+        .contact-btn {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        /* 14. Responsive Design */
+        @media (max-width: 400px) {
+            .profile-card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+
+        <img
+            src="./../Css_Specificity_10-11-2026/bird logo 1.jpg"
+            alt="Profile photo"
+        >
+
+        <h2 id="name" class="name">Priya Sharma</h2>
+
+        <p class="role">Frontend Developer</p>
+
+        <p class="description">
+            Hello! I am a beginner frontend developer.
+            I enjoy creating simple and beautiful websites.
+        </p>
+
+        <h3>My Skills</h3>
+
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+
+        <button class="contact-btn">Contact Me</button>
+
+    </div>
+
+</body>
+</html>

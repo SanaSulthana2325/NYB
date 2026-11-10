@@ -1,0 +1,44 @@
+
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Class selector */
+.card {
+    background-color: white;
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Element selector */
+h2 {
+    color: darkblue;
+}
+
+/* Button styling */
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Pseudo-class */
+button:hover {
+    background-color: darkblue;
+}

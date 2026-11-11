@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* content */
+        .card{
+            width:300px;
+            height:150px;
+            text-align: center;
+            background-color: lightblue;
+        }
+        .box{
+            background-color: lightblue;
+            border:2px solid blue;
+            padding:30px;
+            /* padding-top: 10px; */
+            padding-right: 20px;
+            /*padding-bottom: 30px;*/
+            padding-left: 40px; 
+        }
+        .card1{
+            width:250px;
+            padding:20px;
+            border:5px solid red;
+            background-color: lightgrey;
+        }
+        .card1{
+            border:5px dashed green;
+            border: 5px double brown;
+            border: 5px dotted palevioletred;
+        }
+        .box1{
+            background-color: lightblue;
+            padding:20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .box2{
+            background-color: lightcoral;
+            padding: 20px;
+        }
+        .login-box{
+            width:350px;
+            height:250px;
+            background-color: lightblue;
+            border:2px dashed blue;
+        }
+        /* content-box */
+
+        .box3{
+            width:300px;
+            height:150px;
+            padding:60px;
+            border:5px solid red;
+            box-sizing: content-box;
+        }
+        /* border-box */
+        .box4{
+            width:300px;
+            height:150px;
+            padding:20px;
+            border:5px double plum;
+            box-sizing: border-box;
+
+        }
+        .emp{
+            display:block;
+            background-color: lightblue;
+            border:2px solid blue;
+            padding:15px;
+            margin-bottom:10px;
+            width:300px;
+        }
+        span{
+            display: inline;
+            background-color: lightgreen;
+            color: red;
+            border:2px dashed orange;
+
+            width:150px;
+            height:50px;
+        }
+
+        .product{
+            display:inline-block;
+
+            width: 180px;
+            height:150px;
+
+            background-color: lightyellow;
+            border:2px dashed orange;
+
+            padding:15px;
+            margin:10px;
+
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!--content-->
+
+    <div class="card">
+        <h2> Employee Profile</h2>
+        <p>Name: fifa</p>
+        <p> Role:Hr</p>
+    </div>
+    <br/>
+    <hr/>
+    <!--Padding
+Padding is the space between the content and the border of an element.
+
+In simple words, padding creates internal space inside an element.-->
+
+<div class="box">
+    welcome to Wrold!!
+</div>
+<hr/>
+<br/>
+
+<!--Border
+Border is the line surrounding the padding and content of an element.
+
+It creates an outline around an HTML element.-->
+
+<div class="card1">
+    <h2> My Profile</h2>
+    <p> thia is my profile total about </p>
+</div>
+<hr/>
+<br/>
+<!--Margin
+Margin is the space outside the border of an element.
+
+It creates space between one HTML element and another.-->
+
+<div class="box1">
+    first box
+</div>
+
+<div class="box2"> Second Box</div>
+<hr/>
+<br/>
+<!--Width and Height
+These two properties define the dimensions of an HTML element.
+- Width: Controls how wide an element is.
+- Height: Controls how tall an element is.-->
+
+<div class="login-box">
+    <h2> Login form</h2>
+    <p> Enter your username</p>
+    <p> Enter your password</p>
+</div>
+<hr/>
+<br/>
+<!--Content box: the width and height apply only to the content.-->
+
+<div class="box3"> hello! welcome home</div>
+<hr/>
+<br/>
+<!--Border-box:When you use border-box, the specified width and height include:
+- Content
+- Padding
+- Border-->
+
+<div class="box4"> this is new border box</div>
+
+<hr/>
+<br/>
+<!--Block
+Definition: A block-level element always starts on a new line and occupies the full available width of its parent by default.
+
+Even if the content is small, the block element takes the available horizontal space.-->
+
+<h2> Employee Details</h2>
+<div class="emp"> employee 1-AAA</div>
+
+<div class="emp">employee 2 -BBB</div>
+
+<div class="emp"> employee 3 - CCC</div>
+
+<hr/>
+<br/>
+<!-- Inline-->
+
+<h2> hello hai!!</h2>
+
+<p> Lorem, ipsum dolor sit<span>fafa</span>
+<span>taru</span> And
+<span>javaScript</span>
+skills.
+</p>
+
+<hr/>
+<br/>
+<!--Inline Block-->
+
+<h2> Our Products</h2>
+
+<div class="product">
+    <h3> Laptop</h3>
+    <p>Price:₹ 45000</p>
+</div>
+
+<div class="product">
+    <h3>Mobile</h3>
+    <p> Price:₹ 20000</p>
+</div>
+
+<div class="product">
+    <h3> Headphones</h3>
+    <p>Price:₹2000</p>
+</div>
+
+
+</body>
+</html>
+
+
+<!-- What is the CSS Box Model?
+The CSS Box Model is a concept that explains how every HTML element occupies space on a webpage. -->
+
+<!-- Content
+Content is the actual information inside an HTML element.
+
+It can be:
+- Text
+- Images
+- Videos
+- Other HTML elements -->
+
+
+<!-- Margin	                           Padding
+Creates external space	       Creates internal space
+Exists outside the border	   Exists inside the border
+Separates elements	             Separates content from border
+Background does not normally
+ extend into margin	Background   extends into padding -->
+
+
+<!-- Unit	Meaning   	           Example
+px	    Pixels	                 width: 300px;
+%	   Percentage of parent	     width: 50%;
+vw	  Viewport width	          width: 50vw;
+vh 	 Viewport height	           height: 50vh;
+rem	  Relative to root font size	width: 20rem; -->
+
+
+
+<!-- Box-sizing
+This is one of the most important concepts in the CSS Box Model.
+
+The box-sizing property determines how the browser calculates the total width and height of an element.
+
+There are two important values:
+1. content-box
+2. border-box -->
+
+
+<!-- What is the CSS Display Property?
+The CSS display property determines how an HTML element appears and behaves on a webpage.
+
+In simple words, it controls:
+- Whether an element starts on a new line.
+- Whether multiple elements appear on the same line.
+- Whether we can set width and height.
+- How elements occupy space on a webpage. -->
+
+
+<!-- Common HTML block elements
+- <div>
+- <p>
+- <h1> to <h6>
+- <section>
+- <article>
+- <header>
+- <footer>
+- <ul>
+- <li> -->
+
+
+<!-- Inline
+Definition: An inline element does not start on a new line. It occupies only the space required by its content.
+
+Multiple inline elements can appear on the same line.
+Common HTML inline elements
+- <span>
+- <a>
+- <strong>
+- <b>
+- <i>
+- <em>
+- <label> -->
+
+
+<!-- Inline-block
+Definition: inline-block combines the features of both block and inline elements.
+
+It allows elements to:
+- Appear next to each other on the same line.
+- Have custom width and height.
+- Have padding and margin.
+- Maintain their own box dimensions. -->

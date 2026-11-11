@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Methods</title>
+
+    <style>
+
+        /* GENERAL STYLING */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #263b80;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        section {
+            background-color: white;
+            margin: 30px auto;
+            padding: 25px;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #263b80;
+        }
+
+        .example {
+            background-color: #eef1f7;
+            padding: 20px;
+            margin-top: 15px;
+            border: 2px dashed #aaa;
+            min-height: 130px;
+            border-radius: 8px;
+        }
+
+        .box {
+            width: 150px;
+            height: 70px;
+            background-color: #4b79d8;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+
+        /* 1. STATIC POSITIONING */
+
+        .static-box {
+            position: static;
+        }
+
+
+        /* 2. RELATIVE POSITIONING */
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 40px;
+            background-color: #e58a25;
+        }
+
+
+        /* 3. ABSOLUTE POSITIONING */
+
+        .absolute-parent {
+            position: relative;
+            height: 180px;
+            background-color: #dce9f7;
+            border: 2px solid #777;
+            padding: 15px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #249b68;
+        }
+
+
+        /* 4. FIXED POSITIONING */
+
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d94343;
+            width: 120px;
+            height: 55px;
+            border-radius: 30px;
+            z-index: 1000;
+        }
+
+
+        /* 5. STICKY POSITIONING */
+
+        .sticky-container {
+            height: 250px;
+            overflow-y: auto;
+            border: 2px solid #888;
+            background-color: #f1f1f1;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: #8e44ad;
+            color: white;
+            padding: 18px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .sticky-content {
+            padding: 20px;
+            height: 500px;
+        }
+
+
+        /* Z-INDEX EXAMPLE */
+
+        .z-container {
+            position: relative;
+            height: 180px;
+        }
+
+        .z-box {
+            position: absolute;
+            width: 130px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .z1 {
+            background-color: #e74c3c;
+            left: 20px;
+            top: 20px;
+            z-index: 1;
+        }
+
+        .z2 {
+            background-color: #3498db;
+            left: 70px;
+            top: 50px;
+            z-index: 2;
+        }
+
+        .z3 {
+            background-color: #27ae60;
+            left: 120px;
+            top: 80px;
+            z-index: 3;
+        }
+
+
+       
+    </style>
+</head>
+
+<body>
+
+
+    <!-- 1. STATIC POSITIONING -->
+
+    <section>
+        <h2> Static Positioning</h2>
+
+        <div class="example">
+            <div class="box static-box">Static Box</div>
+            <p>This paragraph appears below the box.</p>
+            <div class="box static-box">Another Box</div>
+        </div>
+
+
+    <!-- 2. RELATIVE POSITIONING -->
+
+    <section>
+        <h2> Relative Positioning</h2>
+
+        <div class="example">
+            <div class="box relative-box">
+                Relative Box
+            </div>
+        </div>
+
+
+    <!-- 3. ABSOLUTE POSITIONING -->
+
+    <section>
+        <h2> Absolute Positioning</h2>
+
+    
+        <div class="example absolute-parent">
+
+            <p>Product Image Area</p>
+
+            <div class="box absolute-box">
+                SALE 50%
+            </div>
+
+        </div>
+
+    
+
+    <!-- 4. FIXED POSITIONING -->
+
+    <section>
+        <h2> Fixed Positioning</h2>
+
+    
+        <div class="example">
+            <p>Scroll the page and observe the red support button.</p>
+            <p>The button stays at the bottom-right corner of the screen.</p>
+        </div>
+
+    <!-- 5. STICKY POSITIONING -->
+
+    <section>
+        <h2> Sticky Positioning</h2>
+
+        <div class="sticky-container">
+
+            <div class="sticky-box">
+                STICKY NAVIGATION BAR
+            </div>
+
+            <div class="sticky-content">
+                <h3>Welcome to My Website</h3>
+
+                <p>Section 1: Home</p>
+                <p>Section 2: About Us</p>
+                <p>Section 3: Our Services</p>
+                <p>Section 4: Our Projects</p>
+                <p>Section 5: Contact Us</p>
+
+                
+            </div>
+
+        </div>
+
+
+    <!-- BONUS: Z-INDEX -->
+
+    <section>
+        <h2>6. Bonus Topic: Z-Index</h2>
+
+        
+        <div class="example z-container">
+
+            <div class="z-box z1">Z-Index 1</div>
+
+            <div class="z-box z2">Z-Index 2</div>
+
+            <div class="z-box z3">Z-Index 3</div>
+
+        </div>
+
+        
+
+    <!-- FIXED SUPPORT BUTTON -->
+
+    <div class="box fixed-box">
+        SUPPORT
+    </div>
+
+
+    
+</body>
+</html>
+

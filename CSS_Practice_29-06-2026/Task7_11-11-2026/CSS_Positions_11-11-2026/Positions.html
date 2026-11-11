@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:150px;
+            height:60px;
+            margin:10px;
+            background-color: lightblue;
+        }
+        .box1{
+            position:static;
+            top: 50px;
+        }
+        /* relative */
+        .box{
+            width: 150px;
+            height:80px;
+            background-color: lightgreen;
+
+            position:relative;
+            top:20px;
+            left:30px;
+        }
+        .card{
+            position:relative;
+            width:200px;
+            height:150px;
+            background-color: lightgray;
+        }
+
+        .sale{
+            position:absolute;
+            top:10px;
+            right:10px;
+            background-color: red;
+            color:white;
+            padding:5px 10px;
+        }
+        .chat{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+
+            background-color: green;
+            color: white;
+            padding:12px 20px;
+            border:none;
+        }
+        .header{
+            position:sticky;
+            top:0;
+
+            background-color: navy;
+            color: white;
+            padding:15px;
+        }
+        .box22 {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+}
+
+.box11 {
+    background: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.box21 {
+    background: blue;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.box31 {
+    background: green;
+    top: 80px;
+    left: 80px;
+    z-index: 3;
+}
+
+/* overflow */
+.box4 {
+    width: 180px;
+    height: 70px;
+    /* overflow: visible; */
+    overflow: hidden;
+    overflow:scroll;
+    overflow:auto;
+    /* overflow:clip; */
+
+
+}
+/* hidden */
+/* .box4 {
+    width: 180px;
+    height: 70px;
+    overflow: hidden;
+} */
+
+/* float */
+img {
+    width: 120px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+}
+img {
+    width: 120px;
+    height: 100px;
+    float: left;
+}
+
+.footer {
+    clear: both;
+    background-color: lightblue;
+    padding: 15px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Static Position
+    Meaning: static is the default position of every HTML element.
+- Elements appear in their normal document flow.
+- top, right, bottom, and left do not affect static elements. -->
+
+<div class="box box1"> Box 1 Asa</div>
+<div class="box box2"> Box 2 ha</div>
+<div class="box box3"> Box 3 ijs</div>
+<br/>
+   <hr/>
+   <br/>
+   <!--Relative Position
+Meaning: position: relative moves an element from its original position.
+- The element's original space remains reserved.
+- You can move it using top, right, bottom, and left.--> 
+
+<div class="box">Profile</div>
+
+<br/>
+<hr/>
+<br/>
+<!--Absolute Position
+Meaning: position: absolute positions an element relative to its nearest positioned ancestor (an ancestor with a position other than static).
+- It is removed from the normal document flow.
+- It does not reserve its original space.
+- If there is no positioned ancestor, it is positioned relative to the initial containing block (usually the page).-->
+
+<div class="card">
+    <img src="./bird logo 1.jpg" alt="bird">
+    <span class="sale">SALE</span>
+
+</div>
+
+<!-- Fixed Position
+Meaning: position: fixed positions an element relative to the browser viewport.
+- It stays in the same place even when the page scrolls.
+- It is removed from the normal document flow. -->
+
+<button class="chat"> chat with us</button>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<hr/>
+<br/>
+<!--Sticky Position
+Meaning: position: sticky behaves like a normal element until it reaches a specified scroll position. Then it sticks there.-->
+
+<div class="header">my Website</div>
+
+<div class="content">
+    <h2> Welcome</h2>
+    <p> Website content....</p>
+</div>
+
+<hr/>
+<br/>
+
+<!--Z-Index and Stacking Context
+What is Z-Index?
+z-index controls which element appears in front of or behind another element when they overlap.
+
+Think of it as layers.
+- Higher z-index generally appears in front.
+- Lower z-index generally appears behind.-->
+
+<div class="box22 box11">Box 1</div>
+<div class="box22 box21">Box 2</div>
+<div class="box22 box31">Box 3</div>
+
+<hr/>
+<br/>
+<!--CSS Overflow Properties
+What is Overflow?
+Overflow controls what happens when content is bigger than its container.
+
+There are five commonly used values:
+1. visible
+2. hidden
+3. scroll
+4. auto
+5. clip-->
+
+<div class="box4"> hello hai!! this is me i know everyone in the wrold wih their behavioue and habbits and rule and regulations</div>
+
+<hr/>
+<br/>
+<!--Float
+Meaning: float moves an element to the left or right of its container, allowing surrounding inline content to wrap around it.
+
+Common values:
+- float: left
+- float: right
+- float: none-->
+
+<div class="article">
+    <img src="./bird logo 1.jpg" alt="News">
+    <p>
+        This is a news article. The text will
+        flow around the image. Float is useful
+        for this kind of layout.
+    </p>
+</div>
+<br/>
+<br/>
+<hr/>
+<!--Clear
+Meaning: clear controls whether an element can sit beside floated elements.
+
+Common values:
+- clear: left
+- clear: right
+- clear: both
+- clear: none-->
+
+<div class="article">
+    <img src="./bird logo 1.jpg" alt="News">
+    <p>This is the article content.</p>
+</div>
+
+<div class="footer">
+    Footer section
+</div>
+
+</body>
+</html>
+
+
+<!-- Property	Behaviour
+visible	        Content displays outside
+hidden	     Extra content is hidden
+scroll	     Scrolling is provided
+auto	     Scrollbar appears when needed
+clip	     Content is clipped, without scrolling -->
+
+
+<!-- Float	                                Clear
+Moves an element left or right	   Prevents an element from sitting beside floats
+Allows text wrapping	             Makes content move below floats
+float: left	                          clear: left
+float: right	                      clear: right -->
+
+
+<!-- Topic	Interview-ready answer
+Static	Default positioning of an element
+Relative	Moves relative to its original position
+Absolute	Positions relative to the nearest positioned ancestor
+Fixed	    Stays fixed relative to the viewport
+Sticky	    Sticks after reaching a specified scroll position
+Z-index	   Controls the stacking order of overlapping elements
+Stacking context	An independent group of layered elements
+Overflow	Controls content that exceeds its container
+Float	Moves an element to the left or right
+Clear	Prevents an element from sitting beside floated elements -->

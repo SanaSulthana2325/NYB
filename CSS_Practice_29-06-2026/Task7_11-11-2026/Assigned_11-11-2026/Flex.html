@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Assignment</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+        }
+
+        h2 {
+            text-align: center;
+            color: #243b55;
+            margin-top: 35px;
+        }
+
+        /* 1. Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #172554;
+            color: rgb(231, 10, 10);
+            padding: 18px 30px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: rgb(120, 241, 7);
+            text-decoration: none;
+        }
+
+        /* 2. Profile Cards */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .profile-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        .profile-card button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 3. Product Cards with Wrapping */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            flex: 1 1 200px;
+            max-width: 250px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* 4. Alignment Example */
+        .alignment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 180px;
+            background: #dbeafe;
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .alignment-box {
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* 5. Button Spacing */
+        .button-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 25px;
+        }
+
+        .button-container button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            background: #16a34a;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">My Website</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Profile Cards -->
+
+
+    <div class="profile-container">
+
+        <div class="profile-card">
+            <img src="https://pixlr.com/images/generator/photo-generator.webp" alt="Employee">
+            <h3>John</h3>
+            <p>Frontend Developer</p>
+            <button>View Profile</button>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://pixlr.com/images/generator/photo-generator.webp" alt="Employee">
+            <h3>David</h3>
+            <p>Backend Developer</p>
+            <button>View Profile</button>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://pixlr.com/images/generator/photo-generator.webp" alt="Employee">
+            <h3>Sarah</h3>
+            <p>UI Designer</p>
+            <button>View Profile</button>
+        </div>
+
+    </div>
+
+    <!-- Product Cards -->
+    <h2>Our Products</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <h3>Laptop</h3>
+            <p>Price: ₹50,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h3>Mobile</h3>
+            <p>Price: ₹20,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h3>Headphones</h3>
+            <p>Price: ₹2,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h3>Keyboard</h3>
+            <p>Price: ₹1,500</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+    <!-- Alignment Example -->
+    <h2>Flexbox Alignment</h2>
+
+    <div class="alignment-container">
+        <div class="alignment-box">Box 1</div>
+        <div class="alignment-box">Box 2</div>
+        <div class="alignment-box">Box 3</div>
+    </div>
+
+    <!-- Button Spacing -->
+    <h2>Flexbox Spacing</h2>
+
+    <div class="button-container">
+        <button>Login</button>
+        <button>Register</button>
+        <button>Contact</button>
+    </div>
+
+</body>
+</html>
+
+
+<!-- Question	                           Short answer
+What is Flexbox?	               A one-dimensional CSS layout system.
+What is display: flex?	           Makes an element a flex container.
+What is the default flex-direction?	   row.
+What is the default flex-wrap?	        nowrap.
+What does justify-content do?	     Aligns items along the main axis.
+What does align-items do?	        Aligns items along the cross axis.
+What does gap do?	                 Adds spacing between flex items.
+What does flex-grow do?	            Controls how items grow.
+What does flex-shrink do?	     Controls how items shrink.
+What does align-self do?	    Aligns one item differently from other items. -->
+
+
+<!-- Flexbox	                      CSS Grid
+One-dimensional   	         Two-dimensional
+Row or column	            Rows and columns
+Best for navigation bars	Best for page layouts
+Good for aligning buttons	Good for dashboards
+Uses display: flex	         Uses display: grid -->

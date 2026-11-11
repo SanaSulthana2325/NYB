@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Grid Complete Assignment</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6fa;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            background: #172554;
+            color: white;
+            padding: 25px;
+            margin: 0;
+        }
+
+        h2 {
+            color: #1d3b70;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 8px;
+        }
+
+        .section {
+            background: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 90%;
+            max-width: 1100px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #00000012;
+        }
+
+    
+        .grid-box {
+            background: #bfdbfe;
+            padding: 25px 10px;
+            text-align: center;
+            border: 1px solid #2563eb;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* 1. BASIC GRID */
+
+        .basic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        /* 2. GRID TEMPLATE COLUMNS */
+
+        .column-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr 200px;
+            gap: 10px;
+        }
+
+        /* 3. GRID TEMPLATE ROWS */
+
+        .row-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 80px 150px 80px;
+            gap: 10px;
+        }
+
+        .row-grid .grid-box {
+            background: #bbf7d0;
+            border-color: #16a34a;
+        }
+
+        /* 4. FR UNIT AND REPEAT */
+
+        .fraction-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+        }
+
+        .fraction-grid .grid-box {
+            background: #fde68a;
+            border-color: #d97706;
+        }
+
+        /* 5. GRID GAP */
+
+        .gap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 30px;
+            column-gap: 15px;
+        }
+
+        .gap-grid .grid-box {
+            background: #fbcfe8;
+            border-color: #db2777;
+        }
+
+        /* 6. GRID TEMPLATE AREAS */
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 250px 70px;
+
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            gap: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #93c5fd;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #c4b5fd;
+        }
+
+        .main {
+            grid-area: main;
+            background: #bbf7d0;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #fde68a;
+        }
+
+        .area-box {
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* 7. GRID COLUMN SPAN */
+
+        .span-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .wide {
+            grid-column: 1 / 3;
+            background: #a5f3fc;
+        }
+
+        /* 8. GRID ROW SPAN */
+
+        .row-span-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+        }
+
+        .tall {
+            grid-row: 1 / 3;
+            background: #c4b5fd;
+        }
+
+        /* 9. GRID ALIGNMENT */
+
+        .alignment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: 250px;
+            justify-items: center;
+            align-items: center;
+            background: #e0f2fe;
+            gap: 10px;
+        }
+
+        .alignment-grid .grid-box {
+            width: 100px;
+            padding: 20px 5px;
+        }
+
+        /* 10. RESPONSIVE GRID */
+
+        .responsive-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .product {
+            background: #f3f4f6;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product h3 {
+            color: #1d4ed8;
+        }
+
+        .product button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* RESPONSIVE WEBSITE LAYOUT */
+
+        @media (max-width: 600px) {
+
+            .section {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .column-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .layout-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            .layout-grid > div {
+                min-height: 70px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- 1. BASIC GRID -->
+
+    <div class="section">
+
+        <h2> Basic CSS Grid</h2>
+
+        
+        <div class="basic-grid">
+
+            <div class="grid-box">Box 1</div>
+            <div class="grid-box">Box 2</div>
+            <div class="grid-box">Box 3</div>
+            <div class="grid-box">Box 4</div>
+            <div class="grid-box">Box 5</div>
+            <div class="grid-box">Box 6</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 2. GRID TEMPLATE COLUMNS -->
+
+    <div class="section">
+
+        <h2> Grid Template Columns</h2>
+
+        
+        <div class="column-grid">
+
+            <div class="grid-box">Sidebar</div>
+            <div class="grid-box">Main Content</div>
+            <div class="grid-box">Right Panel</div>
+
+        </div>
+
+    </div>
+
+
+    <!--  GRID TEMPLATE ROWS -->
+
+    <div class="section">
+
+        <h2>Grid Template Rows</h2>
+
+        
+        <div class="row-grid">
+
+            <div class="grid-box">Row 1</div>
+            <div class="grid-box">Row 1 - Second Column</div>
+            <div class="grid-box">Row 2</div>
+            <div class="grid-box">Row 2 - Second Column</div>
+            <div class="grid-box">Row 3</div>
+            <div class="grid-box">Row 3 - Second Column</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4. FR UNIT AND REPEAT -->
+
+    <div class="section">
+
+        <h2> Fraction (fr) and Repeat</h2>
+
+        
+        <div class="fraction-grid">
+
+            <div class="grid-box">1fr</div>
+            <div class="grid-box">2fr</div>
+            <div class="grid-box">1fr</div>
+
+        </div>
+
+        
+    </div>
+
+
+    <!-- 5. GRID GAP -->
+
+    <div class="section">
+
+        <h2> Grid Gap</h2>
+
+    
+        <div class="gap-grid">
+
+            <div class="grid-box">Item 1</div>
+            <div class="grid-box">Item 2</div>
+            <div class="grid-box">Item 3</div>
+            <div class="grid-box">Item 4</div>
+            <div class="grid-box">Item 5</div>
+            <div class="grid-box">Item 6</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 6. GRID TEMPLATE AREAS -->
+
+    <div class="section">
+
+        <h2>Grid Template Areas</h2>
+
+        
+        <div class="layout-grid">
+
+            <div class="area-box header">
+                HEADER
+            </div>
+
+            <div class="area-box sidebar">
+                SIDEBAR
+            </div>
+
+            <div class="area-box main">
+                MAIN CONTENT
+            </div>
+
+            <div class="area-box footer">
+                FOOTER
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 7. GRID COLUMN SPAN -->
+
+    <div class="section">
+
+        <h2> Grid Column Span</h2>
+
+        
+        <div class="span-grid">
+
+            <div class="grid-box wide">
+                
+            </div>
+
+            <div class="grid-box">Product 2</div>
+            <div class="grid-box">Product 3</div>
+            <div class="grid-box">Product 4</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 8. GRID ROW SPAN -->
+
+    <div class="section">
+
+        <h2>8. Grid Row Span</h2>
+
+       
+        <div class="row-span-grid">
+
+            <div class="grid-box tall">
+                Large Product
+            </div>
+
+            <div class="grid-box">Product 2</div>
+            <div class="grid-box">Product 3</div>
+            <div class="grid-box">Product 4</div>
+            <div class="grid-box">Product 5</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 9. GRID ALIGNMENT -->
+
+    <div class="section">
+
+        <h2>Grid Alignment</h2>
+
+        
+        <div class="alignment-grid">
+
+            <div class="grid-box">Box 1</div>
+            <div class="grid-box">Box 2</div>
+            <div class="grid-box">Box 3</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 10. RESPONSIVE GRID -->
+
+    <div class="section">
+
+        <h2> Responsive CSS Grid</h2>
+
+        
+        <div class="responsive-grid">
+
+            <div class="product">
+                <h3>Laptop</h3>
+                <p>Price: ₹50,000</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>Mobile</h3>
+                <p>Price: ₹20,000</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>Headphones</h3>
+                <p>Price: ₹2,000</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>Keyboard</h3>
+                <p>Price: ₹1,500</p>
+                <button>Buy Now</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

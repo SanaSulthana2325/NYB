@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Practical Assignment</title>
+
+<style>
+
+/* =================================
+   GLOBAL CSS VARIABLES
+================================= */
+
+:root {
+    --primary: #2563eb;
+    --secondary: #16a34a;
+    --danger: #dc2626;
+    --background: #f1f5f9;
+    --dark: #1e293b;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--dark);
+}
+
+section {
+    width: min(95%, 1100px);
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: var(--radius);
+}
+
+h1 {
+    font-size: clamp(25px, 4vw, 40px);
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+nav {
+    background: var(--dark);
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    transition: color 0.4s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+
+/* =================================
+   1. CSS TRANSITIONS
+================================= */
+
+.transition-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.transition-btn {
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    background: var(--primary);
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+
+.transition-btn:hover {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+.transition-width {
+    width: 100px;
+    padding: 15px;
+    background: orange;
+    color: white;
+    transition: width 1s ease-in-out;
+}
+
+.transition-width:hover {
+    width: 250px;
+}
+
+
+/* =================================
+   2. CSS TRANSFORMS
+================================= */
+
+.transform-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 30px;
+}
+
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+    transition: transform 0.5s;
+}
+
+.translate:hover {
+    transform: translate(20px, 20px);
+}
+
+.rotate:hover {
+    transform: rotate(45deg);
+}
+
+.scale:hover {
+    transform: scale(1.3);
+}
+
+.skew:hover {
+    transform: skew(15deg);
+}
+
+
+/* =================================
+   3. HOVER EFFECTS
+================================= */
+
+/* Navigation already demonstrated above */
+
+.hover-btn {
+    padding: 12px 25px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.4s;
+}
+
+.hover-btn:hover {
+    background: orange;
+    transform: translateY(-5px);
+}
+
+/* Image zoom */
+
+.image-container {
+    width: min(100%, 350px);
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+
+/* =================================
+   4. INTERACTIVE UI COMPONENTS
+================================= */
+
+/* Product Card */
+
+.product-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px #ccc;
+
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #999;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background: var(--secondary);
+}
+
+/* FAQ */
+
+details {
+    background: #e0f2fe;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+details:hover {
+    background: #bae6fd;
+}
+
+summary {
+    font-weight: bold;
+}
+
+/* Tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =================================
+   5. CSS FUNCTIONS
+================================= */
+
+/* calc() */
+
+.calc-box {
+    width: calc(100% - 40px);
+    padding: 20px;
+    background: lightgreen;
+    margin: auto;
+}
+
+/* min() */
+
+.min-box {
+    width: min(90%, 500px);
+    padding: 20px;
+    background: lightblue;
+    margin: 15px auto;
+}
+
+/* max() */
+
+.max-box {
+    width: max(50%, 300px);
+    padding: 20px;
+    background: #fde68a;
+    margin: 15px auto;
+}
+
+/* clamp() */
+
+.clamp-heading {
+    font-size: clamp(22px, 5vw, 45px);
+    color: purple;
+    text-align: center;
+}
+
+
+/* =================================
+   6. RESPONSIVE TYPOGRAPHY
+================================= */
+
+.responsive-text {
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.7;
+}
+
+.responsive-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.layout-box {
+    flex: 1 1 200px;
+    background: #dbeafe;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .transform-container {
+        gap: 35px;
+        justify-content: center;
+    }
+
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <a href="#transitions">Transitions</a>
+    <a href="#transforms">Transforms</a>
+    <a href="#hover">Hover</a>
+    <a href="#interactive">Interactive UI</a>
+    <a href="#functions">CSS Functions</a>
+    <a href="#responsive">Responsive</a>
+</nav>
+
+
+<!-- =================================
+     1. TRANSITIONS
+================================= -->
+
+<section id="transitions">
+
+    <h1>1. CSS Transitions</h1>
+
+    <button class="transition-btn">
+        Hover Me
+    </button>
+
+
+    <hr>
+    <br>
+
+    <h3>Example 2: Width Transition</h3>
+
+    <div class="transition-width">
+        Hover Me
+    </div>
+
+
+</section>
+
+
+<!-- =================================
+     2. TRANSFORMS
+================================= -->
+
+<section id="transforms">
+
+    <h1>2. CSS Transforms</h1>
+
+    
+    <div class="transform-container">
+
+        <div>
+            <div class="transform-box translate">
+                Translate
+            </div>
+            <p>Moves the box</p>
+        </div>
+
+        <div>
+            <div class="transform-box rotate">
+                Rotate
+            </div>
+            <p>Rotates 45 degrees</p>
+        </div>
+
+        <div>
+            <div class="transform-box scale">
+                Scale
+            </div>
+            <p>Increases size</p>
+        </div>
+
+        <div>
+            <div class="transform-box skew">
+                Skew
+            </div>
+            <p>Tilts the box</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     3. HOVER EFFECTS
+================================= -->
+
+<section id="hover">
+
+    <h1>3. Hover Effects</h1>
+
+    
+    <button class="hover-btn">
+        Click Me
+    </button>
+
+    
+    <hr>
+    <br>
+
+    <h3>Example 3: Image Zoom Effect</h3>
+
+    <div class="image-container">
+        <img src="https://images5.alphacoders.com/397/thumb-1920-397914.jpg"
+             alt="Nature Image">
+    </div>
+
+    
+</section>
+
+
+<!-- =================================
+     4. INTERACTIVE UI
+================================= -->
+
+<section id="interactive">
+
+    <h1>4. Interactive UI Components</h1>
+
+    
+    <div class="product-container">
+
+        <div class="card">
+
+            <img src="https://img.freepik.com/premium-photo/headphones_920207-9739.jpg"
+                 alt="Headphones">
+
+            <h3>Headphones</h3>
+
+            <p>Price: ₹999</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images-static.nykaa.com/media/catalog/product/1/a/1a94a80TITAN-90110QM01_12.jpg"
+                 alt="Watch">
+
+            <h3>Smart Watch</h3>
+
+            <p>Price: ₹1499</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://th.bing.com/th/id/OIP.oAuqtBmmoKAy9WFZC2GsTAHaGD?w=244&h=199&c=7&r=0&o=7&pid=1.7&rm=3"
+                 alt="Bag">
+
+            <h3>Backpack</h3>
+
+            <p>Price: ₹799</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+    </div>
+
+    
+    <hr>
+    <br>
+
+    <h3>Example 2: Interactive FAQ</h3>
+
+    <details>
+        <summary>What is HTML?</summary>
+        <p>HTML creates the structure of webpages.</p>
+    </details>
+
+    <details>
+        <summary>What is CSS?</summary>
+        <p>CSS styles and designs webpages.</p>
+    </details>
+
+    <details>
+        <summary>What is JavaScript?</summary>
+        <p>JavaScript adds functionality to webpages.</p>
+    </details>
+
+    
+    <hr>
+    <br/>
+
+    <h3>Example 3: Tooltip</h3>
+
+    <div class="tooltip">
+
+        Hover Here
+
+        <span class="tooltip-text">
+            Welcome to CSS!
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- =================================
+     5. CSS FUNCTIONS
+================================= -->
+
+<section id="functions">
+
+    <h1>5. CSS Functions</h1>
+
+    
+    <div class="calc-box">
+        hai
+    </div>
+
+    
+    <hr>
+<br>
+    <h3>Example 2: min()</h3>
+
+    <div class="min-box">
+        hello
+    </div>
+
+    
+    <hr>
+    <br>
+
+    <h3>Example 3: max()</h3>
+
+    <div class="max-box">
+        how are you
+    </div>
+
+    
+    <hr>
+    <br>
+
+    <h3>Example 4: clamp()</h3>
+
+    <h2 class="clamp-heading">
+     are you ok?
+    </h2>
+
+    
+</section>
+
+
+<!-- =================================
+     6. RESPONSIVE TYPOGRAPHY
+================================= -->
+
+<section id="responsive">
+
+    <h1>6. Responsive Typography and Layout</h1>
+    <hr>
+    <br>
+
+    
+    <div class="responsive-layout">
+
+        <div class="layout-box">
+            Content Box 1
+        </div>
+
+        <div class="layout-box">
+            Content Box 2
+        </div>
+
+        <div class="layout-box">
+            Content Box 3
+        </div>
+
+    </div>
+
+    
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <p>copyright - 2026</p>
+
+</footer>
+
+</body>
+</html>

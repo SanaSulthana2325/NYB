@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+            text-align: center;
+            padding: 50px;
+        }
+        h1{
+            color:pink
+        }
+
+        /* mobile screen */
+
+        @media (max-width: 600px) {
+            body{
+                background-color: lightgreen;
+            }
+            h1 {
+                color:darkgreen;
+            }
+        }
+        /* break points */
+        /* Tablet */
+        @media (max-width:768px){
+            h2{
+                font-size:30px;
+                color: blue;
+            }
+        }
+
+        /* mobile */
+        @media(max-width:600px) {
+            h2{
+                font-size: 20px;
+                color: red;
+            }
+        }
+
+        /* using percentage */
+        .container{
+            width:80%;
+            margin:auto;
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+        /* image */
+        img{
+            max-width:100%;
+            height:auto;
+            display:block;
+        }
+        /* grid layout */
+        .container1{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+            gap:15px;
+            padding:20px;
+        }
+
+        .card{
+            background-color: rgb(245, 14, 122);;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        /* navigation */
+
+        nav{
+            display:flex;
+            justify-content: space-around;
+            background-color: navy;
+            padding: 15px;
+        }
+        nav a{
+            color:white;
+            text-decoration: none;
+        }
+        @media(max-width:600px){
+            nav{
+                flex-direction:column;
+                gap:15px;
+                align-items: center;
+            }
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <h1> Welcome to website</h1>
+    <p> This is responsible for website</p>
+
+    <hr/>
+    <br/>
+    <h2>break points</h2>
+    <h2> Welcome to responsive layout of website</h2>
+    <hr/>
+    <br/>
+    <!-- using percentage-->
+     <div class="container">
+        <h2> hello wrold</h2>
+        <p> this is new wrold for u</p>
+     </div>
+     <br/>
+     <hr/>
+     <!--Image-->
+
+     <h2> Travel Website</h2>
+     <img src="https://tse1.mm.bing.net/th/id/OIP.ZOIcug_Fz4ZHFZKUOmfL4QHaEo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="earth">
+
+     <hr/>
+     <br/>
+     <!-- grid layout-->
+      <h2> our products</h2>
+      <div class="container1">
+        <div class="card">Product 1</div>
+        <div class="card">Product 2</div>
+        <div class="card">Product 3</div>
+        <div class="card">Product 4</div>
+
+      </div>
+      <hr/>
+      <br/>
+      <!-- responsive navigation-->
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+
+      </nav>
+
+    
+</body>
+</html>
+
+<!-- What is Responsive Web Design?
+Responsive Web Design (RWD) is a technique used to create websites that automatically adjust their layout, images, text, and other elements according to the screen size of the device.
+
+A responsive website works properly on:
+- Desktop computers
+- Laptops
+- Tablets
+- Mobile phones -->
+
+
+<!-- Viewport Meta Tag
+The viewport meta tag tells the browser how to control the webpage's dimensions and scaling on different devices. -->
+
+<!-- CSS Media Queries
+Media queries allow us to apply different CSS styles depending on the screen size. -->
+
+
+<!-- CSS Breakpoints
+Breakpoints are specific screen widths where the website layout changes to provide a better experience. -->
+
+
+<!-- Device	Breakpoint
+Mobile	600px
+Tablet	768px
+Laptop	1024px
+Desktop	1200px -->
+
+
+<!-- Flexible Layouts Using Percentage (%)
+In responsive design, we use percentages instead of fixed pixel widths when we want elements to adjust according to their parent container. -->
+
+<!-- Responsive Images
+Responsive images automatically adjust their size according to the available screen width. -->
+
+
+<!-- Responsive Grid Layout
+CSS Grid helps us create responsive rows and columns.
+
+We can use repeat() and minmax() to automatically adjust the number of columns.
+
+Important properties:
+- display: grid: Creates a grid layout.
+- grid-template-columns: Defines columns.
+- repeat(): Repeats column definitions.
+- minmax(): Defines minimum and maximum column sizes.
+- gap: Adds spacing between grid items. -->
+
+
+
+<!-- Responsive Navigation Bar
+A navigation bar contains links such as Home, About, Services, and Contact.
+
+On desktop, links are displayed horizontally. On smaller screens, they can be displayed vertically. -->

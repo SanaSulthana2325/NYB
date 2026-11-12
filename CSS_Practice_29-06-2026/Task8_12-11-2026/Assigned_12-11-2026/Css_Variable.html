@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Variables Example</title>
+
+    <style>
+
+        /* Global CSS Variables */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #16a34a;
+            --background-color: #f1f5f9;
+            --text-color: #333333;
+            --font-size: 18px;
+            --card-padding: 20px;
+            --border-radius: 10px;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: var(--font-size);
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .card {
+            background-color: white;
+            padding: var(--card-padding);
+            margin: 30px auto;
+            max-width: 400px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>My Website</h2>
+    </nav>
+
+    <h1>Welcome to CSS Variables</h1>
+
+    <div class="card">
+        <h2>Reusable Styling</h2>
+
+        <p>
+            hello how are u focus on your studies        </p>
+
+        <button>Learn More</button>
+    </div>
+
+    <footer>
+        Copyright 2026 My Website
+    </footer>
+
+</body>
+</html>
+
+<!-- Advantages of CSS Variables
+1. Reusability: Use the same value in multiple places.
+2. Easy maintenance: Change one variable instead of updating many CSS rules.
+3. Consistency: Maintain the same colors and spacing throughout a website.
+4. Theme customization: Easily create light and dark themes.
+5. Clean code: Makes CSS easier to understand and manage. -->

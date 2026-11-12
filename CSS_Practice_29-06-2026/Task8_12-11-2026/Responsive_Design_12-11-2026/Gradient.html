@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner{
+            height:200px;
+            background: linear-gradient(
+                to right,
+                blue,
+                purple
+            );
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        /* radical */
+        .offer{
+            height:200px;
+            background: radial-gradient(
+                circle,
+                yellow,
+                orange,
+                red
+            );
+            text-align: center;
+            padding: 40px;
+        }
+        /* coined */
+        
+    .circle {
+        width: 200px;
+        height: 200px;
+
+        border-radius: 50%;
+
+        background: conic-gradient(
+            red,
+            yellow,
+            green,
+            blue,
+            red
+        );
+    }
+    /* background image */
+    .ban{
+        height:300px;
+        background-image: 
+        linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),
+        url("https://wallpapers.com/images/hd/nature-landscape-pictures-hg4ndx87jp1rsvth.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+    .container{
+        width:calc(100% - 40px);
+        background-color: lightblue;
+        padding: 20px;
+        margin: auto;
+    }
+    .login{
+        width: min(90%,400px);
+        background-color: lightcoral;
+        padding: 25px;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .content{
+        width:max(50%,300px);
+        background-color: lightgreen;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    h2{
+        font-size: clamp(20px,5vw,40px);
+        text-align: center;
+        color: blue;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Linear Gradient
+A linear gradient creates a color transition in a straight line. -->
+<div class="banner">
+    <h1> Welcome to our website</h1>
+    <p> Explore our services</p>
+</div>
+<hr/>
+<br/>
+<!--Radial Gradient
+A radial gradient creates a circular color transition that spreads outward from a central point.-->
+
+<div class="offer">
+    <h2> hello wrold</h2>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus!</p>
+</div>
+<hr/>
+<br/>
+<!--Conic Gradient
+A conic gradient creates a color transition around a central point, similar to a color wheel.-->
+<div class="circle">
+    <h1> this is good </h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore consectetur dolore ipsam voluptatem vitae atque?</p>
+</div>
+<hr/>
+<br/>
+<!--background image-->
+<div class="ban">
+    <h1> explore wrold</h1>
+    <p> narure is good for health</p>
+</div>
+<hr/>
+<br/>
+<!--What is calc()?
+
+The calc() function allows us to perform mathematical calculations directly inside CSS.
+
+We can use:
+- Addition +
+- Subtraction -
+- Multiplication *
+- Division /-->
+
+<div class="container">
+    <h2> my website</h2>
+    <p> this good for u</p>
+</div>
+<hr/>
+<br/>
+<!--min()
+What is min()?
+
+The min() function selects the smallest value from the given values.-->
+
+<div class="login">
+    <h2> Login Form</h2>
+    <input type="text" placeholder="Username">
+    <br><br>
+    <button>Login</button>
+</div>
+<hr/>
+<br/>
+<!--max()
+What is max()?
+
+The max() function selects the largest value from the given values.-->
+<div class="content">
+    <h2> Our service</h2>
+    <p> we provide services for our best</p>
+</div>
+<hr/>
+<br/>
+<!--clamp()
+What is clamp()?
+
+The clamp() function sets a minimum value, a preferred value, and a maximum value.
+
+It is very useful for responsive font sizes, widths, and spacing.-->
+
+<h2> Responsive heading</h2>
+    
+</body>
+</html>
+
+
+<!-- What are CSS Gradients?
+CSS gradients allow us to display smooth color transitions between two or more colors.
+
+Instead of using a single background color, we can combine multiple colors to create attractive website backgrounds.
+
+There are three main types of gradients:
+1. Linear Gradient
+2. Radial Gradient
+3. Conic Gradient -->
+
+
+
+<!-- Background Image Effects
+We can use CSS properties to control background images.
+
+Important    properties:
+Property	                 Purpose
+background-image	   Adds a background image
+background-size	       Controls image size
+background-position	   Controls image position
+background-repeat	    Controls image repetition
+background-attachment	Controls whether the background scrolls -->
+
+<!-- CSS Functions: calc(), min(), max(), and clamp()
+CSS functions help us calculate and control the sizes of elements dynamically.
+
+These functions are especially useful when developing responsive websites. -->

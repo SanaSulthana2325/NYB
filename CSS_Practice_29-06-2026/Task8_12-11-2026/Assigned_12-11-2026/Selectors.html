@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.card p {
+    color: blue;
+    font-size: 20px;
+}
+/* child */
+nav > ul > li {
+    color: green;
+    font-size: 20px;
+}
+/* adjacent sibling */
+h2 + p {
+    color: red;
+    font-weight: bold;
+}
+/* general sibling selector */
+h2 ~ p {
+    color: blue;
+}
+/* Attribute */
+
+input[type="text"] {
+    background-color: rgb(243, 243, 7);
+}
+/* pseudo-class */
+button:hover{
+    background-color: green;
+    color:white
+}
+button:active {
+    background-color: red;
+    transform: scale(0.95);
+}
+/* nth selector */
+
+tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+tr:first-child {
+    background-color: orange;
+}
+/* negation selector */
+
+button:not(.disabled) {
+    background-color: green;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <!--decendant-->
+    <div class="card">
+    <h2>Student Details</h2>
+    <p>Name: Sana</p>
+
+    <section>
+        <p>Course: Web Development</p>
+    </section>
+</div>
+
+<p>This paragraph is outside the card.</p>
+    
+<hr/>
+<br/>
+<!--Child selector-->
+
+<nav>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>
+            Services
+            <ul>
+                <li>Web Design</li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<hr/>
+<br/>
+<!-- adjacent sibling selector-->
+
+<h2>About Us</h2>
+<p>We provide web development services.</p>
+
+<p>We also provide training.</p>
+<hr/>
+<br>
+<!--general sibling selector-->
+
+<h2>Our Services</h2>
+<p>Web Development</p>
+<h3>Our Courses</h3>
+<p>Python</p>
+<p>Java</p>
+
+<hr/>
+<br/>
+<!--Attribute-->
+<input type="text" placeholder="Enter Name">
+<input type="password" placeholder="Enter Password">
+
+<hr/>
+<br/>
+<!--pseudo-class selector-->
+
+<button> Submit</button>
+<hr/>
+<br/>
+<!--nth-->
+<table border="1" cellpadding="10">
+    <tr>
+        <td>Name</td>
+        <td>Marks</td>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>Sana</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>Priya</td>
+        <td>85</td>
+    </tr>
+</table>
+<hr/>
+<br/>
+<!--Negation Selector (:not())
+It selects all elements except the specified element.-->
+
+<button>Submit</button>
+<button>Cancel</button>
+<button class="disabled">Disabled</button>
+
+
+</body>
+</html>
+
+
+
+<!-- Selector	    Example	           Use
+Descendant	    div p	          All paragraphs inside div
+Child	       div > p	          Direct child paragraphs
+Adjacent sibling	h2 + p      	Immediately following paragraph
+General sibling	  h2 ~ p	        All following sibling paragraphs
+Attribute	     input[type="text"]	 Select text input
+Hover	          button:hover	       Mouse hover
+Focus	          input:focus	       Selected input
+First child	       li:first-child	     First list item
+Nth child	       li:nth-child(2)	       Second list item
+Not             	button:not(.disabled)	Exclude disabled buttons
+Has	                .card:has(img)	         Card containing an image -->

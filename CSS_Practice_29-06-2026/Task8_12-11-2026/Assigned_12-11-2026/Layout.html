@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Navbar</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+        /* image */
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* content responsive */
+        .container1 {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .content {
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: clamp(24px, 4vw, 40px);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Create Responsive Navigation Bars and Layouts
+A responsive navigation bar and responsive layout automatically adjust according to the screen size of a device, such as a desktop, laptop, tablet, or mobile phone. -->
+
+    <nav>
+        <h2 class="logo">MyWebsite</h2>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <hr/>
+    <br/>
+    <!--image and content responsive-->
+
+     <div class="container">
+        <h1>Responsive Image</h1>
+
+        <img src="https://static.vecteezy.com/system/resources/previews/030/258/039/large_2x/beautiful-nature-wallpaper-hd-wallpaper-ai-generated-free-photo.jpg"
+             alt="Nature Image">
+    </div>
+    <hr/>
+    <br/>
+    <!--content responsive-->
+    <div class="container1">
+        <div class="content">
+            <h1>Welcome to Web Development</h1>
+
+            <p>
+                Responsive web design makes websites
+                look good on mobile phones, tablets,
+                and desktop screens.
+            </p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+
+<!-- What are CSS Variables?
+CSS variables are used to store reusable values such as colors, font sizes, margins, padding, and other CSS properties.
+
+Instead of writing the same color or value repeatedly, we can create a variable once and reuse it throughout our stylesheet. -->

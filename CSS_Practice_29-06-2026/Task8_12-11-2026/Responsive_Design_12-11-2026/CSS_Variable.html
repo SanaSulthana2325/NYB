@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* global variable */
+        :root{
+            --primary-color:navy;
+            --secondary-color:lightblue;
+            --text-color:white;
+            --font-size:20px;
+            --box-padding:20px;
+            --main-color:red;
+        }
+        body{
+            font-family:Arial;
+        }
+        h1{
+            color:var(--primary-color);
+        }
+        .container{
+            background-color: var(--second-color);
+            padding:var(--box-padding);
+        }
+        button{
+            background-color: var(--primary-color);
+            color:var(--text-color);
+            font-size: var(--font-size);
+            padding:10px 20px;
+            border:none;
+        }
+        /* css selector */
+        /* decendent  */
+        div p{
+            color: blue;
+        }
+        /* child */
+        div > p{
+            color: red;
+        }
+        /* adjacent sibling selector */
+        h1 + p{
+            color:green;
+        }
+        /* Attribute selector */
+        input[type="text"]{
+            background-color: rgb(228, 228, 21);
+        }
+        /* pseudo class */
+        li:first-child{
+            color:rgb(124, 4, 4);
+        }
+        li:nth-child(2){
+            color:rgb(10, 175, 216);
+        }
+        li:last-child{
+            color:rgb(20, 231, 20);
+        }
+        /* transition */
+        button{
+            background-color: blue;
+            color:crimson;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+
+            transition: background-color 0.5s;
+            
+        }
+        button:hover{
+            background-color: green;
+        }
+        /* transform */
+        .card{
+            width:200px;
+            padding:30px;
+            background-color: lightcoral;
+            text-align: center;
+
+            transition: transform 0.4s;
+        }
+        .card:hover{
+            transform: scale(1.1);
+            transform: rotate(45deg);
+            /* transform:translate(30px,20px) */
+            transform: skew(20deg);
+        }
+        /* box ::shadow */
+        .card1{
+            width:250px;
+            padding:25px;
+            text-align:center;
+            background-color: white;
+            box-shadow:5px 5px 15px gray;
+            border-radius: 10px;
+        }
+        /* text shadow */
+        p1{
+            color: blue;
+            text-shadow: 4px 4px 6px rgb(231, 11, 11);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> my Website</h1>
+    <div class="container">
+        <h2> Welcome to the wrold </h2>
+        <p> we provide best services to the people</p>
+        <button> Learn more</button>
+    </div>
+
+    <hr/>
+    <br/>
+    <!--It selects all paragraphs inside a div, even if they are nested inside other elements.-->
+    <div>
+        <p> Paragraph one</p>
+        <section>
+            <p> Paragraph two</p>
+        </section>
+    </div>
+    <hr/>
+    <br/>
+    <!--child selector-->
+    <div>
+        <p>Direct child</p>
+        <section>
+            <p> Nested child</p>
+        </section>
+    </div>
+     <hr/>
+    <br/>
+    <!--Adjacent sibling selector-->
+    <h1> welcome</h1>
+    <p> This is selected</p>
+    <p> my friend is my wrold</p>
+    <hr/>
+    <br/>
+    <!-- Attribute selector-->
+
+    <input type="text" placeholder="Enter Name">
+
+    <input type="email" placeholder="Enter email">
+
+    <input type="password" placeholder="Enter password">
+
+    <hr/>
+    <br/>
+    <!--pseudo class-->
+    <ul>
+        <li>Mobile</li>
+        <li>Laptop</li>
+        <li>HeadPhones</li>
+        <li>TV</li>
+        <li>Keyboard</li>
+
+    </ul>
+    <hr/>
+    <br/>
+    <!--CSS Transitions
+What is a transition?
+
+A CSS transition allows an element to change its property values smoothly over a specified duration.-->
+
+<h2> Login page</h2>
+<button>Login</button>
+<hr/>
+<br/>
+<!--transform-->
+<div class="card">
+    <h2> Product</h2>
+    <p>Price:₹999</p>
+</div>
+<hr/>
+<br/>
+<!--box shadow-->
+
+<div class="card1">
+    <h2> smartphone</h2>
+    <p>latest model</p>
+    <h3> ₹25000</h3>
+</div>
+<hr/>
+<br/>
+<!-- text shadow-->
+ <p1> Welcome to my website</p1>
+
+
+    
+</body>
+</html>
+
+
+<!-- What are CSS Variables?
+CSS variables are used to store reusable values such as colors, font sizes, margins, padding, and other CSS properties.
+
+Instead of writing the same color multiple times, we can store it in a variable and reuse it wherever required. -->
+
+
+<!-- Global variables
+
+Defined inside :root and can be accessed throughout the stylesheet. -->
+
+<!-- Local variables
+
+Defined inside a particular selector and generally accessible within that element and its descendants. -->
+
+
+<!-- Changing variables
+
+We can change the variable value and automatically update all elements using it. -->
+
+
+<!-- What are Advanced Selectors?
+Advanced CSS selectors allow us to select HTML elements based on their relationships, attributes, positions, and states.
+
+Instead of selecting elements only by their class or ID, we can target specific elements using advanced selectors. -->
+
+<!-- Selector	Meaning
+div p	      Selects all paragraphs inside div
+div > p	          Selects direct child paragraphs
+h1 + p	         Selects the immediately following paragraph
+h1 ~ p	          Selects all following sibling paragraphs
+input[type="text"]	Selects text input elements
+li:first-child	Selects the first list item
+li:last-child	Selects the last list item
+li:nth-child(2)	Selects the second list item
+p:not(.active)	Selects paragraphs without active class -->
+
+
+<!-- Pseudo-class Selectors
+Pseudo-classes select elements based on their state or position.
+
+Common pseudo-classes:
+- :hover – When the mouse moves over an element.
+- :focus – When an input gets focus.
+- :first-child – First child element.
+- :last-child – Last child element.
+- :nth-child() – Selects an element by position.
+- :checked – Selects checked inputs. -->
+
+
+
+<!-- Property	                Purpose
+transition-property	       Specifies which property changes
+transition-duration	       Specifies how long the change takes
+transition-delay	       Specifies when the transition starts
+transition-timing-function	Controls the speed of transition
+transition	                Shorthand for transition properties -->
+
+
+<!-- CSS Transforms
+What is transform?
+
+CSS Transform allows us to change the position, size, angle, or shape of an element without changing the normal document flow.
+
+There are five commonly used transform functions:
+Function	Purpose
+translate()	Moves an element
+rotate()	Rotates an element
+scale()	Increases or decreases size
+skew()	Slants an element
+matrix()	Combines multiple 2D transformations -->
+
+
+
+<!-- Transition	                       Transform
+Creates smooth changes	      Changes an element's appearance or position
+Controls animation duration	   Uses functions such as rotate and scale
+Example: transition: 0.5s	   Example: transform: scale(1.2) -->
+
+
+<!-- What is box-shadow?
+
+The box-shadow property adds a shadow around an HTML element.
+
+It is commonly used for:
+- Product cards.
+- Login forms.
+- Buttons.
+- Dashboard panels.
+- Navigation menus. -->

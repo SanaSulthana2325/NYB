@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Mobile First */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 15px;
+            color: rgb(11, 15, 238);
+            background-color: lightgreen;
+
+        }
+
+        .card {
+            background-color: lightblue;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            color: red;
+            background-color: lightpink;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                color: purple;
+                background-color: lightskyblue;
+            }
+        }
+
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+                color: orange;
+                background-color: lightcyan;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Understand mobile-first and responsive design approaches. -->
+
+    <h1>Our Products</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Mobile</h2>
+            <p>₹10,000</p>
+        </div>
+
+        <div class="card">
+            <h2>Laptop</h2>
+            <p>₹40,000</p>
+        </div>
+
+        <div class="card">
+            <h2>Headphones</h2>
+            <p>₹2,000</p>
+        </div>
+
+        <div class="card">
+            <h2>Keyboard</h2>
+            <p>₹1,000</p>
+        </div>
+
+    </div>
+    
+
+
+    
+</body>
+</html>
+
+
+<!-- What is Mobile-First Design?
+Mobile-First Design is a web development approach in which we design and develop a website for smaller screens (mobile phones) first and then gradually improve the layout for larger screens such as tablets, laptops, and desktops.
+
+In simple words:
+
+First create a website for mobile, then make it suitable for bigger screens. -->

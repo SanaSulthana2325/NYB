@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width:250px;
+            background: white;
+            border-radius:12px;
+            box-shadow:0 4px 10px gray;
+            padding:15px;
+            text-align: center;
+            font-family: Arial;
+            transition:0.4s;
+        }
+        .card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 10px 20px gray;
+        }
+        .card img{
+            width:100%;
+            border-radius:10px;
+
+            transition:0.4s;
+        }
+        .card:hover img{
+            transform:scale(1.05);
+        }
+        .card button{
+            background: blue;
+            color:white;
+            padding: 10px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        /* gradient Button */
+        btn{
+            background: linear-gradient(
+                to right,
+                blue,
+                purple
+            );
+            color:white;
+            padding:15px 35px;
+            border:none;
+            border-radius:25px;
+            font-size:16px;
+            cursor:pointer;
+        }
+        /* shadow button */
+        btn1 {
+    background: green;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 10px gray;
+    cursor: pointer;
+}
+
+btn1:hover {
+    box-shadow: 0 8px 15px gray;
+    transform: translateY(-3px);
+}
+
+/* Animated Button */
+
+btn2 {
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+.notificaton{
+    background: #d4edda;
+    color:#155724;
+    padding:20px;
+    border-left:5px solid green;
+    width:300px;
+    border-radius:5px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Advanced card-->
+     <h2> Product card</h2>
+     <div class="card">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.tg7WElSBD-_Dv7558oSu-AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="watch">
+        <p> Price: ₹1,999</p>
+        <button> BUy Now</button>
+
+     </div>
+
+     <hr/>
+     <br/>
+     <!--What are Advanced CSS Buttons?
+Advanced buttons are attractive and interactive buttons created using CSS properties such as colors, gradients, shadows, borders, transitions and transformations.-->
+
+<h2> Gradient button</h2>
+<btn>Sign Up</btn>
+
+<hr/>
+<br/>
+<!--shadow Button-->
+<h2> Shadow button</h2>
+<btn1> submit</btn1>
+
+<hr/>
+<br/>
+<!--Animated button-->
+<btn2> Buy Now</btn2>
+<hr/>
+<br/>
+<!--What are Custom CSS Components?
+Custom CSS Components are reusable UI elements that we design using HTML and CSS according to our website requirements.
+
+Instead of creating the same design repeatedly, we can create one component and reuse it wherever required.-->
+
+<!--Custom Notification box-->
+<div class="notification">
+    <h3> Success!!</h3>
+    <p> Your registration was complted sucessfully completed</p>
+</div>
+    
+</body>
+</html>
+
+
+<!-- What is a CSS Card?
+A Card is a rectangular section on a webpage that displays information in an organized and attractive way.
+
+Cards usually contain:
+- Images
+- Titles and descriptions
+- Prices
+- Buttons
+- Ratings
+- Product or service details -->
+

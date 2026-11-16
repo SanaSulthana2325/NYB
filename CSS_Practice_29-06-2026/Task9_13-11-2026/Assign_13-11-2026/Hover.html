@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover and Transition Effects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* Product card */
+        .card {
+            background-color: white;
+            width: 220px;
+            padding: 20px;
+            border-radius: 12px;
+
+            /* Transition effect */
+            transition: all 0.5s ease;
+        }
+
+        /* Advanced hover effect */
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 25px gray;
+        }
+
+        /* Button design */
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            transition: background-color 0.5s ease;
+        }
+
+        button:hover {
+            background-color: green;
+        }
+
+        .product {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Online Shopping Products</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="product">🎧</div>
+            <h2>Headphones</h2>
+            <p>Price: ₹1500</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <div class="product">⌚</div>
+            <h2>Smart Watch</h2>
+            <p>Price: ₹2500</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <div class="product">🎒</div>
+            <h2>Bag</h2>
+            <p>Price: ₹1000</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

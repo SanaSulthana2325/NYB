@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .button1 {
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+
+.button2 {
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+
+.button3 {
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+/* reusable */
+.button4 {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+/* box-sizing */
+
+* {
+    box-sizing: border-box;
+}
+
+.container1 {
+    display: flex;
+    gap: 15px;
+}
+
+.card1 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid blue;
+    background: lightblue;
+}
+/* diffreent screen size */
+
+.container1 {
+    display: flex;
+    gap: 15px;
+}
+
+.card1 {
+    background: lightblue;
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .container1 {
+        flex-wrap: wrap;
+    }
+
+    .card1 {
+        flex: 1 1 45%;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .container1 {
+        flex-direction: column;
+    }
+
+}
+/* display */
+/* Block */
+
+.employee-card {
+    width: 250px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 3px 10px gray;
+    text-align: center;
+}
+
+/* Element */
+
+.employee-card__name {
+    color: blue;
+}
+
+.employee-card__role {
+    color: gray;
+}
+
+/* Modifier */
+
+.employee-card--featured {
+    border: 3px solid orange;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Avoiding repeating code-->
+     <button class="button1">Login</button>
+
+<button class="button2">Register</button>
+
+<button class="button3">Submit</button>
+
+<hr/>
+<br/>
+<!-- reusable button-->
+
+<button class="button4">Login</button>
+
+<button class="button4">Register</button>
+
+<button class="button4">Submit</button>
+<hr/>
+<br/>
+<!-- Box-Sizing-->
+ <h2>Employee Cards</h2>
+
+<div class="container">
+
+    <div class="card">Employee 1</div>
+
+    <div class="card">Employee 2</div>
+
+    <div class="card">Employee 3</div>
+
+</div>
+
+<hr/>
+<br/>
+<!-- rsponsive CSS dor different screen size-->
+
+<h2>Responsive Cards</h2>
+
+<div class="container1">
+
+    <div class="card1">Card 1</div>
+
+    <div class="card1">Card 2</div>
+
+    <div class="card1">Card 3</div>
+
+</div>
+<hr/>
+<br/>
+<!---->
+<div class="employee-card employee-card--featured">
+
+    <h2 class="employee-card__name">
+         Kumar
+    </h2>
+
+    <p class="employee-card__role">
+        Software Developer
+    </p>
+
+</div>
+
+
+    
+</body>
+</html>
+
+<!-- What are CSS Best Practices?
+CSS Best Practices means following good coding methods while writing CSS.
+
+It helps developers:
+- Write clean and readable code.
+- Avoid unnecessary CSS properties.
+- Reuse styles.
+- Reduce errors.
+- Make websites easier to maintain. -->
+
+
+<!-- What is Cross-Browser Compatibility?
+Cross-Browser Compatibility means making sure a website works properly across different web browsers. -->
+
+<!-- What is CSS Code Organization?
+CSS Code Organization means arranging CSS code in a proper structure so developers can easily understand, find, update and maintain styles. -->
+
+<!-- 1. What is Git?
+Git is a version control system. It helps developers track changes in their code.
+
+Imagine you are creating a website. You make some changes today, and tomorrow you accidentally delete some code. Git helps you go back to an earlier version.
+
+
+What is GitHub?
+GitHub is an online platform where developers store and share their Git repositories.
+
+Think of it like Google Drive, but mainly for storing and managing code projects. -->
+
+
+
+<!-- Git	                             GitHub
+Version control system	      Online code hosting platform
+Installed on your computer	     Accessed through a website
+Tracks code changes	            Stores and shares repositories
+Works locally	                Works online
+Created by Linus Torvalds	Owned by Microsoft -->
+
+
+<!-- Term	       Meaning
+Repository	A folder that contains your project and its Git history
+Commit	    A saved snapshot of your code
+Branch	    A separate line of development
+Clone	    Download a repository from GitHub
+Push	   Upload local commits to GitHub
+Pull	   Get changes from GitHub
+Merge	   Combine changes from different branches -->

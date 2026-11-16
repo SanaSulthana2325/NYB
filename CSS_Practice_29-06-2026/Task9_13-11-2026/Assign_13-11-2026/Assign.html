@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Keyframes Animation</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: moveBox 3s infinite;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(300px);
+            }
+        }
+
+        /* animation duration */
+                .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            animation-name: rotateBox;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rotateBox {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* animation delay */
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+
+            animation-name: move;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(250px);
+            }
+        }
+        /* loader */
+        .loader {
+            width: 60px;
+            height: 60px;
+
+            border: 6px solid lightgray;
+            border-top: 6px solid blue;
+
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* text animation */
+                h1 {
+            animation: fade 3s infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* bouncing ball */
+        .ball {
+            width: 60px;
+            height: 60px;
+            background-color: orange;
+            border-radius: 50%;
+
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(150px);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Moving Box Animation</h2>
+
+    <div class="box"></div>
+    <hr/>
+    <br/>
+    <h2> Animation duration</h2>
+    
+    <div class="box1"></div>
+    <hr/>
+    <br/>
+    <h2> Animation delay</h2>
+    <div class="box2"></div>
+    <hr/>
+    <br/>
+    <h2>Loading </h2>
+    <div class="loader"></div>
+    <hr/>
+    <br/>
+    <h2>text animation</h2>
+    <h1> welcome to css</h1>
+    <hr/>
+    <br/>
+    <h2> bouncing ball</h2>
+    <div class="ball"></div>
+
+
+
+</body>
+</html>

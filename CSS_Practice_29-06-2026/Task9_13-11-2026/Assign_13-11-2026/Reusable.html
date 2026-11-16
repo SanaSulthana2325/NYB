@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reusable CSS Classes and Variables</title>
+
+    <style>
+
+        /* CSS VARIABLES */
+        :root {
+            --primary-color: blue;
+            --success-color: green;
+            --warning-color: orange;
+            --card-background: white;
+            --border-radius: 12px;
+            --card-padding: 25px;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        /* REUSABLE CLASS */
+        .card {
+            background-color: var(--card-background);
+            padding: var(--card-padding);
+            border-radius: var(--border-radius);
+            width: 200px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        /* REUSABLE HEADING */
+        .card h2 {
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* DIFFERENT CARD COLORS */
+        .employees h2 {
+            color: var(--primary-color);
+        }
+
+        .jobs h2 {
+            color: var(--warning-color);
+        }
+
+        .interviews h2 {
+            color: var(--success-color);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        /* code duplicate */
+        
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        /* Common reusable style */
+        .alert {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* Different colors */
+        .info {
+            background-color: lightblue;
+        }
+
+        .success {
+            background-color: lightgreen;
+        }
+
+        .warning {
+            background-color: lightyellow;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1>HR Management Dashboard</h1>
+
+    <div class="container">
+
+        <div class="card employees">
+            <h2>Total Employees</h2>
+            <p>125</p>
+        </div>
+
+        <div class="card jobs">
+            <h2>Open Positions</h2>
+            <p>08</p>
+        </div>
+
+        <div class="card interviews">
+            <h2>Scheduled Interviews</h2>
+            <p>14</p>
+        </div>
+
+    </div>
+
+    <hr/>
+    <br/>
+    <!--code duplicate-->
+    
+
+
+    <h1>HR Portal Notifications</h1>
+
+    <div class="alert info">
+        Information: Your interview is scheduled.
+    </div>
+
+    <div class="alert success">
+        Success: Your application was submitted.
+    </div>
+
+    <div class="alert warning">
+        Warning: Please upload your resume.
+    </div>
+
+
+
+</body>
+</html>
+
+<!-- Remove Duplicate and Unnecessary CSS Styles
+What does it mean?
+Removing duplicate CSS means avoiding writing the same properties repeatedly.
+
+Instead of writing separate CSS for every element, we create one common class and reuse it. -->

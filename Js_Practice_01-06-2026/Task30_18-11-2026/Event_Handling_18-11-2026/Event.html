@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- button click-->
+     <h2 id="message">Welcome to world</h2>
+
+     <button id="btn"> click me</button>
+
+     <!--move events-->
+     <h2 id="heading">Move your mouse here</h2>
+
+     <input type="text" id="username" placeholder="Enter your name">
+
+     <p id="output"></p>
+
+     <hr>
+     <!-- event bubbling-->
+      <div id="parent">
+    Parent
+
+    <button id="child">Click Me</button>
+
+</div>
+<hr/>
+<!-- event capturing-->
+
+<div id="parent1">
+    Parent
+
+    <button id="child1">Click Me</button>
+
+</div>
+
+<hr/>
+<!-- event delegation-->
+ <ul id="studentList">
+    <li> Sanju
+        <button> Delete</button>
+    </li>
+    <li> Manju
+        <button> Delete</button>
+    </li>
+    <li>kanju
+        <button> Delete</button>
+    </li>
+ </ul>
+
+ <hr/>
+ <!-- form handling-->
+
+ <form id="employeeForm">
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <p id="message1"></p>
+    <hr/>
+    <!-- local storage-->
+      <input type="text1" id="username"
+           placeholder="Enter your name">
+
+    <btn3 onclick="saveName()">
+        Save Name
+    </btn3>
+
+    <btn3 onclick="showName()">
+        Show Name
+    </btn3>
+
+    <h3 id="output"></h3>
+    <hr/>
+    <!-- session storage-->
+     <h2>Session Storage Example</h2>
+
+<input type="text" id="username"
+       placeholder="Enter your name">
+
+<button onclick="saveSession()">
+    Save
+</button>
+
+<button onclick="getSession()">
+    Show
+</button>
+
+<h3 id="output"></h3>
+
+
+    <script src="./Event.js"></script>
+    
+</body>
+</html>

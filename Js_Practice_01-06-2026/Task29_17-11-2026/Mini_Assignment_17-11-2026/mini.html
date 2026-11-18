@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #243b64;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .delete-btn {
+            background: red;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #243b64;
+            color: white;
+        }
+
+        .summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px;
+            background: #e8efff;
+            border-radius: 8px;
+        }
+
+        .department-card {
+            background: #eef3ff;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Employee Data Management System</h1>
+
+    <!-- Dashboard Summary -->
+
+    <section class="container">
+
+        <h2>Dashboard</h2>
+
+        <div class="summary">
+
+            <div class="card">
+                <h3>Total Employees</h3>
+                <h2 id="totalEmployees">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Salary</h3>
+                <h2 id="totalSalary">₹0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Average Salary</h3>
+                <h2 id="averageSalary">₹0</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Add Employee -->
+
+    <section class="container">
+
+        <h2>Add Employee</h2>
+
+        <form id="employeeForm">
+
+            <input type="number" id="empId"
+                placeholder="Employee ID" required min="1">
+
+            <input type="text" id="empName"
+                placeholder="Employee Name" required>
+
+            <select id="empDepartment" required>
+                <option value="">Select Department</option>
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+
+            <input type="number" id="empAge"
+                placeholder="Age" required min="18">
+
+            <input type="number" id="empSalary"
+                placeholder="Salary" required min="1">
+
+            <button type="submit">Add Employee</button>
+
+        </form>
+
+    </section>
+
+    <!-- Search and Filters -->
+
+    <section class="container">
+
+        <h2>Search and Filter</h2>
+
+        <input type="text" id="searchInput"
+            placeholder="Search by name or ID">
+
+        <select id="departmentFilter">
+            <option value="All">All Departments</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+
+        <input type="number" id="salaryFilter"
+            placeholder="Minimum Salary" min="0">
+
+        <select id="sortFilter">
+            <option value="default">Default Order</option>
+            <option value="name">Sort by Name</option>
+            <option value="salaryLow">Salary Low to High</option>
+            <option value="salaryHigh">Salary High to Low</option>
+        </select>
+
+    </section>
+
+    <!-- Employee Records -->
+
+    <section class="container">
+
+        <h2>Employee Records</h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Age</th>
+                        <th>Salary</th>
+                        <th>Bonus (10%)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="employeeTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Department Grouping -->
+
+    <section class="container">
+
+        <h2>Department-wise Employees</h2>
+
+        <div id="departmentGroups"></div>
+
+    </section>
+
+    <script src="./mini.js"></script>
+
+</body>
+</html>

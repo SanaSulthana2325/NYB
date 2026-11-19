@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .product {
+            background: #eeeeee;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .delete {
+            background: red;
+            color: white;
+        }
+
+        .edit {
+            background: green;
+            color: white;
+        }
+
+        #loading {
+            color: blue;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #message {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Product Management</h1>
+
+    <h3>Add Product</h3>
+
+    <input type="text" id="name" placeholder="Product Name">
+
+    <input type="number" id="price" placeholder="Product Price">
+
+    <button onclick="addProduct()">Add Product</button>
+
+    <h3>Search Product</h3>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search product..."
+        oninput="displayProducts()"
+    >
+
+    <p id="loading"></p>
+    <p id="error"></p>
+    <p id="message"></p>
+
+    <h2>Product List</h2>
+
+    <div id="productList"></div>
+
+</div>
+
+<script src="./Mini.js"></script>
+
+</body>
+</html>
